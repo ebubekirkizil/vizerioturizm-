@@ -3,72 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vizerio | Vize ve Tur Danışmanlığı</title>
+    <title>Vizerio | VIP Kültür Turları</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         :root { --gold: #C5A059; --navy: #0C1324; }
         .bg-navy { background-color: var(--navy); }
         .text-gold { color: var(--gold); }
-        .border-gold { border-color: var(--gold); }
-        .gold-button { background: linear-gradient(135deg, #f6e27a 0%, #cb9b51 45%, #f6e27a 100%); color: #0C1324; font-weight: bold; }
+        .gold-gradient { background: linear-gradient(135deg, #f6e27a 0%, #cb9b51 45%, #f6e27a 100%); }
+        .hidden-page { display: none; }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-50 font-sans overflow-x-hidden">
 
-    <header class="bg-navy text-white py-16 px-6 text-center border-b-4 border-gold">
-        <h1 class="text-4xl font-bold tracking-[0.2em] text-gold mb-4">VIZERIO</h1>
-        <p class="text-xl max-w-2xl mx-auto italic opacity-80">Profesyonel Vize Çözümleri ve Unutulmaz Kültür Turları</p>
-        <div class="mt-8">
-            <a href="#turlar" class="gold-button px-8 py-3 rounded-sm uppercase text-sm tracking-widest">Turlarımızı İnceleyin</a>
+    <div id="ana-sayfa">
+        <section class="bg-navy text-white min-h-[70vh] flex flex-col justify-center items-center text-center px-6 border-b-8 border-gold" data-aos="fade-down">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-[0.3em] text-gold mb-6 uppercase">VIZERIO</h1>
+            <p class="text-xl md:text-2xl italic opacity-70 mb-10" data-aos="zoom-in" data-aos-delay="400">"Sınırları Aşan Deneyimler"</p>
+            <a href="#turlar" class="gold-gradient px-10 py-4 text-navy font-bold uppercase tracking-widest shadow-2xl hover:scale-105 transition transform">Turlarımızı Keşfedin</a>
+        </section>
+
+        <section id="turlar" class="py-24 container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-navy uppercase">Aktif Programlar</h2>
+                <div class="w-32 h-1.5 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div id="tur-listesi" class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                </div>
+        </section>
+    </div>
+
+    <div id="detay-sayfasi" class="hidden-page min-h-screen bg-white">
+        <nav class="bg-navy p-4 sticky top-0 z-50">
+            <button onclick="anaSayfayaDon()" class="text-gold font-bold flex items-center gap-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+                GERİ DÖN
+            </button>
+        </nav>
+        
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-2 gap-12">
+                <img id="detay-resim" class="w-full h-[500px] object-cover rounded-lg shadow-2xl border-4 border-gold">
+                <div class="space-y-6">
+                    <h1 id="detay-baslik" class="text-4xl font-bold text-navy uppercase"></h1>
+                    <p id="detay-tarih" class="text-gold font-bold text-xl"></p>
+                    <div id="detay-fiyat" class="text-3xl font-black text-navy border-b pb-4"></div>
+                    <div class="prose max-w-none">
+                        <h4 class="font-bold text-navy uppercase underline">Tur Hakkında</h4>
+                        <p id="detay-aciklama" class="text-gray-700 leading-relaxed"></p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded border-l-4 border-red-500">
+                        <h4 class="font-bold text-xs uppercase text-gray-500">İade Politikası</h4>
+                        <p id="detay-iade" class="text-xs italic"></p>
+                    </div>
+                    <a id="whatsapp-link" href="#" target="_blank" class="block w-full text-center bg-green-600 text-white font-bold py-5 rounded-lg text-xl shadow-lg hover:bg-green-700 transition">
+                        KAYIT OL VE BİLGİ AL (WHATSAPP)
+                    </a>
+                </div>
+            </div>
         </div>
-    </header>
-
-    <section id="turlar" class="py-20 container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-navy uppercase tracking-tighter">Aktif Tur Programlarımız</h2>
-            <div class="w-24 h-1 bg-gold mx-auto mt-2"></div>
-        </div>
-
-        <div id="tur-listesi" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <p class="text-center col-span-full text-gray-500">Turlar yükleniyor...</p>
-        </div>
-    </section>
-
-    <footer class="bg-navy text-white py-10 text-center border-t border-gold/30">
-        <p>© 2026 Vizerio Travel. Tüm Hakları Saklıdır.</p>
-    </footer>
+    </div>
 
     <script>
-        // BURAYA 1. ADIMDA ALDIĞINIZ CSV LİNKİNİ YAPIŞTIRIN
-        const csvUrl = 'SENİN_GOOGLE_SHEETS_CSV_LİNKİN_BURAYA';
+        // 1. ADIMDA ALDIĞINIZ CSV LİNKİNİ BURAYA YAPIŞTIRIN
+        const csvUrl = 'SENİN_GOOGLE_SHEETS_CSV_LİNKİN';
+        let turVerileri = [];
 
         async function turlariGetir() {
             const response = await fetch(csvUrl);
             const data = await response.text();
             const rows = data.split('\n').slice(1);
             const container = document.getElementById('tur-listesi');
-            container.innerHTML = '';
-
-            rows.forEach(row => {
-                const cols = row.split(',');
-                if(cols.length < 3) return;
+            
+            rows.forEach((row, index) => {
+                const cols = row.split(','); // Sütunları ayır
+                if(cols.length < 5) return;
+                
+                const turObj = { id: index, ad: cols[0], tarih: cols[1], fiyat: cols[2], resim: cols[3], kisa: cols[4], uzun: cols[5], iade: cols[6] };
+                turVerileri.push(turObj);
 
                 container.innerHTML += `
-                    <div class="bg-white shadow-2xl overflow-hidden border border-gray-200 group">
-                        <div class="relative overflow-hidden">
-                            <img src="${cols[3]}" alt="${cols[0]}" class="w-full h-72 object-cover group-hover:scale-110 transition duration-500">
-                            <div class="absolute top-4 right-4 bg-navy text-gold px-4 py-1 font-bold shadow-lg">${cols[2]}</div>
+                    <div class="bg-white shadow-2xl overflow-hidden group border-b-4 border-transparent hover:border-gold transition-all duration-300" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="relative overflow-hidden h-80">
+                            <img src="${turObj.resim}" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition"></div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-navy mb-2 uppercase">${cols[0]}</h3>
-                            <p class="text-gold font-semibold text-sm mb-4">${cols[1]}</p>
-                            <p class="text-gray-600 text-sm mb-6">${cols[4]}</p>
-                            <a href="https://wa.me/905510698812" class="block text-center border-2 border-navy py-2 text-navy font-bold hover:bg-navy hover:text-white transition">KAYIT VE BİLGİ AL</a>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-navy mb-2 uppercase">${turObj.ad}</h3>
+                            <p class="text-gold font-bold mb-4">${turObj.tarih}</p>
+                            <p class="text-gray-600 text-sm mb-6">${turObj.kisa}</p>
+                            <button onclick="detayGoster(${index})" class="w-full border-2 border-navy py-3 font-bold hover:bg-navy hover:text-white transition">DETAYLARI İNCELE</button>
                         </div>
                     </div>
                 `;
             });
+            AOS.init({ duration: 1000, once: true });
         }
+
+        function detayGoster(index) {
+            const tur = turVerileri[index];
+            document.getElementById('ana-sayfa').classList.add('hidden-page');
+            document.getElementById('detay-sayfasi').classList.remove('hidden-page');
+            
+            document.getElementById('detay-baslik').innerText = tur.ad;
+            document.getElementById('detay-tarih').innerText = "📅 Tarih: " + tur.tarih;
+            document.getElementById('detay-fiyat').innerText = "💰 Ücret: " + tur.fiyat;
+            document.getElementById('detay-resim').src = tur.resim;
+            document.getElementById('detay-aciklama').innerText = tur.uzun;
+            document.getElementById('detay-iade').innerText = tur.iade;
+            
+            const message = encodeURIComponent(`Merhaba, ${tur.ad} (${tur.tarih}) hakkında bilgi almak ve kayıt yaptırmak istiyorum.`);
+            document.getElementById('whatsapp-link').href = `https://wa.me/905510698812?text=${message}`;
+            
+            window.scrollTo(0,0);
+        }
+
+        function anaSayfayaDon() {
+            document.getElementById('ana-sayfa').classList.remove('hidden-page');
+            document.getElementById('detay-sayfasi').classList.add('hidden-page');
+        }
+
         turlariGetir();
     </script>
 </body>
