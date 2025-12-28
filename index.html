@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizerio | Profesyonel Vize ve Kültür Turları</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { --gold: #C5A059; --navy: #0C1324; }
+        .gold-gradient { background: linear-gradient(135deg, #f6e27a 0%, #cb9b51 45%, #f6e27a 100%); }
+        .gold-text { color: #C5A059; }
+        .bg-navy { background-color: #0C1324; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-navy p-4 text-white sticky top-0 z-50 border-b border-yellow-600/30">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-widest gold-text">VIZERIO</h1>
+            <div class="space-x-6 text-sm">
+                <a href="#turlar" class="hover:text-yellow-500">TURLARIMIZ</a>
+                <a href="#kayit" class="bg-yellow-600 px-4 py-2 rounded text-navy font-bold">KAYIT OL</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-navy text-white py-20 px-4 relative overflow-hidden">
+        <div class="container mx-auto text-center relative z-10">
+            <h2 class="text-gold text-xl mb-2 tracking-widest">ÖZEL TUR DENEYİMİ</h2>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">SIRBİSTAN KÜLTÜR & EĞLENCE TURU</h1>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-8 italic">31 Ocak - 2 Şubat 2026 | 2 Gece 3 Gün | Her Şey Dahil 400€</p>
+            <div class="flex justify-center gap-4 flex-wrap text-sm uppercase">
+                <span class="border border-yellow-600 px-4 py-2"><i class="fa fa-plane mr-2"></i> Uçak</span>
+                <span class="border border-yellow-600 px-4 py-2"><i class="fa fa-hotel mr-2"></i> Konaklama</span>
+                <span class="border border-yellow-600 px-4 py-2"><i class="fa fa-shield-alt mr-2"></i> Sigorta</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="turlar" class="py-16 container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-12 text-navy">AKTİF TURLARIMIZ</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white shadow-xl rounded-lg overflow-hidden border-t-4 border-yellow-600">
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">Sırbistan Turu</h4>
+                    <p class="text-gray-600 text-sm mb-4">Kültür, tarih ve eğlencenin bir arada olduğu 3 günlük efsane rota.</p>
+                    <div class="text-2xl font-bold text-navy mb-4">400€</div>
+                    <a href="#kayit" class="block text-center bg-navy text-white py-2 rounded hover:bg-yellow-600 transition">Detay ve Kayıt</a>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="kayit" class="bg-gray-100 py-16">
+        <div class="container mx-auto max-w-xl bg-white p-8 rounded-lg shadow-2xl">
+            <h3 class="text-2xl font-bold text-navy text-center mb-6 border-b-2 border-yellow-600 pb-2">ÖN KAYIT FORMU</h3>
+            <form action="BURAYA_GOOGLE_FORM_VEYA_MAİL_LİNKİ_GELECEK" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-bold mb-1">Ad Soyad</label>
+                    <input type="text" class="w-full border p-2 rounded focus:border-yellow-600 outline-none" placeholder="Adınız ve Soyadınız" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-1">WhatsApp Numarası</label>
+                    <input type="tel" class="w-full border p-2 rounded focus:border-yellow-600 outline-none" placeholder="05XX XXX XX XX" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-1">Pasaportunuz Var mı?</label>
+                    <select class="w-full border p-2 rounded outline-none">
+                        <option>Evet, var</option>
+                        <option>Hayır, vize desteği istiyorum</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full gold-gradient text-navy font-bold py-3 rounded uppercase tracking-wider hover:opacity-90">Kaydımı Tamamla</button>
+            </form>
+            <p class="text-xs text-center mt-4 text-gray-500 italic font-bold">⚠️ Son Başvuru: 29 Ocak</p>
+        </div>
+    </section>
+
+    <footer class="bg-navy text-white py-10 text-center border-t border-yellow-600/30">
+        <p class="mb-4">Vizerio | Profesyonel Vize & Tur Danışmanlığı</p>
+        <div class="flex justify-center space-x-6">
+            <a href="https://wa.me/905510698812" class="text-green-500 text-2xl"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
