@@ -327,16 +327,15 @@
     </nav>
 
     <section class="hero">
-        <!-- Video: İstersen bunu kendi dosyana çevir (aşağıda anlattım) -->
-        <video autoplay muted loop playsinline id="hero-video" poster="assets/img/hero-fallback.jpg">
-            <source src="https://videos.pexels.com/video-files/3121459/3121459-hd_1920_1080_25fps.mp4" type="video/mp4">
-        </video>
+       <!-- Derinlik katmanı (premium arka plan) -->
+<div class="depth-bg" aria-hidden="true"></div>
 
-        <!-- Uçuş animasyonu canvas (JS bunu kullanıyor) -->
-        <canvas id="flight-map"></canvas>
+<!-- Uçuş animasyonu canvas -->
+<canvas id="flight-map" aria-hidden="true"></canvas>
 
-        <!-- Premium karartma/ışık overlay -->
-        <div class="video-overlay"></div>
+<!-- Premium karartma/ışık overlay -->
+<div class="video-overlay" aria-hidden="true"></div>
+
 
         <div class="hero-content">
             <h1>Sadece Bir Tatil Değil, <br><span>Prestijli Bir Yaşam Tarzı.</span></h1>
