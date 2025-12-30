@@ -3,129 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vizerio | VIP Kültür Turları</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Vizerio | Sınırları Aşan Deneyimler</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        :root { --gold: #C5A059; --navy: #0C1324; }
-        .bg-navy { background-color: var(--navy); }
-        .text-gold { color: var(--gold); }
-        .gold-gradient { background: linear-gradient(135deg, #f6e27a 0%, #cb9b51 45%, #f6e27a 100%); }
-        .hidden-page { display: none; }
+        /* --- CUSTOM COLORS & VARIABLES --- */
+        :root {
+            --navy: #0C1324;
+            --gold: #C5A059;
+            --gold-light: #f6e27a;
+            --gold-dark: #cb9b51;
+        }
+
+        body { font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* --- STICKY HEADER (FROSTED GLASS) --- */
+        .glass-header {
+            background: rgba(12, 19, 36, 0.7); /* Lacivert transparan */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .glass-header.scrolled {
+            background: rgba(12, 19, 36, 0.95);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- HERO SECTION (KEN BURNS EFFECT) --- */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            /* Sırbistan/Belgrad manzarası placeholder */
+            background-image: url('https://images.unsplash.com/photo-1549643977-c934f0c976f9?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            /* Ken Burns Animasyonu (Yavaş Yakınlaşma) */
+            animation: kenBurns 20s infinite alternate;
+        }
+
+        @keyframes kenBurns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(12, 19, 36, 0.6), rgba(12, 19, 36, 0.8));
+            z-index: 0;
+        }
+
+        /* --- BUTTONS & GRADIENTS --- */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f6e27a 0%, #cb9b51 100%);
+            color: var(--navy);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.4);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(197, 160, 89, 0.1);
+            color: white;
+            border-color: white;
+        }
+
+        /* --- TRUST BAR --- */
+        .trust-bar {
+            background: var(--navy);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
     </style>
 </head>
-<body class="bg-gray-50 font-sans overflow-x-hidden">
+<body class="bg-gray-100">
 
-    <div id="ana-sayfa">
-        <section class="bg-navy text-white min-h-[70vh] flex flex-col justify-center items-center text-center px-6 border-b-8 border-gold" data-aos="fade-down">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-[0.3em] text-gold mb-6 uppercase">VIZERIO</h1>
-            <p class="text-xl md:text-2xl italic opacity-70 mb-10" data-aos="zoom-in" data-aos-delay="400">"Sınırları Aşan Deneyimler"</p>
-            <a href="#turlar" class="gold-gradient px-10 py-4 text-navy font-bold uppercase tracking-widest shadow-2xl hover:scale-105 transition transform">Turlarımızı Keşfedin</a>
-        </section>
+    <header id="navbar" class="fixed w-full top-0 z-50 glass-header py-5 px-6 md:px-12 flex justify-between items-center">
+        <a href="#" class="text-2xl md:text-3xl font-bold tracking-[0.2em] text-white">
+            VIZERIO<span class="text-[#C5A059]">.</span>
+        </a>
 
-        <section id="turlar" class="py-24 container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-navy uppercase">Aktif Programlar</h2>
-                <div class="w-32 h-1.5 bg-gold mx-auto mt-4"></div>
-            </div>
-
-            <div id="tur-listesi" class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                </div>
-        </section>
-    </div>
-
-    <div id="detay-sayfasi" class="hidden-page min-h-screen bg-white">
-        <nav class="bg-navy p-4 sticky top-0 z-50">
-            <button onclick="anaSayfayaDon()" class="text-gold font-bold flex items-center gap-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
-                GERİ DÖN
-            </button>
+        <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide text-gray-300">
+            <a href="#" class="text-[#C5A059] hover:text-white transition">SIRBİSTAN TURU</a>
+            <a href="#" class="hover:text-[#C5A059] transition">HAKKIMIZDA</a>
+            <a href="#" class="hover:text-[#C5A059] transition">VİZE İŞLEMLERİ</a>
+            <a href="#" class="hover:text-[#C5A059] transition">BLOG</a>
         </nav>
-        
-        <div class="container mx-auto px-4 py-12">
-            <div class="grid md:grid-cols-2 gap-12">
-                <img id="detay-resim" class="w-full h-[500px] object-cover rounded-lg shadow-2xl border-4 border-gold">
-                <div class="space-y-6">
-                    <h1 id="detay-baslik" class="text-4xl font-bold text-navy uppercase"></h1>
-                    <p id="detay-tarih" class="text-gold font-bold text-xl"></p>
-                    <div id="detay-fiyat" class="text-3xl font-black text-navy border-b pb-4"></div>
-                    <div class="prose max-w-none">
-                        <h4 class="font-bold text-navy uppercase underline">Tur Hakkında</h4>
-                        <p id="detay-aciklama" class="text-gray-700 leading-relaxed"></p>
-                    </div>
-                    <div class="bg-gray-100 p-4 rounded border-l-4 border-red-500">
-                        <h4 class="font-bold text-xs uppercase text-gray-500">İade Politikası</h4>
-                        <p id="detay-iade" class="text-xs italic"></p>
-                    </div>
-                    <a id="whatsapp-link" href="#" target="_blank" class="block w-full text-center bg-green-600 text-white font-bold py-5 rounded-lg text-xl shadow-lg hover:bg-green-700 transition">
-                        KAYIT OL VE BİLGİ AL (WHATSAPP)
-                    </a>
+
+        <a href="https://wa.me/905510698812" class="hidden md:inline-block btn-primary px-6 py-2 rounded-full text-sm">
+            <i class="fab fa-whatsapp mr-2"></i> İletişime Geç
+        </a>
+
+        <button class="md:hidden text-white text-2xl"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <section class="hero-section flex items-center justify-center text-center px-4">
+        <div class="hero-bg"></div> <div class="hero-overlay"></div> <div class="relative z-10 max-w-4xl mx-auto mt-10">
+            <p class="text-[#C5A059] text-sm md:text-lg font-bold tracking-[0.3em] mb-4 uppercase" data-aos="fade-down" data-aos-duration="1000">
+                Profesyonel Vize & Tur Danışmanlığı
+            </p>
+            
+            <h1 class="text-white text-5xl md:text-7xl font-bold leading-tight mb-6" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+                Sınırları Aşan <br> <span class="gold-gradient-text">Unutulmaz Anılar</span>
+            </h1>
+
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                Vizesiz Sırbistan turları ve kişiye özel vize çözümleriyle hayallerinizdeki rotayı gerçeğe dönüştürün.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <a href="#turlar" class="btn-primary px-10 py-4 rounded shadow-2xl flex items-center justify-center">
+                    Sırbistan Turunu İncele <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+                <a href="#nasil-calisir" class="btn-secondary px-10 py-4 rounded flex items-center justify-center">
+                    Güvenli Kayıt Sistemi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-bar py-6 relative z-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center md:justify-around items-center gap-6 text-gray-400 text-sm md:text-base font-semibold">
+                
+                <div class="flex items-center gap-3" data-aos="fade-right" data-aos-delay="800">
+                    <i class="fas fa-certificate text-[#C5A059] text-2xl"></i>
+                    <span>TÜRSAB Onaylı Acenta</span>
                 </div>
+
+                <div class="hidden md:block w-px h-8 bg-gray-700"></div>
+
+                <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="900">
+                    <i class="fas fa-user-shield text-[#C5A059] text-2xl"></i>
+                    <span>%100 Güvenli Ödeme & KVKK</span>
+                </div>
+
+                <div class="hidden md:block w-px h-8 bg-gray-700"></div>
+
+                <div class="flex items-center gap-3" data-aos="fade-left" data-aos-delay="1000">
+                    <i class="fas fa-headset text-[#C5A059] text-2xl"></i>
+                    <span>7/24 Canlı Destek</span>
+                </div>
+
             </div>
         </div>
     </div>
 
+    <section id="turlar" class="bg-white py-20 min-h-screen">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-[#0C1324] mb-4">Popüler Rotalarımız</h2>
+            <p class="text-gray-600">Aşağı kaydırdığınızda menünün nasıl değiştiğini görün.</p>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // 1. ADIMDA ALDIĞINIZ CSV LİNKİNİ BURAYA YAPIŞTIRIN
-        const csvUrl = 'SENİN_GOOGLE_SHEETS_CSV_LİNKİN';
-        let turVerileri = [];
+        // 1. Initialize Animations (AOS)
+        AOS.init({
+            once: true, // Animasyonlar sadece bir kere çalışsın
+            offset: 100
+        });
 
-        async function turlariGetir() {
-            const response = await fetch(csvUrl);
-            const data = await response.text();
-            const rows = data.split('\n').slice(1);
-            const container = document.getElementById('tur-listesi');
-            
-            rows.forEach((row, index) => {
-                const cols = row.split(','); // Sütunları ayır
-                if(cols.length < 5) return;
-                
-                const turObj = { id: index, ad: cols[0], tarih: cols[1], fiyat: cols[2], resim: cols[3], kisa: cols[4], uzun: cols[5], iade: cols[6] };
-                turVerileri.push(turObj);
-
-                container.innerHTML += `
-                    <div class="bg-white shadow-2xl overflow-hidden group border-b-4 border-transparent hover:border-gold transition-all duration-300" data-aos="fade-up" data-aos-delay="${index * 100}">
-                        <div class="relative overflow-hidden h-80">
-                            <img src="${turObj.resim}" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                            <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition"></div>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-navy mb-2 uppercase">${turObj.ad}</h3>
-                            <p class="text-gold font-bold mb-4">${turObj.tarih}</p>
-                            <p class="text-gray-600 text-sm mb-6">${turObj.kisa}</p>
-                            <button onclick="detayGoster(${index})" class="w-full border-2 border-navy py-3 font-bold hover:bg-navy hover:text-white transition">DETAYLARI İNCELE</button>
-                        </div>
-                    </div>
-                `;
-            });
-            AOS.init({ duration: 1000, once: true });
-        }
-
-        function detayGoster(index) {
-            const tur = turVerileri[index];
-            document.getElementById('ana-sayfa').classList.add('hidden-page');
-            document.getElementById('detay-sayfasi').classList.remove('hidden-page');
-            
-            document.getElementById('detay-baslik').innerText = tur.ad;
-            document.getElementById('detay-tarih').innerText = "📅 Tarih: " + tur.tarih;
-            document.getElementById('detay-fiyat').innerText = "💰 Ücret: " + tur.fiyat;
-            document.getElementById('detay-resim').src = tur.resim;
-            document.getElementById('detay-aciklama').innerText = tur.uzun;
-            document.getElementById('detay-iade').innerText = tur.iade;
-            
-            const message = encodeURIComponent(`Merhaba, ${tur.ad} (${tur.tarih}) hakkında bilgi almak ve kayıt yaptırmak istiyorum.`);
-            document.getElementById('whatsapp-link').href = `https://wa.me/905510698812?text=${message}`;
-            
-            window.scrollTo(0,0);
-        }
-
-        function anaSayfayaDon() {
-            document.getElementById('ana-sayfa').classList.remove('hidden-page');
-            document.getElementById('detay-sayfasi').classList.add('hidden-page');
-        }
-
-        turlariGetir();
+        // 2. Sticky Header Logic
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 </html>
