@@ -11,309 +11,204 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
-    :root {
-      --navy: #0C1324;
-      --gold: #C5A059;
-      --gold-light: #f6e27a;
-      --white: #FFFFFF;
-      --gray-light: #f8f9fa;
-      --text-dark: #333;
-      --glass: rgba(12, 19, 36, 0.95);
-      --transition: all 0.3s ease;
+    :root{
+      --navy:#0C1324;
+      --gold:#C5A059;
+      --gold-light:#f6e27a;
+      --white:#FFFFFF;
+      --gray-light:#f8f9fa;
+      --text-dark:#333;
+      --glass:rgba(12,19,36,0.95);
+      --transition:all 0.3s ease;
     }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--gray-light);
-      color: var(--text-dark);
-      overflow-x: hidden;
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Poppins',sans-serif;
+      background-color:var(--gray-light);
+      color:var(--text-dark);
+      overflow-x:hidden;
     }
-
-    h1, h2, h3, .nav-link, .btn-book, .btn-outline { font-family: 'Montserrat', sans-serif; }
+    h1,h2,h3,.nav-link,.btn-book,.btn-outline{font-family:'Montserrat',sans-serif;}
 
     /* NAVBAR */
-    .navbar {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    .navbar{
+      position:fixed;top:0;left:0;width:100%;
+      padding:1rem 5%;
+      display:flex;justify-content:space-between;align-items:center;
+      z-index:1000;
+      background:var(--glass);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(197,160,89,0.2);
+      box-shadow:0 4px 20px rgba(0,0,0,0.2);
     }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .logo{
+      font-size:1.8rem;font-weight:800;color:var(--white);
+      letter-spacing:1px;text-transform:uppercase;
+      display:flex;align-items:center;gap:10px;
     }
-    .logo span { color: var(--gold); }
-
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-
-    .nav-link {
-      text-decoration: none;
-      color: var(--white);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: var(--transition);
-      position: relative;
+    .logo span{color:var(--gold);}
+    .nav-right{display:flex;align-items:center;gap:2rem;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-link{
+      text-decoration:none;color:var(--white);
+      font-weight:500;font-size:0.95rem;
+      transition:var(--transition);position:relative;
     }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -5px; left: 0;
-      width: 0; height: 2px;
-      background: var(--gold);
-      transition: var(--transition);
+    .nav-link::after{
+      content:'';position:absolute;bottom:-5px;left:0;
+      width:0;height:2px;background:var(--gold);
+      transition:var(--transition);
     }
-    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover::after{width:100%;}
 
     /* BUTTONS */
-    .btn-book {
-      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
-      color: var(--navy);
-      padding: 0.8rem 2rem;
-      border-radius: 4px;
-      font-weight: 800;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
-      border: none;
-      cursor: pointer;
-      letter-spacing: 1px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-      text-align: center;
+    .btn-book{
+      background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 100%);
+      color:var(--navy);
+      padding:0.8rem 2rem;border-radius:4px;
+      font-weight:800;text-decoration:none;text-transform:uppercase;
+      transition:var(--transition);
+      box-shadow:0 4px 15px rgba(197,160,89,0.3);
+      border:none;cursor:pointer;letter-spacing:1px;
+      display:inline-flex;align-items:center;justify-content:center;
+      white-space:nowrap;text-align:center;
     }
-    .btn-book:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5);
+    .btn-book:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(197,160,89,0.5);}
+    .btn-outline{
+      background:transparent;color:var(--white);
+      border:2px solid var(--gold);
+      padding:0.8rem 2rem;border-radius:4px;
+      font-weight:700;text-decoration:none;text-transform:uppercase;
+      transition:var(--transition);
+      display:inline-flex;align-items:center;justify-content:center;
+      white-space:nowrap;text-align:center;
     }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid var(--gold);
-      padding: 0.8rem 2rem;
-      border-radius: 4px;
-      font-weight: 700;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: var(--transition);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-      text-align: center;
-    }
-    .btn-outline:hover { background: var(--gold); color: var(--navy); }
+    .btn-outline:hover{background:var(--gold);color:var(--navy);}
 
     /* HERO */
-    .hero {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      background-color: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      padding: 0 20px;
+    .hero{
+      position:relative;height:100vh;width:100%;
+      background-color:var(--navy);
+      display:flex;align-items:center;justify-content:center;
+      text-align:center;overflow:hidden;padding:0 20px;
     }
 
-    /* depth */
     .depth-bg{
-      position:absolute;
-      inset:-20%;
-      z-index:0;
+      position:absolute;inset:-20%;z-index:0;
       background:
         radial-gradient(circle at 30% 40%, rgba(197,160,89,0.12), transparent 40%),
         radial-gradient(circle at 70% 60%, rgba(197,160,89,0.09), transparent 45%),
         linear-gradient(180deg, #0C1324 0%, #050914 100%);
-      filter: blur(26px);
-      transform: translate3d(0,0,0) scale(1.15);
-      will-change: transform;
-      animation: slowFloat 40s ease-in-out infinite alternate;
-      pointer-events: none;
+      filter:blur(26px);
+      transform:translate3d(0,0,0) scale(1.15);
+      will-change:transform;
+      animation:slowFloat 40s ease-in-out infinite alternate;
+      pointer-events:none;
     }
     @keyframes slowFloat{
-      0%   { transform: translate3d(-18px,-10px,0) scale(1.15); }
-      100% { transform: translate3d(18px, 10px,0) scale(1.18); }
+      0%{transform:translate3d(-18px,-10px,0) scale(1.15);}
+      100%{transform:translate3d(18px,10px,0) scale(1.18);}
     }
 
-    /* 3D Globe Layer (daha belirgin) */
+    /* 3D Globe Layer (gerçek dünya daha belirgin) */
     #globe{
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      opacity: 0.95; /* daha belirgin */
-      filter: saturate(1.12) contrast(1.18) brightness(1.05);
+      position:absolute;inset:0;z-index:1;
+      pointer-events:none;
+      opacity:1;
+      filter:saturate(1.15) contrast(1.18) brightness(1.08);
     }
 
-    /* Overlay (dünyayı boğmayacak şekilde hafifletildi) */
+    /* Overlay (dünyayı öldürmeyecek kadar) */
     .video-overlay{
-      position: absolute;
-      inset: 0;
-      z-index: 2;
+      position:absolute;inset:0;z-index:2;
       background:
-        radial-gradient(60% 50% at 50% 45%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.52) 70%),
-        linear-gradient(to bottom, rgba(12, 19, 36, 0.45), rgba(12, 19, 36, 0.78));
-      pointer-events: none;
+        radial-gradient(60% 55% at 50% 45%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.42) 72%),
+        linear-gradient(to bottom, rgba(12, 19, 36, 0.35), rgba(12, 19, 36, 0.72));
+      pointer-events:none;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 950px;
+    .hero-content{position:relative;z-index:3;max-width:950px;}
+    .hero h1{
+      color:var(--white);
+      font-size:4rem;font-weight:800;line-height:1.1;
+      margin-bottom:1.5rem;
+      text-shadow:0 10px 40px rgba(0,0,0,0.6);
     }
-
-    .hero h1 {
-      color: var(--white);
-      font-size: 4rem;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    .hero h1 span{color:var(--gold);}
+    .hero p{
+      color:rgba(255,255,255,0.95);
+      font-size:1.3rem;margin-bottom:3rem;font-weight:300;
+      max-width:800px;margin-left:auto;margin-right:auto;
     }
-    .hero h1 span { color: var(--gold); }
-
-    .hero p {
-      color: rgba(255,255,255,0.95);
-      font-size: 1.3rem;
-      margin-bottom: 3rem;
-      font-weight: 300;
-      max-width: 800px;
-      margin-left: auto; margin-right: auto;
-    }
-
-    .hero-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .hero-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
 
     /* DESTINATIONS */
-    .destinations { padding: 6rem 5%; background-color: var(--white); }
-
-    .section-header { text-align: center; margin-bottom: 4rem; }
-    .section-header h2 { font-size: 2.8rem; color: var(--navy); margin-bottom: 10px; font-weight: 800; }
-    .section-header p { color: #666; font-size: 1.1rem; }
-    .gold-line { width: 100px; height: 5px; background-color: var(--gold); margin: 15px auto 0; }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
+    .destinations{padding:6rem 5%;background-color:var(--white);}
+    .section-header{text-align:center;margin-bottom:4rem;}
+    .section-header h2{font-size:2.8rem;color:var(--navy);margin-bottom:10px;font-weight:800;}
+    .section-header p{color:#666;font-size:1.1rem;}
+    .gold-line{width:100px;height:5px;background-color:var(--gold);margin:15px auto 0;}
+    .grid-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+      gap:2.5rem;
     }
-
-    .card {
-      position: relative;
-      height: 480px;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-      transition: var(--transition);
-      cursor: pointer;
-      border: 1px solid rgba(0,0,0,0.05);
+    .card{
+      position:relative;height:480px;border-radius:15px;overflow:hidden;
+      box-shadow:0 15px 35px rgba(0,0,0,0.1);
+      transition:var(--transition);cursor:pointer;
+      border:1px solid rgba(0,0,0,0.05);
     }
-    .card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px rgba(12, 19, 36, 0.25); }
-
-    .card-img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s;
+    .card:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(12, 19, 36, 0.25);}
+    .card-img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s;}
+    .card:hover .card-img{transform:scale(1.1);}
+    .card-overlay{
+      position:absolute;bottom:0;left:0;width:100%;
+      background:linear-gradient(to top, var(--navy), transparent);
+      padding:2.5rem 2rem;color:var(--white);
     }
-    .card:hover .card-img { transform: scale(1.1); }
-
-    .card-overlay {
-      position: absolute;
-      bottom: 0; left: 0; width: 100%;
-      background: linear-gradient(to top, var(--navy), transparent);
-      padding: 2.5rem 2rem;
-      color: var(--white);
+    .card-tag{
+      position:absolute;top:20px;right:20px;
+      background:var(--gold);color:var(--navy);
+      padding:8px 16px;border-radius:30px;
+      font-size:0.85rem;font-weight:800;text-transform:uppercase;
+      box-shadow:0 4px 15px rgba(0,0,0,0.4);
+      z-index:10;
     }
-
-    .card-tag {
-      position: absolute;
-      top: 20px; right: 20px;
-      background: var(--gold);
-      color: var(--navy);
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-      z-index: 10;
-    }
-
-    .card h3 { font-size: 2rem; margin-bottom: 8px; color: var(--gold); text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-    .card p { font-size: 1rem; color: #f0f0f0; font-weight: 400; line-height: 1.5; }
+    .card h3{font-size:2rem;margin-bottom:8px;color:var(--gold);text-shadow:0 2px 10px rgba(0,0,0,0.5);}
+    .card p{font-size:1rem;color:#f0f0f0;font-weight:400;line-height:1.5;}
 
     /* FOOTER */
-    footer {
-      background: var(--navy);
-      color: var(--white);
-      padding: 4rem 5% 2rem 5%;
-      text-align: center;
-      border-top: 5px solid var(--gold);
+    footer{
+      background:var(--navy);color:var(--white);
+      padding:4rem 5% 2rem 5%;
+      text-align:center;border-top:5px solid var(--gold);
     }
-
-    .trust-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 3rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+    .trust-section{
+      display:flex;justify-content:center;align-items:center;
+      gap:3rem;margin-bottom:3rem;flex-wrap:wrap;
+      padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.1);
     }
+    .trust-item{display:flex;align-items:center;gap:12px;opacity:0.9;transition:var(--transition);}
+    .trust-item:hover{opacity:1;transform:scale(1.05);}
+    .trust-item i{font-size:1.8rem;color:var(--gold);}
+    .trust-item span{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:0.5px;}
+    .copyright{font-size:0.9rem;opacity:0.6;}
 
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      opacity: 0.9;
-      transition: var(--transition);
+    @media (max-width: 768px){
+      .nav-links{display:none;}
+      .hero h1{font-size:2.5rem;}
+      .hero p{font-size:1rem;}
+      .hero-btns{flex-direction:column;width:100%;}
+      .btn-book,.btn-outline{width:100%;}
+      .trust-section{flex-direction:column;gap:1.5rem;}
+      .card{height:400px;}
+      #globe{opacity:0.92;}
+      .depth-bg{filter:blur(30px);}
     }
-    .trust-item:hover { opacity: 1; transform: scale(1.05); }
-    .trust-item i { font-size: 1.8rem; color: var(--gold); }
-    .trust-item span { font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
-
-    .copyright { font-size: 0.9rem; opacity: 0.6; }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hero h1 { font-size: 2.5rem; }
-      .hero p { font-size: 1rem; }
-      .hero-btns { flex-direction: column; width: 100%; }
-      .btn-book, .btn-outline { width: 100%; }
-      .trust-section { flex-direction: column; gap: 1.5rem; }
-      .card { height: 400px; }
-
-      #globe{ opacity: 0.78; }
-      .depth-bg{ filter: blur(30px); }
-    }
-
     @media (prefers-reduced-motion: reduce){
-      .depth-bg{ animation: none; }
-      #globe{ opacity: 0.55; }
+      .depth-bg{animation:none;}
+      #globe{opacity:0.60;}
     }
   </style>
 </head>
@@ -444,91 +339,82 @@
       const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const GOLD = '#C5A059';
 
-      // Şehirler (önemli şehirler)
-      const cityByName = {
-        Istanbul:  { name:'Istanbul',  lat: 41.0082, lng: 28.9784 },
-        London:    { name:'London',    lat: 51.5074, lng: -0.1278 },
-        Paris:     { name:'Paris',     lat: 48.8566, lng: 2.3522 },
-        NewYork:   { name:'New York',  lat: 40.7128, lng: -74.0060 },
-        Toronto:   { name:'Toronto',   lat: 43.6532, lng: -79.3832 },
-        MexicoCity:{ name:'Mexico City',lat: 19.4326, lng: -99.1332 },
-        Rio:       { name:'Rio',       lat: -22.9068, lng: -43.1729 },
-        Dubai:     { name:'Dubai',     lat: 25.2048, lng: 55.2708 },
-        Singapore: { name:'Singapore', lat: 1.3521,  lng: 103.8198 },
-        Tokyo:     { name:'Tokyo',     lat: 35.6762, lng: 139.6503 },
-        Sydney:    { name:'Sydney',    lat: -33.8688, lng: 151.2093 }
-      };
-
-      // Uçuş sırası: İstanbul'dan başlar, şehirleri atlaya atlaya gider
+      // İstanbul'dan başlayıp (Belgrad, Roma, Paris/Fransa...) dolaşan rota
       const routeOrder = [
-        cityByName.Istanbul,
-        cityByName.London,
-        cityByName.Paris,
-        cityByName.NewYork,
-        cityByName.Toronto,
-        cityByName.MexicoCity,
-        cityByName.Rio,
-        cityByName.Dubai,
-        cityByName.Singapore,
-        cityByName.Tokyo,
-        cityByName.Sydney
+        { name:'Istanbul', lat:41.0082, lng:28.9784 },
+        { name:'Belgrade', lat:44.7866, lng:20.4489 },
+        { name:'Rome',     lat:41.9028, lng:12.4964 },
+        { name:'Paris',    lat:48.8566, lng:2.3522  },  // Fransa
+        { name:'London',   lat:51.5074, lng:-0.1278 },
+        { name:'Madrid',   lat:40.4168, lng:-3.7038 },
+        { name:'New York', lat:40.7128, lng:-74.0060 },
+        { name:'Dubai',    lat:25.2048, lng:55.2708 },
+        { name:'Tokyo',    lat:35.6762, lng:139.6503 },
+        { name:'Sydney',   lat:-33.8688, lng:151.2093 }
       ];
 
-      // Noktalar: tüm şehirler
-      const points = routeOrder.map(c => ({ ...c }));
+      // Noktalar: rotadaki şehirler
+      const points = routeOrder.map(c => ({...c}));
 
-      // Globe init
       const globe = Globe()(el)
         .backgroundColor('rgba(0,0,0,0)')
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-        .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+
+        /* GERÇEKÇİ DÜNYA DOKUSU (photorealistic) */
+        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+        .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+
         .showAtmosphere(true)
         .atmosphereColor(GOLD)
-        .atmosphereAltitude(0.22)
+        .atmosphereAltitude(0.20)
 
         // Şehir noktaları
         .pointsData(points)
         .pointLat(d => d.lat)
         .pointLng(d => d.lng)
         .pointColor(() => GOLD)
-        .pointAltitude(0.028)
-        .pointRadius(0.26)
+        .pointAltitude(0.030)
+        .pointRadius(0.28)
 
-        // Başlangıçta boş arcs; sonra adım adım güncellenecek
+        // Arc animasyonu (uçuş izi)
         .arcsData([])
         .arcColor(() => [GOLD, GOLD])
-        .arcAltitude(() => 0.30)
-        .arcStroke(() => 0.95)
+        .arcAltitude(() => 0.32)
+        .arcStroke(() => 1.05)
         .arcDashLength(0.55)
         .arcDashGap(2.0)
-        .arcDashAnimateTime(prefersReduced ? 0 : 2000);
+        .arcDashAnimateTime(prefersReduced ? 0 : 1900);
 
-      // "İniş" hissi: hedefte halka/pulse
+      // İniş hissi için ring
       globe.ringsData([])
         .ringLat(d => d.lat)
         .ringLng(d => d.lng)
         .ringColor(() => [GOLD, 'rgba(197,160,89,0)'])
-        .ringMaxRadius(() => 4.2)
-        .ringPropagationSpeed(() => 2.6)
-        .ringRepeatPeriod(() => 1200);
+        .ringMaxRadius(() => 4.6)
+        .ringPropagationSpeed(() => 2.8)
+        .ringRepeatPeriod(() => 1100);
 
-      // Light (premium)
+      // Işık (daha gerçekçi/kontrastlı)
       const scene = globe.scene();
-      const ambient = new THREE.AmbientLight(0xffffff, 0.80);
-      const dir = new THREE.DirectionalLight(0xffffff, 1.25);
-      dir.position.set(2, 1, 1);
+      const ambient = new THREE.AmbientLight(0xffffff, 0.55);
+      const dir1 = new THREE.DirectionalLight(0xffffff, 1.35);
+      dir1.position.set(2.2, 1.2, 1.0);
+      const dir2 = new THREE.DirectionalLight(0xffffff, 0.55);
+      dir2.position.set(-2.0, -0.5, -1.0);
       scene.add(ambient);
-      scene.add(dir);
+      scene.add(dir1);
+      scene.add(dir2);
 
-      // Kamera
-      globe.pointOfView({ lat: 18, lng: 15, altitude: 2.05 }, 0);
+      // Kamera sabit: 365° dönüş hissi kesilmesin (pointOfView değiştirmiyoruz)
+      globe.pointOfView({ lat: 22, lng: 15, altitude: 2.05 }, 0);
+
+      // Arka plan olduğu için kontrol kapalı
       globe.controls().enableZoom = false;
       globe.controls().enablePan = false;
 
-      // Dünya sağdan sola doğru dönsün: autoRotateSpeed negatif
+      // 365° sürekli dönüş: soldan sağa (pozitif hız)
       if (!prefersReduced) {
         globe.controls().autoRotate = true;
-        globe.controls().autoRotateSpeed = -0.70; // sağdan sola
+        globe.controls().autoRotateSpeed = 0.85; // soldan sağa, sürekli
       }
 
       const resize = () => {
@@ -538,12 +424,11 @@
       window.addEventListener('resize', resize);
       resize();
 
-      // Uçuş: İstanbul -> sıradaki şehir -> sıradaki şehir ...
+      // Uçuş: İstanbul -> Belgrad -> Roma -> Paris ... (tek aktif uçuş, premium netlik)
       let i = 0;
-
       const makeArc = (from, to) => ({
         startLat: from.lat, startLng: from.lng,
-        endLat: to.lat,     endLng: to.lng
+        endLat: to.lat, endLng: to.lng
       });
 
       const step = () => {
@@ -552,25 +437,14 @@
         const from = routeOrder[i % routeOrder.length];
         const to = routeOrder[(i + 1) % routeOrder.length];
 
-        // Tek aktif rota (daha premium, daha net)
         globe.arcsData([ makeArc(from, to) ]);
-
-        // Hedefte iniş halkası
         globe.ringsData([{ lat: to.lat, lng: to.lng }]);
-
-        // Kamerayı çok az hedefe doğru kaydır (abartısız)
-        globe.pointOfView(
-          { lat: to.lat * 0.22, lng: to.lng * 0.22, altitude: 2.05 },
-          1100
-        );
 
         i++;
       };
 
-      // İlk adımı hemen göster
       step();
-      // Atlaya atlaya gitsin
-      if (!prefersReduced) setInterval(step, 2600);
+      if (!prefersReduced) setInterval(step, 2400);
     })();
   </script>
 </body>
