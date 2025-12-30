@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vizerio | Global Travel Agency</title>
+    <title>Vizerio | Sınırları Aşan Deneyimler</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,28 +12,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- 1. BRAND COLORS (OFFICE POSTER IDENTITY) --- */
+        /* --- 1. PRESTİJLİ RENK PALETİ (Poster Renkleri) --- */
         :root {
-            --navy: #0C1324;      /* Poster Laciverti - Derin ve Lüks */
-            --gold: #C5A059;      /* Poster Altını - Mat ve Şık */
-            --gold-light: #f6e27a;
+            --navy: #0C1324;      /* Poster Laciverti */
+            --gold: #C5A059;      /* Poster Altını */
+            --gold-light: #f6e27a; 
             --white: #FFFFFF;
-            --gray-light: #f4f4f4;
+            --gray-light: #f8f9fa;
             --text-dark: #333;
+            --glass: rgba(12, 19, 36, 0.95); /* Menü için buzlu cam */
+            --transition: all 0.3s ease;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--white);
+            background-color: var(--gray-light);
             color: var(--text-dark);
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .nav-link, .btn, .lang-toggle { font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3, .nav-link, .btn { font-family: 'Montserrat', sans-serif; }
 
-        /* --- 2. NAVIGATION (GLASSMORPHISM) --- */
+        /* --- MENÜ TASARIMI --- */
         .navbar {
             position: fixed;
             top: 0; left: 0; width: 100%;
@@ -42,73 +44,75 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(12, 19, 36, 0.85); /* Navy transparent */
+            background: var(--glass);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
             color: var(--white);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         .logo span { color: var(--gold); }
-        .logo i { font-size: 1.5rem; color: var(--gold); }
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
+        .nav-right { display: flex; align-items: center; gap: 2rem; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        
         .nav-link {
             text-decoration: none;
             color: var(--white);
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            transition: var(--transition);
             position: relative;
-            transition: color 0.3s;
         }
-        .nav-link:hover { color: var(--gold); }
-
-        /* Language Toggle */
-        .lang-toggle {
-            cursor: pointer;
-            color: var(--gold);
-            font-weight: 700;
-            border: 1px solid var(--gold);
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            transition: 0.3s;
+        .nav-link::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+            background: var(--gold); transition: var(--transition);
         }
-        .lang-toggle:hover { background: var(--gold); color: var(--navy); }
+        .nav-link:hover::after { width: 100%; }
 
+        /* Butonlar */
         .btn-book {
-            background: linear-gradient(135deg, #f6e27a 0%, #C5A059 100%);
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
             color: var(--navy);
-            padding: 0.7rem 1.5rem;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+        .btn-book:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5); 
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+            padding: 0.8rem 2rem;
             border-radius: 4px;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+            text-transform: uppercase;
+            transition: var(--transition);
         }
-        .btn-book:hover { transform: translateY(-2px); box-shadow: 0 0 25px rgba(197, 160, 89, 0.6); }
+        .btn-outline:hover { background: var(--gold); color: var(--navy); }
 
-        /* --- 3. HERO SECTION (CANVAS MAP) --- */
+        /* --- HERO (GİRİŞ) BÖLÜMÜ --- */
         .hero {
             position: relative;
             height: 100vh;
@@ -122,85 +126,72 @@
             padding: 0 20px;
         }
 
-        #world-map {
+        /* Uçuş Animasyonu Alanı */
+        #flight-map {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
             z-index: 1;
-            opacity: 0.3;
+            opacity: 0.4;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 900px;
+            max-width: 950px;
         }
 
         .hero h1 {
             color: var(--white);
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.1;
             margin-bottom: 1.5rem;
+            text-shadow: 0 10px 40px rgba(0,0,0,0.6);
         }
         .hero h1 span { color: var(--gold); }
 
         .hero p {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
+            color: rgba(255,255,255,0.95);
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
             font-weight: 300;
+            max-width: 800px;
+            margin-left: auto; margin-right: auto;
         }
 
-        .hero-btns {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
+        .hero-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--gold);
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .btn-outline:hover { background: var(--gold); color: var(--navy); }
-
-        /* --- 4. DESTINATIONS GRID (VISUAL PRESTIGE) --- */
-        .destinations {
-            padding: 6rem 5%;
-            background-color: var(--white);
-        }
-
+        /* --- ROTALAR (DESTINATIONS) --- */
+        .destinations { padding: 6rem 5%; background-color: var(--white); }
+        
         .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-header h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 10px; font-weight: 800; }
-        .gold-line { width: 80px; height: 4px; background-color: var(--gold); margin: 0 auto; }
+        .section-header h2 { font-size: 2.8rem; color: var(--navy); margin-bottom: 10px; font-weight: 800; }
+        .section-header p { color: #666; font-size: 1.1rem; }
+        .gold-line { width: 100px; height: 5px; background-color: var(--gold); margin: 15px auto 0; }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .card {
             position: relative;
-            height: 450px;
-            border-radius: 12px;
+            height: 480px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            transition: transform 0.4s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: var(--transition);
             cursor: pointer;
+            border: 1px solid rgba(0,0,0,0.05);
         }
-        .card:hover { transform: translateY(-10px); }
+        .card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px rgba(12, 19, 36, 0.25); }
 
         .card-img {
             width: 100%; height: 100%;
             object-fit: cover;
-            transition: transform 0.6s;
+            transition: transform 0.8s;
         }
         .card:hover .card-img { transform: scale(1.1); }
 
@@ -208,89 +199,69 @@
             position: absolute;
             bottom: 0; left: 0; width: 100%;
             background: linear-gradient(to top, var(--navy), transparent);
-            padding: 2rem;
-            color: white;
+            padding: 2.5rem 2rem;
+            color: var(--white);
         }
 
         .card-tag {
             position: absolute;
             top: 20px; right: 20px;
-            padding: 6px 14px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 8px 16px;
             border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 700;
+            font-size: 0.85rem;
+            font-weight: 800;
             text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             z-index: 10;
         }
-        .tag-active { background: var(--gold); color: var(--navy); }
-        .tag-soon { background: var(--white); color: var(--navy); }
 
-        .card h3 { font-size: 1.8rem; margin-bottom: 5px; color: var(--gold); }
-        .card p { font-size: 0.95rem; color: #eee; }
+        .card h3 { font-size: 2rem; margin-bottom: 8px; color: var(--gold); text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        .card p { font-size: 1rem; color: #f0f0f0; font-weight: 400; line-height: 1.5; }
 
-        /* --- 5. TRUST & LEGAL SECTION (REPOSITIONED) --- */
-        .trust-section {
-            background-color: #f8f9fa;
-            border-top: 4px solid var(--gold);
-            padding: 3rem 5%;
+        /* --- FOOTER --- */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 5% 2rem 5%;
             text-align: center;
+            border-top: 5px solid var(--gold);
         }
         
-        .trust-title {
-            color: var(--navy);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .partners-wrapper {
+        .trust-section {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 3rem;
+            margin-bottom: 3rem;
             flex-wrap: wrap;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .partner-box {
+        .trust-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #555;
-            opacity: 0.8;
-            transition: opacity 0.3s;
+            gap: 12px;
+            opacity: 0.9;
+            transition: var(--transition);
         }
-        .partner-box:hover { opacity: 1; color: var(--navy); }
-        .partner-box i { font-size: 2rem; }
+        .trust-item:hover { opacity: 1; transform: scale(1.05); }
+        .trust-item i { font-size: 1.8rem; color: var(--gold); }
+        .trust-item span { font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        .legal-text {
-            margin-top: 2rem;
-            font-size: 0.85rem;
-            color: #777;
-            max-width: 800px;
-            margin-left: auto; margin-right: auto;
-        }
+        .copyright { font-size: 0.9rem; opacity: 0.6; }
 
-        /* Footer */
-        footer {
-            background: var(--navy);
-            color: rgba(255,255,255,0.6);
-            padding: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Responsive */
+        /* --- MOBİL UYUMLULUK --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Simplified for mobile */
-            .hero h1 { font-size: 2.2rem; }
-            .hero-btns { flex-direction: column; }
-            .grid-container { grid-template-columns: 1fr; }
+            .nav-links { display: none; } 
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1rem; }
+            .hero-btns { flex-direction: column; width: 100%; }
+            .btn-book, .btn-outline { width: 100%; }
+            .trust-section { flex-direction: column; gap: 1.5rem; }
+            .card { height: 400px; }
         }
     </style>
 </head>
@@ -298,181 +269,138 @@
 
     <nav class="navbar">
         <div class="logo">
-            <i class="fas fa-paper-plane"></i>
+            <i class="fas fa-plane-departure" style="color: var(--gold);"></i>
             VIZERIO<span>.</span>
         </div>
         
         <div class="nav-right">
             <ul class="nav-links">
-                <li><a href="#" class="nav-link" data-lang="nav_home">Home</a></li>
-                <li><a href="#destinations" class="nav-link" data-lang="nav_dest">Destinations</a></li>
-                <li><a href="#" class="nav-link" data-lang="nav_about">About Us</a></li>
+                <li><a href="#" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="#rotalar" class="nav-link">Rotalar</a></li>
+                <li><a href="#" class="nav-link">Hakkımızda</a></li>
             </ul>
             
-            <button class="lang-toggle" id="langBtn">TR | EN</button>
-            <a href="https://wa.me/905510698812" class="btn-book" data-lang="nav_cta">BOOK NOW</a>
+            <a href="https://wa.me/905510698812" class="btn-book">REZERVASYON YAP</a>
         </div>
     </nav>
 
     <section class="hero">
-        <canvas id="world-map"></canvas>
+        <canvas id="flight-map"></canvas>
         <div class="hero-content">
-            <h1 id="hero-title">Your Gateway to the <br><span>World's Hidden Gems</span></h1>
-            <p id="hero-sub">Experience premium, visa-free journeys and luxury tours across Serbia, Russia, Dubai, and beyond.</p>
+            <h1>Sadece Bir Tatil Değil, <br><span>Prestijli Bir Yaşam Tarzı.</span></h1>
+            <p>Rusya'nın ihtişamı, Sırbistan'ın enerjisi ve Dubai'nin lüksü. Vizerio ile standartların ötesine geç, global bir gezgin ol.</p>
             <div class="hero-btns">
-                <a href="#destinations" class="btn-book" data-lang="hero_btn1">VIEW TOURS</a>
-                <a href="#" class="btn-outline" data-lang="hero_btn2">LEARN MORE</a>
+                <a href="#rotalar" class="btn-book">ÜLKELERİ KEŞFET</a>
+                <a href="https://wa.me/905510698812" class="btn-outline">WHATSAPP İLE SOR</a>
             </div>
         </div>
     </section>
 
-    <section class="destinations" id="destinations">
+    <section class="destinations" id="rotalar">
         <div class="section-header">
-            <h2 data-lang="grid_title">Our Prestige Destinations</h2>
+            <h2>Sana Özel Deneyimler</h2>
+            <p>Şehirleri değil, kültürleri keşfet. Seçkin ülke turlarımız.</p>
             <div class="gold-line"></div>
         </div>
 
         <div class="grid-container">
-            <div class="card">
-                <span class="card-tag tag-active">Active Now</span>
-                <img src="https://images.unsplash.com/photo-1549643977-c934f0c976f9?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Serbia">
+            
+            <div class="card" onclick="location.href='https://wa.me/905510698812'">
+                <span class="card-tag">Vizesiz Avrupa</span>
+                <img src="https://images.unsplash.com/photo-1549643977-c934f0c976f9?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Sırbistan">
                 <div class="card-overlay">
-                    <h3 data-lang="card_serbia">Serbia</h3>
-                    <p data-lang="desc_serbia">The Balkan Mystery. Visa-free entry, historic fortresses, and vibrant nightlife.</p>
+                    <h3>Sırbistan</h3>
+                    <p>Vizesiz giriş fırsatıyla Balkanların en canlı kültürünü ve eğlencesini yaşayın.</p>
                 </div>
             </div>
 
-            <div class="card">
-                <span class="card-tag tag-active">Limited Slots</span>
-                <img src="https://images.unsplash.com/photo-1512453979798-5ea904ac66de?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Dubai">
+            <div class="card" onclick="location.href='https://wa.me/905510698812'">
+                <span class="card-tag">Tarih & İhtişam</span>
+                <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Rusya">
                 <div class="card-overlay">
-                    <h3>Dubai</h3>
-                    <p>Golden Sands. Luxury shopping, desert safaris, and the Burj Khalifa.</p>
+                    <h3>Rusya</h3>
+                    <p>Kuzeyin ihtişamı, imparatorluk sarayları ve eşsiz bir sanat tarihi.</p>
                 </div>
             </div>
 
-            <div class="card">
-                <span class="card-tag tag-soon">Season 2026</span>
-                <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Russia">
+            <div class="card" onclick="location.href='https://wa.me/905510698812'">
+                <span class="card-tag">Prestij & Moda</span>
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Fransa">
                 <div class="card-overlay">
-                    <h3 data-lang="card_russia">Russia</h3>
-                    <p>Heritage & Elegance. Experience the White Nights and imperial grandeur.</p>
+                    <h3>Fransa</h3>
+                    <p>Romantizm, moda ve sanatın dünyadaki başkenti. Seçkin bir Avrupa deneyimi.</p>
                 </div>
             </div>
 
-            <div class="card">
-                <span class="card-tag tag-soon">Planning</span>
-                <img src="https://images.unsplash.com/photo-1539650116455-8efgd4.jpg?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Egypt">
+            <div class="card" onclick="location.href='https://wa.me/905510698812'">
+                <span class="card-tag">Lüks & Gelecek</span>
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea904ac66de?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Dubai BAE">
                 <div class="card-overlay">
-                    <h3>Egypt</h3>
-                    <p>Wonders of the Nile. Pyramids, history, and endless mystery.</p>
+                    <h3>BAE - Dubai</h3>
+                    <p>Çölün ortasında yükselen lüks, modern mimari ve sınırsız alışveriş keyfi.</p>
                 </div>
             </div>
 
-            <div class="card">
-                <span class="card-tag tag-soon">Planning</span>
-                <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Italy">
+            <div class="card" onclick="location.href='https://wa.me/905510698812'">
+                <span class="card-tag">Antik Gizem</span>
+                <img src="https://images.unsplash.com/photo-1539650116455-8efgd4.jpg?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Mısır">
                 <div class="card-overlay">
-                    <h3>Italy</h3>
-                    <p>Eternal Rome. Art, culture, and the finest cuisine in the world.</p>
+                    <h3>Mısır</h3>
+                    <p>Piramitlerin gölgesinde binlerce yıllık tarihe egzotik bir yolculuk.</p>
                 </div>
             </div>
 
-            <div class="card">
-                <span class="card-tag tag-active">Summer 2026</span>
-                <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Antalya">
+             <div class="card" onclick="location.href='https://wa.me/905510698812'">
+                <span class="card-tag">Fiesta & Enerji</span>
+                <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=800" class="card-img" alt="İspanya">
                 <div class="card-overlay">
-                    <h3>Antalya</h3>
-                    <p>Turquoise Coast. The pearl of the Mediterranean awaits.</p>
+                    <h3>İspanya</h3>
+                    <p>Akdeniz ateşi, flamenko ruhu ve bitmeyen bir enerji. Sıcak bir Avrupa masalı.</p>
                 </div>
             </div>
+
         </div>
-    </section>
-
-    <section class="trust-section">
-        <h4 class="trust-title" data-lang="trust_title">Official Strategic Partnerships</h4>
-        
-        <div class="partners-wrapper">
-            <div class="partner-box">
-                <i class="fas fa-crown" style="color: var(--navy);"></i>
-                <span>VIZERIO</span>
-            </div>
-            <div style="font-size: 1.5rem; color: #ccc;">&times;</div>
-            <div class="partner-box">
-                <i class="fas fa-globe" style="color: var(--gold);"></i>
-                <span>ERCIN TURIZM</span>
-            </div>
-            <div class="partner-box">
-                <i class="fas fa-certificate" style="color: #d32f2f;"></i>
-                <span>TURSAB</span>
-            </div>
-        </div>
-
-        <p class="legal-text" data-lang="trust_desc">
-            Vizerio is a Strategic Partner of Ercin Turizm (TURSAB License No: 12345). All tours are organized under the assurance of TURSAB and strictly adhere to KVKK data protection regulations.
-        </p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Vizerio Travel. Designed for Global Excellence.</p>
+        <div class="trust-section">
+            <div class="trust-item">
+                <i class="fas fa-crown"></i>
+                <span>VIZERIO PRESTIGE</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-certificate"></i>
+                <span>TÜRSAB ONAYLI PARTNER</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>%100 GÜVENLİ ÖDEME</span>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Vizerio Travel. Tüm Hakları Saklıdır.</p>
     </footer>
 
     <script>
-        // 1. LANGUAGE LOGIC
-        const translations = {
-            en: {
-                nav_home: "Home", nav_dest: "Destinations", nav_about: "About Us", nav_cta: "BOOK NOW",
-                hero_title: "Your Gateway to the <br><span>World's Hidden Gems</span>",
-                hero_sub: "Experience premium, visa-free journeys and luxury tours across Serbia, Russia, Dubai, and beyond.",
-                hero_btn1: "VIEW TOURS", hero_btn2: "LEARN MORE",
-                grid_title: "Our Prestige Destinations",
-                card_serbia: "Serbia", desc_serbia: "The Balkan Mystery. Visa-free entry, historic fortresses, and vibrant nightlife.",
-                card_russia: "Russia",
-                trust_title: "OFFICIAL STRATEGIC PARTNERSHIPS",
-                trust_desc: "Vizerio is a Strategic Partner of Ercin Turizm (TURSAB License No: 12345). All tours are organized under the assurance of TURSAB and strictly adhere to KVKK data protection regulations."
-            },
-            tr: {
-                nav_home: "Ana Sayfa", nav_dest: "Rotalar", nav_about: "Hakkımızda", nav_cta: "REZERVASYON YAP",
-                hero_title: "Dünyanın Gizli Cennetlerine <br><span>Açılan Kapınız</span>",
-                hero_sub: "Sırbistan, Rusya, Dubai ve ötesinde vizesiz seyahat ve lüks turları deneyimleyin.",
-                hero_btn1: "TURLARI İNCELE", hero_btn2: "BİLGİ AL",
-                grid_title: "Prestijli Rotalarımız",
-                card_serbia: "Sırbistan", desc_serbia: "Balkanların Gizemi. Vizesiz giriş, tarihi kaleler ve canlı gece hayatı.",
-                card_russia: "Rusya",
-                trust_title: "RESMİ STRATEJİK ORTAKLIKLAR",
-                trust_desc: "Vizerio, Erçin Turizm (TÜRSAB Belge No: 12345) Stratejik Ortağıdır. Tüm turlar TÜRSAB güvencesi altında düzenlenmekte ve KVKK veri koruma yönetmeliklerine tam uyum sağlamaktadır."
-            }
-        };
-
-        let currentLang = 'en';
-        const langBtn = document.getElementById('langBtn');
-
-        langBtn.addEventListener('click', () => {
-            currentLang = currentLang === 'en' ? 'tr' : 'en';
-            langBtn.textContent = currentLang === 'en' ? 'TR | EN' : 'EN | TR';
-            updateContent();
-        });
-
-        function updateContent() {
-            document.querySelectorAll('[data-lang]').forEach(el => {
-                const key = el.getAttribute('data-lang');
-                if (translations[currentLang][key]) {
-                    el.innerHTML = translations[currentLang][key];
-                }
-            });
-            // Special HTML update for Title
-            if(currentLang === 'tr') {
-                document.getElementById('hero-title').innerHTML = translations.tr.hero_title;
-            } else {
-                document.getElementById('hero-title').innerHTML = translations.en.hero_title;
-            }
-        }
-
-        // 2. FLUID MAP ANIMATION
-        const canvas = document.getElementById('world-map');
+        const canvas = document.getElementById('flight-map');
         const ctx = canvas.getContext('2d');
         let width, height;
-        let particles = [];
+
+        // Poster Renkleri (CSS ile aynı)
+        const brandNavy = '#0C1324';
+        const brandGold = '#C5A059';
+
+        // Şehirler (Temsili Konumlar)
+        const cities = [
+            { x: 0.55, y: 0.45, name: 'İstanbul' }, // HUB
+            { x: 0.48, y: 0.38, name: 'Belgrad' },
+            { x: 0.65, y: 0.55, name: 'Dubai' },
+            { x: 0.42, y: 0.42, name: 'Madrid' },
+            { x: 0.58, y: 0.60, name: 'Kahire' },
+            { x: 0.45, y: 0.35, name: 'Paris' },
+            { x: 0.75, y: 0.25, name: 'Moskova' }
+        ];
+
+        let planePosition = 0; 
 
         function resize() {
             width = canvas.width = window.innerWidth;
@@ -481,61 +409,70 @@
         window.addEventListener('resize', resize);
         resize();
 
-        class Particle {
-            constructor() {
-                this.reset();
-            }
-            reset() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.size = Math.random() * 2;
-            }
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                if (this.x < 0 || this.x > width) this.vx *= -1;
-                if (this.y < 0 || this.y > height) this.vy *= -1;
-            }
-            draw() {
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.2)'; // White dots on Navy bg
+        function drawMap() {
+            ctx.clearRect(0, 0, width, height);
+
+            // Rotaları Çiz
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            
+            const hub = cities[0];
+            const hubX = hub.x * width;
+            const hubY = hub.y * height;
+
+            for(let i=1; i<cities.length; i++) {
+                const city = cities[i];
+                const cx = city.x * width;
+                const cy = city.y * height;
+                
+                ctx.moveTo(hubX, hubY);
+                ctx.quadraticCurveTo(hubX, cy, cx, cy);
+                
+                ctx.fillStyle = brandGold;
                 ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.arc(cx, cy, 4, 0, Math.PI*2);
                 ctx.fill();
             }
+            ctx.stroke();
+
+            // Merkez
+            ctx.fillStyle = brandNavy;
+            ctx.beginPath();
+            ctx.arc(hubX, hubY, 8, 0, Math.PI*2);
+            ctx.fill();
+            ctx.strokeStyle = brandGold;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            animatePlane(hubX, hubY);
         }
 
-        function initParticles() {
-            for(let i=0; i<60; i++) particles.push(new Particle());
+        function animatePlane(hubX, hubY) {
+            planePosition += 0.004;
+            if(planePosition > 1) planePosition = 0;
+
+            const dest = cities[2]; // Dubai Rotası Örneği
+            const startX = hubX;
+            const startY = hubY;
+            const endX = dest.x * width;
+            const endY = dest.y * height;
+            
+            const t = planePosition;
+            const cpX = startX; 
+            const cpY = endY;
+
+            const x = (1-t)*(1-t)*startX + 2*(1-t)*t*cpX + t*t*endX;
+            const y = (1-t)*(1-t)*startY + 2*(1-t)*t*cpY + t*t*endY;
+
+            ctx.fillStyle = brandGold;
+            ctx.font = "24px FontAwesome";
+            ctx.fillText('\uf072', x, y);
+            
+            requestAnimationFrame(drawMap);
         }
 
-        function animate() {
-            ctx.clearRect(0, 0, width, height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            // Connect lines
-            particles.forEach((a, i) => {
-                particles.slice(i + 1).forEach(b => {
-                    const dx = a.x - b.x;
-                    const dy = a.y - b.y;
-                    const dist = Math.sqrt(dx*dx + dy*dy);
-                    if (dist < 120) {
-                        ctx.strokeStyle = `rgba(197, 160, 89, ${0.15 - dist/800})`; // Gold lines
-                        ctx.beginPath();
-                        ctx.moveTo(a.x, a.y);
-                        ctx.lineTo(b.x, b.y);
-                        ctx.stroke();
-                    }
-                });
-            });
-            requestAnimationFrame(animate);
-        }
-
-        initParticles();
-        animate();
+        drawMap();
     </script>
 </body>
 </html>
