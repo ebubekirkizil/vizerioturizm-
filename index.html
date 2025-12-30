@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vizerio | Sınırları Aşan Deneyimler</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -16,7 +16,7 @@
         :root {
             --navy: #0C1324;      /* Poster Laciverti */
             --gold: #C5A059;      /* Poster Altını */
-            --gold-light: #f6e27a; 
+            --gold-light: #f6e27a;
             --white: #FFFFFF;
             --gray-light: #f8f9fa;
             --text-dark: #333;
@@ -25,7 +25,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--gray-light);
@@ -64,7 +64,7 @@
 
         .nav-right { display: flex; align-items: center; gap: 2rem; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
-        
+
         .nav-link {
             text-decoration: none;
             color: var(--white);
@@ -74,8 +74,12 @@
             position: relative;
         }
         .nav-link::after {
-            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
-            background: var(--gold); transition: var(--transition);
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 0;
+            width: 0; height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
         }
         .nav-link:hover::after { width: 100%; }
 
@@ -94,9 +98,9 @@
             cursor: pointer;
             letter-spacing: 1px;
         }
-        .btn-book:hover { 
-            transform: translateY(-3px); 
-            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5); 
+        .btn-book:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5);
         }
 
         .btn-outline {
@@ -126,18 +130,42 @@
             padding: 0 20px;
         }
 
-        /* Uçuş Animasyonu Alanı */
+        /* Video arka plan */
+        #hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            transform: scale(1.03);
+            filter: saturate(1.05) contrast(1.05) brightness(0.85);
+        }
+
+        /* Uçuş animasyonu alanı (canvas) */
         #flight-map {
             position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            inset: 0;
+            width: 100%;
+            height: 100%;
             z-index: 1;
-            opacity: 0.4;
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        /* Video üstü premium overlay */
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background:
+                radial-gradient(60% 50% at 50% 45%, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 70%),
+                linear-gradient(to bottom, rgba(12, 19, 36, 0.65), rgba(12, 19, 36, 0.92));
         }
 
         .hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             max-width: 950px;
         }
 
@@ -164,7 +192,7 @@
 
         /* --- ROTALAR (DESTINATIONS) --- */
         .destinations { padding: 6rem 5%; background-color: var(--white); }
-        
+
         .section-header { text-align: center; margin-bottom: 4rem; }
         .section-header h2 { font-size: 2.8rem; color: var(--navy); margin-bottom: 10px; font-weight: 800; }
         .section-header p { color: #666; font-size: 1.1rem; }
@@ -228,7 +256,7 @@
             text-align: center;
             border-top: 5px solid var(--gold);
         }
-        
+
         .trust-section {
             display: flex;
             justify-content: center;
@@ -253,18 +281,32 @@
 
         .copyright { font-size: 0.9rem; opacity: 0.6; }
 
-        /* --- MOBİL UYUMLULUK --- */
+        /* Mobilde video kapat (performans) + poster kullan */
         @media (max-width: 768px) {
-            .nav-links { display: none; } 
+            .nav-links { display: none; }
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1rem; }
             .hero-btns { flex-direction: column; width: 100%; }
             .btn-book, .btn-outline { width: 100%; }
             .trust-section { flex-direction: column; gap: 1.5rem; }
             .card { height: 400px; }
+
+            #hero-video { display: none; }
+            .hero {
+                background: url("assets/img/hero-fallback.jpg") center/cover no-repeat;
+            }
+        }
+
+        /* Kullanıcı reduced motion açtıysa video kapat */
+        @media (prefers-reduced-motion: reduce) {
+            #hero-video { display: none; }
+            .hero {
+                background: url("assets/img/hero-fallback.jpg") center/cover no-repeat;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -272,24 +314,28 @@
             <i class="fas fa-plane-departure" style="color: var(--gold);"></i>
             VIZERIO<span>.</span>
         </div>
-        
+
         <div class="nav-right">
             <ul class="nav-links">
                 <li><a href="#" class="nav-link">Ana Sayfa</a></li>
                 <li><a href="#rotalar" class="nav-link">Rotalar</a></li>
                 <li><a href="#" class="nav-link">Hakkımızda</a></li>
             </ul>
-            
+
             <a href="https://wa.me/905510698812" class="btn-book">REZERVASYON YAP</a>
         </div>
     </nav>
 
-        <section class="hero">
-        
-        <video autoplay muted loop playsinline id="hero-video">
+    <section class="hero">
+        <!-- Video: İstersen bunu kendi dosyana çevir (aşağıda anlattım) -->
+        <video autoplay muted loop playsinline id="hero-video" poster="assets/img/hero-fallback.jpg">
             <source src="https://videos.pexels.com/video-files/3121459/3121459-hd_1920_1080_25fps.mp4" type="video/mp4">
         </video>
 
+        <!-- Uçuş animasyonu canvas (JS bunu kullanıyor) -->
+        <canvas id="flight-map"></canvas>
+
+        <!-- Premium karartma/ışık overlay -->
         <div class="video-overlay"></div>
 
         <div class="hero-content">
@@ -302,48 +348,6 @@
         </div>
     </section>
 
-    <style>
-        /* HERO VİDEO AYARLARI */
-        .hero {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            padding: 0 20px;
-        }
-
-        #hero-video {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover; /* Videoyu ekrana tam doldurur */
-            z-index: 0;
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            /* Lacivertten siyaha giden hafif transparan filtre */
-            background: linear-gradient(to bottom, rgba(12, 19, 36, 0.7), rgba(12, 19, 36, 0.9));
-            z-index: 1;
-        }
-
-        /* İçeriklerin videonun üstünde kalması için */
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 950px;
-        }
-        
-        /* Diğer stil ayarları (h1, p, btn) zaten mevcut CSS'inde var, onlar aynen kalabilir. */
-    </style>
-
-
     <section class="destinations" id="rotalar">
         <div class="section-header">
             <h2>Sana Özel Deneyimler</h2>
@@ -352,7 +356,7 @@
         </div>
 
         <div class="grid-container">
-            
+
             <div class="card" onclick="location.href='https://wa.me/905510698812'">
                 <span class="card-tag">Vizesiz Avrupa</span>
                 <img src="https://images.unsplash.com/photo-1549643977-c934f0c976f9?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Sırbistan">
@@ -398,7 +402,7 @@
                 </div>
             </div>
 
-             <div class="card" onclick="location.href='https://wa.me/905510698812'">
+            <div class="card" onclick="location.href='https://wa.me/905510698812'">
                 <span class="card-tag">Fiesta & Enerji</span>
                 <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=800" class="card-img" alt="İspanya">
                 <div class="card-overlay">
@@ -430,97 +434,103 @@
 
     <script>
         const canvas = document.getElementById('flight-map');
-        const ctx = canvas.getContext('2d');
-        let width, height;
 
-        // Poster Renkleri (CSS ile aynı)
-        const brandNavy = '#0C1324';
-        const brandGold = '#C5A059';
+        // Canvas yoksa scripti güvenli şekilde bitir (ileride yanlışlıkla silinirse sayfa çökmesin)
+        if (!canvas) {
+            console.warn("flight-map canvas bulunamadı.");
+        } else {
+            const ctx = canvas.getContext('2d');
+            let width, height;
 
-        // Şehirler (Temsili Konumlar)
-        const cities = [
-            { x: 0.55, y: 0.45, name: 'İstanbul' }, // HUB
-            { x: 0.48, y: 0.38, name: 'Belgrad' },
-            { x: 0.65, y: 0.55, name: 'Dubai' },
-            { x: 0.42, y: 0.42, name: 'Madrid' },
-            { x: 0.58, y: 0.60, name: 'Kahire' },
-            { x: 0.45, y: 0.35, name: 'Paris' },
-            { x: 0.75, y: 0.25, name: 'Moskova' }
-        ];
+            // Poster Renkleri (CSS ile aynı)
+            const brandNavy = '#0C1324';
+            const brandGold = '#C5A059';
 
-        let planePosition = 0; 
+            // Şehirler (Temsili Konumlar)
+            const cities = [
+                { x: 0.55, y: 0.45, name: 'İstanbul' }, // HUB
+                { x: 0.48, y: 0.38, name: 'Belgrad' },
+                { x: 0.65, y: 0.55, name: 'Dubai' },
+                { x: 0.42, y: 0.42, name: 'Madrid' },
+                { x: 0.58, y: 0.60, name: 'Kahire' },
+                { x: 0.45, y: 0.35, name: 'Paris' },
+                { x: 0.75, y: 0.25, name: 'Moskova' }
+            ];
 
-        function resize() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resize);
-        resize();
+            let planePosition = 0;
 
-        function drawMap() {
-            ctx.clearRect(0, 0, width, height);
-
-            // Rotaları Çiz
-            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            
-            const hub = cities[0];
-            const hubX = hub.x * width;
-            const hubY = hub.y * height;
-
-            for(let i=1; i<cities.length; i++) {
-                const city = cities[i];
-                const cx = city.x * width;
-                const cy = city.y * height;
-                
-                ctx.moveTo(hubX, hubY);
-                ctx.quadraticCurveTo(hubX, cy, cx, cy);
-                
-                ctx.fillStyle = brandGold;
-                ctx.beginPath();
-                ctx.arc(cx, cy, 4, 0, Math.PI*2);
-                ctx.fill();
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
             }
-            ctx.stroke();
+            window.addEventListener('resize', resize);
+            resize();
 
-            // Merkez
-            ctx.fillStyle = brandNavy;
-            ctx.beginPath();
-            ctx.arc(hubX, hubY, 8, 0, Math.PI*2);
-            ctx.fill();
-            ctx.strokeStyle = brandGold;
-            ctx.lineWidth = 2;
-            ctx.stroke();
+            function drawMap() {
+                ctx.clearRect(0, 0, width, height);
 
-            animatePlane(hubX, hubY);
+                // Rotaları Çiz
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+
+                const hub = cities[0];
+                const hubX = hub.x * width;
+                const hubY = hub.y * height;
+
+                for (let i = 1; i < cities.length; i++) {
+                    const city = cities[i];
+                    const cx = city.x * width;
+                    const cy = city.y * height;
+
+                    ctx.moveTo(hubX, hubY);
+                    ctx.quadraticCurveTo(hubX, cy, cx, cy);
+
+                    ctx.fillStyle = brandGold;
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, 4, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.stroke();
+
+                // Merkez
+                ctx.fillStyle = brandNavy;
+                ctx.beginPath();
+                ctx.arc(hubX, hubY, 8, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.strokeStyle = brandGold;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                animatePlane(hubX, hubY);
+            }
+
+            function animatePlane(hubX, hubY) {
+                planePosition += 0.004;
+                if (planePosition > 1) planePosition = 0;
+
+                const dest = cities[2]; // Dubai Rotası Örneği
+                const startX = hubX;
+                const startY = hubY;
+                const endX = dest.x * width;
+                const endY = dest.y * height;
+
+                const t = planePosition;
+                const cpX = startX;
+                const cpY = endY;
+
+                const x = (1 - t) * (1 - t) * startX + 2 * (1 - t) * t * cpX + t * t * endX;
+                const y = (1 - t) * (1 - t) * startY + 2 * (1 - t) * t * cpY + t * t * endY;
+
+                ctx.fillStyle = brandGold;
+                ctx.font = "24px FontAwesome";
+                ctx.fillText('\uf072', x, y);
+
+                requestAnimationFrame(drawMap);
+            }
+
+            drawMap();
         }
-
-        function animatePlane(hubX, hubY) {
-            planePosition += 0.004;
-            if(planePosition > 1) planePosition = 0;
-
-            const dest = cities[2]; // Dubai Rotası Örneği
-            const startX = hubX;
-            const startY = hubY;
-            const endX = dest.x * width;
-            const endY = dest.y * height;
-            
-            const t = planePosition;
-            const cpX = startX; 
-            const cpY = endY;
-
-            const x = (1-t)*(1-t)*startX + 2*(1-t)*t*cpX + t*t*endX;
-            const y = (1-t)*(1-t)*startY + 2*(1-t)*t*cpY + t*t*endY;
-
-            ctx.fillStyle = brandGold;
-            ctx.font = "24px FontAwesome";
-            ctx.fillText('\uf072', x, y);
-            
-            requestAnimationFrame(drawMap);
-        }
-
-        drawMap();
     </script>
 </body>
 </html>
