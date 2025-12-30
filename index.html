@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
+    /* --- 1. PRESTİJLİ RENK PALETİ --- */
     :root {
       --navy: #0C1324;
       --gold: #C5A059;
@@ -33,7 +34,7 @@
 
     h1, h2, h3, .nav-link, .btn-book, .btn-outline { font-family: 'Montserrat', sans-serif; }
 
-    /* NAVBAR */
+    /* --- MENÜ TASARIMI --- */
     .navbar {
       position: fixed;
       top: 0; left: 0;
@@ -82,7 +83,7 @@
     }
     .nav-link:hover::after { width: 100%; }
 
-    /* BUTTONS */
+    /* Butonlar */
     .btn-book {
       background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
       color: var(--navy);
@@ -99,8 +100,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       white-space: nowrap;
+      text-align: center;
     }
     .btn-book:hover {
       transform: translateY(-3px);
@@ -120,17 +121,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       white-space: nowrap;
+      text-align: center;
     }
     .btn-outline:hover { background: var(--gold); color: var(--navy); }
 
-    /* HERO */
+    /* --- HERO (GİRİŞ) BÖLÜMÜ --- */
     .hero {
       position: relative;
       height: 100vh;
       width: 100%;
-      background: linear-gradient(180deg, #0C1324 0%, #050914 100%);
+      background-color: var(--navy);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -139,15 +140,14 @@
       padding: 0 20px;
     }
 
-    /* Premium depth layer (no video) */
+    /* === PREMIUM DEPTH (arka katman) === */
     .depth-bg{
       position:absolute;
       inset:-20%;
       z-index:0;
       background:
-        radial-gradient(circle at 30% 40%, rgba(197,160,89,0.14), transparent 42%),
-        radial-gradient(circle at 70% 60%, rgba(197,160,89,0.10), transparent 48%),
-        radial-gradient(circle at 55% 10%, rgba(255,255,255,0.04), transparent 35%),
+        radial-gradient(circle at 30% 40%, rgba(197,160,89,0.12), transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(197,160,89,0.09), transparent 45%),
         linear-gradient(180deg, #0C1324 0%, #050914 100%);
       filter: blur(26px);
       transform: translate3d(0,0,0) scale(1.15);
@@ -161,22 +161,18 @@
       100% { transform: translate3d(18px, 10px,0) scale(1.18); }
     }
 
-    /* Canvas map layer */
-    #flight-map {
+    /* 3D Globe Layer */
+    #globe{
       position: absolute;
       inset: 0;
-      width: 100%;
-      height: 100%;
       z-index: 1;
-      opacity: 0.24; /* premium/sakin */
       pointer-events: none;
-      transform: translate3d(0,0,0) scale(1.03);
-      will-change: transform;
-      filter: blur(0.15px);
+      opacity: 0.78; /* daha görünür ve premium */
+      filter: saturate(1.05) contrast(1.05);
     }
 
-    /* Overlay */
-    .video-overlay {
+    /* Premium karartma/ışık overlay */
+    .video-overlay{
       position: absolute;
       inset: 0;
       z-index: 2;
@@ -213,7 +209,7 @@
 
     .hero-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
-    /* DESTINATIONS */
+    /* --- ROTALAR (DESTINATIONS) --- */
     .destinations { padding: 6rem 5%; background-color: var(--white); }
 
     .section-header { text-align: center; margin-bottom: 4rem; }
@@ -271,7 +267,7 @@
     .card h3 { font-size: 2rem; margin-bottom: 8px; color: var(--gold); text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
     .card p { font-size: 1rem; color: #f0f0f0; font-weight: 400; line-height: 1.5; }
 
-    /* FOOTER */
+    /* --- FOOTER --- */
     footer {
       background: var(--navy);
       color: var(--white);
@@ -304,7 +300,7 @@
 
     .copyright { font-size: 0.9rem; opacity: 0.6; }
 
-    /* MOBILE */
+    /* Mobil ayarları */
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hero h1 { font-size: 2.5rem; }
@@ -314,15 +310,13 @@
       .trust-section { flex-direction: column; gap: 1.5rem; }
       .card { height: 400px; }
 
-      /* mobilde biraz daha sakin */
-      #flight-map { opacity: 0.18; }
-      .depth-bg { filter: blur(30px); }
+      #globe{ opacity: 0.60; }
+      .depth-bg{ filter: blur(30px); }
     }
 
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      .depth-bg { animation: none; }
-      #flight-map { opacity: 0.16; }
+    @media (prefers-reduced-motion: reduce){
+      .depth-bg{ animation: none; }
+      #globe{ opacity: 0.40; }
     }
   </style>
 </head>
@@ -346,8 +340,13 @@
   </nav>
 
   <section class="hero">
+    <!-- Derinlik katmanı -->
     <div class="depth-bg" aria-hidden="true"></div>
-    <canvas id="flight-map" aria-hidden="true"></canvas>
+
+    <!-- 3D Dünya Küresi -->
+    <div id="globe" aria-hidden="true"></div>
+
+    <!-- Premium overlay -->
     <div class="video-overlay" aria-hidden="true"></div>
 
     <div class="hero-content">
@@ -442,177 +441,112 @@
     <p class="copyright">&copy; 2025 Vizerio Travel. Tüm Hakları Saklıdır.</p>
   </footer>
 
+  <!-- 3D Globe (WebGL) -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/globe.gl@2.33.1/dist/globe.gl.min.js"></script>
   <script>
-    (function () {
-      const canvas = document.getElementById('flight-map');
-      if (!canvas) return;
+  (() => {
+    const el = document.getElementById('globe');
+    if (!el) return;
 
-      const ctx = canvas.getContext('2d', { alpha: true });
-      const depthBg = document.querySelector('.depth-bg');
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // Motion preferences
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    const GOLD = '#C5A059';
 
-      // Brand colors
-      const brandNavy = '#0C1324';
-      const brandGold = '#C5A059';
+    const cities = [
+      { name:'Istanbul',  lat: 41.0082, lng: 28.9784 },
+      { name:'London',    lat: 51.5074, lng: -0.1278 },
+      { name:'Paris',     lat: 48.8566, lng: 2.3522 },
+      { name:'New York',  lat: 40.7128, lng: -74.0060 },
+      { name:'Dubai',     lat: 25.2048, lng: 55.2708 },
+      { name:'Tokyo',     lat: 35.6762, lng: 139.6503 },
+      { name:'Singapore', lat: 1.3521,  lng: 103.8198 },
+      { name:'Sydney',    lat: -33.8688, lng: 151.2093 },
+      { name:'Cairo',     lat: 30.0444, lng: 31.2357 },
+      { name:'Moscow',    lat: 55.7558, lng: 37.6173 }
+    ];
 
-      // Cities (normalized positions)
-      const cities = [
-        { x: 0.55, y: 0.45, name: 'İstanbul' }, // HUB
-        { x: 0.48, y: 0.38, name: 'Belgrad' },
-        { x: 0.65, y: 0.55, name: 'Dubai' },
-        { x: 0.42, y: 0.42, name: 'Madrid' },
-        { x: 0.58, y: 0.60, name: 'Kahire' },
-        { x: 0.45, y: 0.35, name: 'Paris' },
-        { x: 0.75, y: 0.25, name: 'Moskova' }
-      ];
+    const hub = cities[0];
+    let routeIndex = 1;
 
-      let width = 0, height = 0;
-      let planePosition = 0;
+    const makeArc = (from, to) => ({
+      startLat: from.lat,
+      startLng: from.lng,
+      endLat: to.lat,
+      endLng: to.lng,
+      color: [GOLD, GOLD]
+    });
 
-      function resize() {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-      }
-      window.addEventListener('resize', resize);
-      resize();
+    let arcs = cities.slice(1, 6).map(c => makeArc(hub, c));
 
-      // === PREMIUM PARALLAX (desktop only, very subtle) ===
-      let targetX = 0, targetY = 0;
-      let currentX = 0, currentY = 0;
+    const globe = Globe()(el)
+      .backgroundColor('rgba(0,0,0,0)')
+      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+      .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+      .showAtmosphere(true)
+      .atmosphereColor(GOLD)
+      .atmosphereAltitude(0.20)
 
-      if (!prefersReduced && !isTouch) {
-        document.addEventListener('mousemove', (e) => {
-          targetX = (e.clientX / window.innerWidth - 0.5);
-          targetY = (e.clientY / window.innerHeight - 0.5);
-        });
-      }
+      .pointsData(cities)
+      .pointLat(d => d.lat)
+      .pointLng(d => d.lng)
+      .pointColor(() => GOLD)
+      .pointAltitude(0.02)
+      .pointRadius(0.22)
 
-      function parallaxTick() {
-        if (!prefersReduced && !isTouch) {
-          currentX += (targetX - currentX) * 0.06;
-          currentY += (targetY - currentY) * 0.06;
+      .arcsData(arcs)
+      .arcColor(d => d.color)
+      .arcAltitude(() => 0.28)
+      .arcStroke(() => 0.85)
+      .arcDashLength(0.55)
+      .arcDashGap(2.1)
+      .arcDashAnimateTime(prefersReduced ? 0 : 2100);
 
-          canvas.style.transform = `translate3d(${currentX * 18}px, ${currentY * 14}px, 0) scale(1.03)`;
+    // Light (premium)
+    const scene = globe.scene();
+    const ambient = new THREE.AmbientLight(0xffffff, 0.75);
+    const dir = new THREE.DirectionalLight(0xffffff, 1.15);
+    dir.position.set(2, 1, 1);
+    scene.add(ambient);
+    scene.add(dir);
 
-          if (depthBg) {
-            depthBg.style.transform = `translate3d(${currentX * 10}px, ${currentY * 8}px, 0) scale(1.15)`;
-          }
-        }
-        requestAnimationFrame(parallaxTick);
-      }
-      parallaxTick();
+    globe.pointOfView({ lat: 18, lng: 15, altitude: 2.15 }, 0);
 
-      function drawRoutes(hubX, hubY) {
-        ctx.save();
+    globe.controls().enableZoom = false;
+    globe.controls().enablePan = false;
 
-        // Soft, premium line style
-        ctx.lineWidth = 1.6;
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.10)';
+    if (!prefersReduced) {
+      globe.controls().autoRotate = true;
+      globe.controls().autoRotateSpeed = 0.55;
+    }
 
-        ctx.beginPath();
-        for (let i = 1; i < cities.length; i++) {
-          const city = cities[i];
-          const cx = city.x * width;
-          const cy = city.y * height;
+    const resize = () => {
+      globe.width(window.innerWidth);
+      globe.height(window.innerHeight);
+    };
+    window.addEventListener('resize', resize);
+    resize();
 
-          ctx.moveTo(hubX, hubY);
-          ctx.quadraticCurveTo(hubX, cy, cx, cy);
-        }
-        ctx.stroke();
+    // Sürekli iniş-kalkış hissi (rota değiştir)
+    if (!prefersReduced) {
+      setInterval(() => {
+        routeIndex = (routeIndex + 1) % cities.length;
+        if (routeIndex === 0) routeIndex = 1;
 
-        // Destination dots (subtle glow)
-        for (let i = 1; i < cities.length; i++) {
-          const city = cities[i];
-          const cx = city.x * width;
-          const cy = city.y * height;
+        const target = cities[routeIndex];
 
-          ctx.globalCompositeOperation = "lighter";
-          const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, 14);
-          g.addColorStop(0, "rgba(197,160,89,0.55)");
-          g.addColorStop(1, "rgba(197,160,89,0)");
-          ctx.fillStyle = g;
-          ctx.beginPath();
-          ctx.arc(cx, cy, 14, 0, Math.PI * 2);
-          ctx.fill();
+        arcs = [
+          makeArc(hub, target),
+          makeArc(hub, cities[(routeIndex + 2) % cities.length] || cities[1]),
+          makeArc(hub, cities[(routeIndex + 4) % cities.length] || cities[2]),
+          makeArc(hub, cities[(routeIndex + 6) % cities.length] || cities[3])
+        ];
 
-          ctx.globalCompositeOperation = "source-over";
-          ctx.fillStyle = "rgba(197,160,89,0.85)";
-          ctx.beginPath();
-          ctx.arc(cx, cy, 3.2, 0, Math.PI * 2);
-          ctx.fill();
-        }
-
-        // Hub marker
-        ctx.fillStyle = brandNavy;
-        ctx.beginPath();
-        ctx.arc(hubX, hubY, 7.5, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.strokeStyle = "rgba(197,160,89,0.9)";
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.arc(hubX, hubY, 7.5, 0, Math.PI * 2);
-        ctx.stroke();
-
-        ctx.restore();
-      }
-
-      function drawGlowParticle(x, y) {
-        ctx.save();
-        ctx.globalCompositeOperation = "lighter";
-
-        const g = ctx.createRadialGradient(x, y, 0, x, y, 18);
-        g.addColorStop(0, "rgba(197,160,89,0.95)");
-        g.addColorStop(1, "rgba(197,160,89,0)");
-        ctx.fillStyle = g;
-        ctx.beginPath();
-        ctx.arc(x, y, 18, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.fillStyle = "rgba(197,160,89,0.95)";
-        ctx.beginPath();
-        ctx.arc(x, y, 5.5, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.restore();
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, width, height);
-
-        const hub = cities[0];
-        const hubX = hub.x * width;
-        const hubY = hub.y * height;
-
-        drawRoutes(hubX, hubY);
-
-        // Move particle along a sample route (Dubai)
-        planePosition += 0.0032;
-        if (planePosition > 1) planePosition = 0;
-
-        const dest = cities[2];
-        const startX = hubX;
-        const startY = hubY;
-        const endX = dest.x * width;
-        const endY = dest.y * height;
-
-        const t = planePosition;
-        const cpX = startX;
-        const cpY = endY;
-
-        const x = (1 - t) * (1 - t) * startX + 2 * (1 - t) * t * cpX + t * t * endX;
-        const y = (1 - t) * (1 - t) * startY + 2 * (1 - t) * t * cpY + t * t * endY;
-
-        drawGlowParticle(x, y);
-
-        requestAnimationFrame(animate);
-      }
-
-      animate();
-    })();
+        globe.arcsData(arcs);
+        globe.pointOfView({ lat: target.lat * 0.30, lng: target.lng * 0.30, altitude: 2.15 }, 1200);
+      }, 3200);
+    }
+  })();
   </script>
 </body>
 </html>
