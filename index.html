@@ -284,17 +284,65 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <canvas id="flight-map"></canvas>
+        <section class="hero">
+        
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="https://videos.pexels.com/video-files/3121459/3121459-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-overlay"></div>
+
         <div class="hero-content">
             <h1>Sadece Bir Tatil Değil, <br><span>Prestijli Bir Yaşam Tarzı.</span></h1>
-            <p>Rusya'nın ihtişamı, Sırbistan'ın enerjisi ve Dubai'nin lüksü. Vizerio ile standartların ötesine geç, global bir gezgin ol.</p>
+            <p>Rusya'nın ihtişamı, Dubai'nin lüksü ve Paris'in ışıltısı. Vizerio ile standartların ötesine geç.</p>
             <div class="hero-btns">
-                <a href="#rotalar" class="btn-book">ÜLKELERİ KEŞFET</a>
+                <a href="#rotalar" class="btn-book">MACERALARI KEŞFET</a>
                 <a href="https://wa.me/905510698812" class="btn-outline">WHATSAPP İLE SOR</a>
             </div>
         </div>
     </section>
+
+    <style>
+        /* HERO VİDEO AYARLARI */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        #hero-video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover; /* Videoyu ekrana tam doldurur */
+            z-index: 0;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            /* Lacivertten siyaha giden hafif transparan filtre */
+            background: linear-gradient(to bottom, rgba(12, 19, 36, 0.7), rgba(12, 19, 36, 0.9));
+            z-index: 1;
+        }
+
+        /* İçeriklerin videonun üstünde kalması için */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 950px;
+        }
+        
+        /* Diğer stil ayarları (h1, p, btn) zaten mevcut CSS'inde var, onlar aynen kalabilir. */
+    </style>
+
 
     <section class="destinations" id="rotalar">
         <div class="section-header">
