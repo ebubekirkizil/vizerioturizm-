@@ -312,10 +312,38 @@
             .trust-section { flex-direction: column; gap: 1.5rem; }
             .card { height: 400px; }
 
-            #hero-video { display: none; }
-            .hero {
-                background: url("assets/img/hero-fallback.jpg") center/cover no-repeat;
-            }
+           // === PREMIUM PARALLAX (çok hafif, güven hissini bozmaz) ===
+const depthBg = document.querySelector('.depth-bg');
+const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+let targetX = 0, targetY = 0;
+let currentX = 0, currentY = 0;
+
+if (!prefersReduced && !isTouch) {
+  document.addEventListener('mousemove', (e) => {
+    targetX = (e.clientX / window.innerWidth - 0.5);
+    targetY = (e.clientY / window.innerHeight - 0.5);
+  });
+
+  const tick = () => {
+    // yumuşatma (ani hareket yok = güven)
+    currentX += (targetX - currentX) * 0.06;
+    currentY += (targetY - currentY) * 0.06;
+
+    // Canvas hafif öne gelsin
+    canvas.style.transform = `translate3d(${currentX * 18}px, ${currentY * 14}px, 0) scale(1.03)`;
+
+    // Arka katman daha yavaş (derinlik hissi)
+    if (depthBg) {
+      depthBg.style.transform = `translate3d(${currentX * 10}px, ${currentY * 8}px, 0) scale(1.15)`;
+    }
+
+    requestAnimationFrame(tick);
+  };
+  tick();
+}
+
         }
 
         /* Kullanıcı reduced motion açtıysa video kapat */
