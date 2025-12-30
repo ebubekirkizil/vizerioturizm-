@@ -130,17 +130,38 @@
             padding: 0 20px;
         }
 
-        /* Video arka plan */
-        #hero-video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            transform: scale(1.03);
-            filter: saturate(1.05) contrast(1.05) brightness(0.85);
-        }
+       /* === PREMIUM DEPTH (videosuz) === */
+.depth-bg{
+  position:absolute;
+  inset:-20%;
+  z-index:0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(197,160,89,0.12), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(197,160,89,0.09), transparent 45%),
+    linear-gradient(180deg, #0C1324 0%, #050914 100%);
+  filter: blur(26px);
+  transform: translate3d(0,0,0) scale(1.15);
+  will-change: transform;
+  animation: slowFloat 40s ease-in-out infinite alternate;
+}
+
+/* Canvas katmanını daha “derin” göster */
+#flight-map{
+  z-index:1;
+  opacity:0.26;              /* 0.35 -> daha premium/sakin */
+  filter: blur(0.2px);
+  transform: translate3d(0,0,0) scale(1.03);
+  will-change: transform;
+}
+
+.video-overlay{ z-index:2; }
+.hero-content{ z-index:3; }
+
+@keyframes slowFloat{
+  0%   { transform: translate3d(-18px,-10px,0) scale(1.15); }
+  100% { transform: translate3d(18px, 10px,0) scale(1.18); }
+}
+
 
         /* Uçuş animasyonu alanı (canvas) */
         #flight-map {
