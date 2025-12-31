@@ -109,17 +109,26 @@
       100%{transform:translate3d(18px,10px,0) scale(1.18);}
     }
 
-    /* 3D Globe Layer (site renkleriyle uyumlu) */
+    /* 3D Globe Layer */
     #globe{
       position:absolute;inset:0;z-index:1;
       pointer-events:none;
-
-      /* Dünya net + premium */
       opacity:1;
-      filter: contrast(1.15) saturate(0.85) brightness(1.02); /* gerçek mavi/yeşili kırar */
+      filter: contrast(1.15) saturate(0.85) brightness(1.02);
     }
 
-    /* Overlay (dünyayı öldürmez) */
+    /* ASIL RENK DÖNÜŞÜMÜ: globe canvas'ını site tonuna çeker */
+    #globe canvas{
+      filter:
+        grayscale(1)
+        contrast(1.25)
+        brightness(0.92)
+        sepia(1)
+        hue-rotate(185deg)
+        saturate(2.4);
+    }
+
+    /* Overlay */
     .video-overlay{
       position:absolute;inset:0;z-index:2;
       background:
@@ -340,9 +349,8 @@
       const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       const GOLD = '#C5A059';
-      const NAVY = '#0C1324';
 
-      // İstanbul -> Avrupa -> Amerika (çoğaltıldı) -> tekrar global
+      // İstanbul -> Avrupa -> Amerika (çoğaltıldı) -> global
       const routeOrder = [
         // Avrupa / yakın
         { name:'Istanbul',   lat:41.0082, lng:28.9784 },
@@ -351,33 +359,34 @@
         { name:'Paris',      lat:48.8566, lng:2.3522  },
         { name:'Madrid',     lat:40.4168, lng:-3.7038 },
         { name:'London',     lat:51.5074, lng:-0.1278 },
+
         // Amerika kıtası (çoğaltıldı)
-        { name:'New York',   lat:40.7128, lng:-74.0060 },
-        { name:'Toronto',    lat:43.6532, lng:-79.3832 },
-        { name:'Chicago',    lat:41.8781, lng:-87.6298 },
-        { name:'Miami',      lat:25.7617, lng:-80.1918 },
-        { name:'Los Angeles',lat:34.0522, lng:-118.2437 },
-        { name:'Mexico City',lat:19.4326, lng:-99.1332 },
-        { name:'Bogota',     lat:4.7110,  lng:-74.0721 },
-        { name:'Lima',       lat:-12.0464,lng:-77.0428 },
-        { name:'Sao Paulo',  lat:-23.5558,lng:-46.6396 },
-        { name:'Rio',        lat:-22.9068,lng:-43.1729 },
+        { name:'New York',    lat:40.7128, lng:-74.0060 },
+        { name:'Toronto',     lat:43.6532, lng:-79.3832 },
+        { name:'Chicago',     lat:41.8781, lng:-87.6298 },
+        { name:'Miami',       lat:25.7617, lng:-80.1918 },
+        { name:'Los Angeles', lat:34.0522, lng:-118.2437 },
+        { name:'Mexico City', lat:19.4326, lng:-99.1332 },
+        { name:'Bogota',      lat:4.7110,  lng:-74.0721 },
+        { name:'Lima',        lat:-12.0464,lng:-77.0428 },
+        { name:'Sao Paulo',   lat:-23.5558,lng:-46.6396 },
+        { name:'Rio',         lat:-22.9068,lng:-43.1729 },
         { name:'Buenos Aires',lat:-34.6037,lng:-58.3816 },
-        // tekrar global
-        { name:'Dubai',      lat:25.2048, lng:55.2708 },
-        { name:'Singapore',  lat:1.3521,  lng:103.8198 },
-        { name:'Tokyo',      lat:35.6762, lng:139.6503 },
-        { name:'Sydney',     lat:-33.8688,lng:151.2093 }
+
+        // global
+        { name:'Dubai',       lat:25.2048, lng:55.2708 },
+        { name:'Singapore',   lat:1.3521,  lng:103.8198 },
+        { name:'Tokyo',       lat:35.6762, lng:139.6503 },
+        { name:'Sydney',      lat:-33.8688,lng:151.2093 }
       ];
 
-      // noktalar: hepsi
       const points = routeOrder.map(c => ({...c}));
 
       const globe = Globe()(el)
         .backgroundColor('rgba(0,0,0,0)')
 
-        // Doku “gerçekçi kalsın” ama rengi bizden gelsin (mavi/yeşil baskılanır)
-        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+        /* KOYU DÜNYA (premium) */
+        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
         .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
 
         .showAtmosphere(true)
@@ -392,7 +401,7 @@
         .pointAltitude(0.030)
         .pointRadius(0.27)
 
-        // uçuş izi
+        // Uçuş izi
         .arcsData([])
         .arcColor(() => [GOLD, GOLD])
         .arcAltitude(() => 0.32)
@@ -410,14 +419,6 @@
         .ringPropagationSpeed(() => 2.8)
         .ringRepeatPeriod(() => 1100);
 
-      // === Dünya rengini "site renklerine" çek (mavi/yeşili kır) ===
-      // Not: Doku kalır, ama üstten navy tint + emissive gold ile premium olur.
-      const mat = globe.globeMaterial();
-      mat.color = new THREE.Color('#0A1020');       // navy tint
-      mat.emissive = new THREE.Color('#0B1226');    // çok hafif ışık
-      mat.emissiveIntensity = 0.35;
-      mat.shininess = 12;
-
       // Işık (premium)
       const scene = globe.scene();
       const ambient = new THREE.AmbientLight(0xffffff, 0.48);
@@ -429,12 +430,12 @@
       scene.add(dir1);
       scene.add(dir2);
 
-      // Kamera sabit (dönüş kesilmesin)
+      // Kamera sabit
       globe.pointOfView({ lat: 22, lng: 15, altitude: 2.05 }, 0);
       globe.controls().enableZoom = false;
       globe.controls().enablePan = false;
 
-      // Dünya soldan sağa: autoRotateSpeed pozitif
+      // Dünya soldan sağa (pozitif hız) 360° sürekli
       if (!prefersReduced) {
         globe.controls().autoRotate = true;
         globe.controls().autoRotateSpeed = 0.90;
