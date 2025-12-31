@@ -41,12 +41,22 @@
       border-bottom:1px solid rgba(197,160,89,0.2);
       box-shadow:0 4px 20px rgba(0,0,0,0.2);
     }
-    .logo{
-      font-size:1.8rem;font-weight:800;color:var(--white);
-      letter-spacing:1px;text-transform:uppercase;
-      display:flex;align-items:center;gap:10px;
+
+    /* ✅ LOGO (IMG) */
+    .brand{
+      display:flex;
+      align-items:center;
+      text-decoration:none;
+      gap:12px;
     }
-    .logo span{color:var(--gold);}
+    .brand-logo{
+      height:44px;  /* büyüt/küçült: 36-52 arası iyi */
+      width:auto;
+      display:block;
+      object-fit:contain;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+    }
+
     .nav-right{display:flex;align-items:center;gap:2rem;}
     .nav-links{display:flex;gap:2rem;list-style:none;}
     .nav-link{
@@ -117,7 +127,7 @@
       filter: contrast(1.15) saturate(0.85) brightness(1.02);
     }
 
-    /* ASIL RENK DÖNÜŞÜMÜ: globe canvas'ını site tonuna çeker */
+    /* ✅ Dünya renklerini site tonuna çeker (bariz değişim) */
     #globe canvas{
       filter:
         grayscale(1)
@@ -207,6 +217,7 @@
 
     @media (max-width: 768px){
       .nav-links{display:none;}
+      .brand-logo{height:38px;}
       .hero h1{font-size:2.5rem;}
       .hero p{font-size:1rem;}
       .hero-btns{flex-direction:column;width:100%;}
@@ -225,10 +236,11 @@
 
 <body>
   <nav class="navbar">
-    <div class="logo">
-      <i class="fas fa-plane-departure" style="color: var(--gold);"></i>
-      VIZERIO<span>.</span>
-    </div>
+    <!-- ✅ Senin logo burada -->
+    <!-- Logo dosyanı repo içine şu yola koy: assets/logo.png -->
+    <a href="#" class="brand" aria-label="Vizerio Ana Sayfa">
+      <img src="assets/logo.png" alt="Vizerio Logo" class="brand-logo" />
+    </a>
 
     <div class="nav-right">
       <ul class="nav-links">
@@ -347,12 +359,9 @@
       if (!el) return;
 
       const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
       const GOLD = '#C5A059';
 
-      // İstanbul -> Avrupa -> Amerika (çoğaltıldı) -> global
       const routeOrder = [
-        // Avrupa / yakın
         { name:'Istanbul',   lat:41.0082, lng:28.9784 },
         { name:'Belgrade',   lat:44.7866, lng:20.4489 },
         { name:'Rome',       lat:41.9028, lng:12.4964 },
@@ -360,7 +369,6 @@
         { name:'Madrid',     lat:40.4168, lng:-3.7038 },
         { name:'London',     lat:51.5074, lng:-0.1278 },
 
-        // Amerika kıtası (çoğaltıldı)
         { name:'New York',    lat:40.7128, lng:-74.0060 },
         { name:'Toronto',     lat:43.6532, lng:-79.3832 },
         { name:'Chicago',     lat:41.8781, lng:-87.6298 },
@@ -373,7 +381,6 @@
         { name:'Rio',         lat:-22.9068,lng:-43.1729 },
         { name:'Buenos Aires',lat:-34.6037,lng:-58.3816 },
 
-        // global
         { name:'Dubai',       lat:25.2048, lng:55.2708 },
         { name:'Singapore',   lat:1.3521,  lng:103.8198 },
         { name:'Tokyo',       lat:35.6762, lng:139.6503 },
@@ -384,16 +391,12 @@
 
       const globe = Globe()(el)
         .backgroundColor('rgba(0,0,0,0)')
-
-        /* KOYU DÜNYA (premium) */
         .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
         .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
-
         .showAtmosphere(true)
         .atmosphereColor(GOLD)
         .atmosphereAltitude(0.20)
 
-        // Şehir noktaları
         .pointsData(points)
         .pointLat(d => d.lat)
         .pointLng(d => d.lng)
@@ -401,7 +404,6 @@
         .pointAltitude(0.030)
         .pointRadius(0.27)
 
-        // Uçuş izi
         .arcsData([])
         .arcColor(() => [GOLD, GOLD])
         .arcAltitude(() => 0.32)
@@ -410,7 +412,6 @@
         .arcDashGap(2.0)
         .arcDashAnimateTime(prefersReduced ? 0 : 1850);
 
-      // iniş hissi
       globe.ringsData([])
         .ringLat(d => d.lat)
         .ringLng(d => d.lng)
@@ -419,7 +420,6 @@
         .ringPropagationSpeed(() => 2.8)
         .ringRepeatPeriod(() => 1100);
 
-      // Işık (premium)
       const scene = globe.scene();
       const ambient = new THREE.AmbientLight(0xffffff, 0.48);
       const dir1 = new THREE.DirectionalLight(0xffffff, 1.35);
@@ -430,15 +430,13 @@
       scene.add(dir1);
       scene.add(dir2);
 
-      // Kamera sabit
       globe.pointOfView({ lat: 22, lng: 15, altitude: 2.05 }, 0);
       globe.controls().enableZoom = false;
       globe.controls().enablePan = false;
 
-      // Dünya soldan sağa (pozitif hız) 360° sürekli
       if (!prefersReduced) {
         globe.controls().autoRotate = true;
-        globe.controls().autoRotateSpeed = 0.90;
+        globe.controls().autoRotateSpeed = 0.90; // soldan sağa
       }
 
       const resize = () => {
@@ -448,7 +446,6 @@
       window.addEventListener('resize', resize);
       resize();
 
-      // uçuş: sıra ile
       let i = 0;
       const makeArc = (from, to) => ({
         startLat: from.lat, startLng: from.lng,
@@ -457,13 +454,10 @@
 
       const step = () => {
         if (prefersReduced) return;
-
         const from = routeOrder[i % routeOrder.length];
         const to = routeOrder[(i + 1) % routeOrder.length];
-
         globe.arcsData([ makeArc(from, to) ]);
         globe.ringsData([{ lat: to.lat, lng: to.lng }]);
-
         i++;
       };
 
