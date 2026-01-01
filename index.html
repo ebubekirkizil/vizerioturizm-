@@ -1,469 +1,1509 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vizerio | Sınırları Aşan Deneyimler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-  <style>
-    :root{
-      --navy:#0C1324;
-      --gold:#C5A059;
-      --gold-light:#f6e27a;
-      --white:#FFFFFF;
-      --gray-light:#f8f9fa;
-      --text-dark:#333;
-      --glass:rgba(12,19,36,0.95);
-      --transition:all 0.3s ease;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{
-      font-family:'Poppins',sans-serif;
-      background-color:var(--gray-light);
-      color:var(--text-dark);
-      overflow-x:hidden;
-    }
-    h1,h2,h3,.nav-link,.btn-book,.btn-outline{font-family:'Montserrat',sans-serif;}
+	<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Anasayfa - VizeRio</title>
+	<link rel="canonical" href="https://vizeriotr.com/" />
+	<meta property="og:locale" content="tr_TR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Anasayfa - VizeRio" />
+	<meta property="og:description" content="Vize Başvurularınızda Güvenli ve Hızlı : Vizerio ile Yola Çıkın! Vizerio, yurt dışına seyahat edecek birey ve kurumlara profesyonel vize danışmanlık hizmeti sunar. 40’tan Fazla Ülke için Vize Desteği Belgelerinizi Uzmanlar Tarafından Kontrol Ediyoruz Hızlı Başvuru ve Takip Süreci Vize Başvurusu Yap Detaylı Bilgi Al Vize Süreçlerinde İş Birliği Yaptığımız Partnerler Hangi Vize Size Uygun? [&hellip;]" />
+	<meta property="og:url" content="https://vizeriotr.com/" />
+	<meta property="og:site_name" content="VizeRio" />
+	<meta property="article:modified_time" content="2025-11-18T13:58:16+00:00" />
+	<meta property="og:image" content="https://vizeriotr.com/wp-content/uploads/2025/11/logo1.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://vizeriotr.com/","url":"https://vizeriotr.com/","name":"Anasayfa - VizeRio","isPartOf":{"@id":"https://vizeriotr.com/#website"},"about":{"@id":"https://vizeriotr.com/#organization"},"primaryImageOfPage":{"@id":"https://vizeriotr.com/#primaryimage"},"image":{"@id":"https://vizeriotr.com/#primaryimage"},"thumbnailUrl":"https://vizeriotr.com/wp-content/uploads/2025/11/logo1.png","datePublished":"2023-12-20T16:50:52+00:00","dateModified":"2025-11-18T13:58:16+00:00","breadcrumb":{"@id":"https://vizeriotr.com/#breadcrumb"},"inLanguage":"tr","potentialAction":[{"@type":"ReadAction","target":["https://vizeriotr.com/"]}]},{"@type":"ImageObject","inLanguage":"tr","@id":"https://vizeriotr.com/#primaryimage","url":"https://vizeriotr.com/wp-content/uploads/2025/11/logo1.png","contentUrl":"https://vizeriotr.com/wp-content/uploads/2025/11/logo1.png","width":137,"height":40},{"@type":"BreadcrumbList","@id":"https://vizeriotr.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Anasayfa"}]},{"@type":"WebSite","@id":"https://vizeriotr.com/#website","url":"https://vizeriotr.com/","name":"Vizerio","description":"Dünyaya Açılan Kapınız","publisher":{"@id":"https://vizeriotr.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://vizeriotr.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"tr"},{"@type":"Organization","@id":"https://vizeriotr.com/#organization","name":"VizeRio","url":"https://vizeriotr.com/","logo":{"@type":"ImageObject","inLanguage":"tr","@id":"https://vizeriotr.com/#/schema/logo/image/","url":"https://vizeriotr.com/wp-content/uploads/2025/11/logo-1.png","contentUrl":"https://vizeriotr.com/wp-content/uploads/2025/11/logo-1.png","width":320,"height":320,"caption":"VizeRio"},"image":{"@id":"https://vizeriotr.com/#/schema/logo/image/"},"sameAs":["https://www.instagram.com/vizeriotr"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
 
-    /* NAVBAR */
-    .navbar{
-      position:fixed;top:0;left:0;width:100%;
-      padding:1rem 5%;
-      display:flex;justify-content:space-between;align-items:center;
-      z-index:1000;
-      background:var(--glass);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(197,160,89,0.2);
-      box-shadow:0 4px 20px rgba(0,0,0,0.2);
-    }
 
-    /* ✅ LOGO (IMG) */
-    .brand{
-      display:flex;
-      align-items:center;
-      text-decoration:none;
-      gap:12px;
-    }
-    .brand-logo{
-      height:44px;  /* büyüt/küçült: 36-52 arası iyi */
-      width:auto;
-      display:block;
-      object-fit:contain;
-      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
-    }
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="VizeRio &raquo; akışı" href="https://vizeriotr.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="VizeRio &raquo; yorum akışı" href="https://vizeriotr.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://vizeriotr.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvizeriotr.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://vizeriotr.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvizeriotr.com%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
 
-    .nav-right{display:flex;align-items:center;gap:2rem;}
-    .nav-links{display:flex;gap:2rem;list-style:none;}
-    .nav-link{
-      text-decoration:none;color:var(--white);
-      font-weight:500;font-size:0.95rem;
-      transition:var(--transition);position:relative;
-    }
-    .nav-link::after{
-      content:'';position:absolute;bottom:-5px;left:0;
-      width:0;height:2px;background:var(--gold);
-      transition:var(--transition);
-    }
-    .nav-link:hover::after{width:100%;}
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://vizeriotr.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='evisa-googlefonts-css' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans%3A300%2C400%2C500%2C600%2C700%7CInter%3A300%2C400%2C500%2C600%2C700%7CDancing+Script%3A400%2C500%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/bootstrap.min.css?ver=5.0.' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/fontawesome.css?ver=5.13.0' type='text/css' media='all' />
+<link rel='stylesheet' id='e-animations-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/animate.css?ver=3.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='swiper-evisa-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/swiper.min.css?ver=6.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='odometer-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/odometer.css?ver=0.4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='nice-select-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/nice-select.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/jquery-ui.min.css?ver=1.12.1' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/magnific-popup.css?ver=3.1.9' type='text/css' media='all' />
+<link rel='stylesheet' id='evisa-core-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/evisa-core.css?ver=1.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='evisa-main-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/main.css?ver=1.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='evisa-style-css' href='https://vizeriotr.com/wp-content/themes/evisa/style.css?ver=1.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='evisa-inline-style-css' href='https://vizeriotr.com/wp-content/themes/evisa/assets/css/inline-style.css?ver=1.0.2' type='text/css' media='all' />
+<style id='evisa-inline-style-inline-css' type='text/css'>
 
-    /* BUTTONS */
-    .btn-book{
-      background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 100%);
-      color:var(--navy);
-      padding:0.8rem 2rem;border-radius:4px;
-      font-weight:800;text-decoration:none;text-transform:uppercase;
-      transition:var(--transition);
-      box-shadow:0 4px 15px rgba(197,160,89,0.3);
-      border:none;cursor:pointer;letter-spacing:1px;
-      display:inline-flex;align-items:center;justify-content:center;
-      white-space:nowrap;text-align:center;
-    }
-    .btn-book:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(197,160,89,0.5);}
-    .btn-outline{
-      background:transparent;color:var(--white);
-      border:2px solid var(--gold);
-      padding:0.8rem 2rem;border-radius:4px;
-      font-weight:700;text-decoration:none;text-transform:uppercase;
-      transition:var(--transition);
-      display:inline-flex;align-items:center;justify-content:center;
-      white-space:nowrap;text-align:center;
-    }
-    .btn-outline:hover{background:var(--gold);color:var(--navy);}
+        .elementor-inner {margin-left: -10px;margin-right: -10px;}.elementor-inner .elementor-section-wrap > section:first-of-type .elementor-editor-element-settings {display: block !important;}.elementor-inner .elementor-section-wrap > section:first-of-type .elementor-editor-element-settings li {display: inline-block !important;}.elementor-editor-active .elementor-editor-element-setting{height: 25px;line-height: 25px;text-align: center;}.elementor-section.elementor-section-boxed>.elementor-container {max-width: 1320px !important;}.elementor-section-stretched.elementor-section-boxed .elementor-row{padding-left: 5px;padding-right: 5px;}.elementor-section-boxed .elementor-container.elementor-column-gap-extended {margin-left: -5px;margin-right: -5px;}.elementor-section-stretched.elementor-section-boxed .elementor-container.elementor-column-gap-extended {margin-left: auto;margin-right: auto;}
+    .lang-btn,
+.search-field {
+    display: none !important;
+}
+/*# sourceURL=evisa-inline-style-inline-css */
+</style>
+<link rel='stylesheet' id='elementor-frontend-css' href='https://vizeriotr.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.32.5' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-7-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-7.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://vizeriotr.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.32.5' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-12-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-12.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='csf-google-web-fonts-css' href='//fonts.googleapis.com/css?family=Plus%20Jakarta%20Sans:500,600,700&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-roboto-css' href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap&#038;subset=latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-robotoslab-css' href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap&#038;subset=latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-plusjakartasans-css' href='https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap&#038;subset=latin-ext' type='text/css' media='all' />
+<script type="text/javascript" src="https://vizeriotr.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 
-    /* HERO */
-    .hero{
-      position:relative;height:100vh;width:100%;
-      background-color:var(--navy);
-      display:flex;align-items:center;justify-content:center;
-      text-align:center;overflow:hidden;padding:0 20px;
-    }
-    .depth-bg{
-      position:absolute;inset:-20%;z-index:0;
-      background:
-        radial-gradient(circle at 30% 40%, rgba(197,160,89,0.12), transparent 40%),
-        radial-gradient(circle at 70% 60%, rgba(197,160,89,0.09), transparent 45%),
-        linear-gradient(180deg, #0C1324 0%, #050914 100%);
-      filter:blur(26px);
-      transform:translate3d(0,0,0) scale(1.15);
-      will-change:transform;
-      animation:slowFloat 40s ease-in-out infinite alternate;
-      pointer-events:none;
-    }
-    @keyframes slowFloat{
-      0%{transform:translate3d(-18px,-10px,0) scale(1.15);}
-      100%{transform:translate3d(18px,10px,0) scale(1.18);}
-    }
-
-    /* 3D Globe Layer */
-    #globe{
-      position:absolute;inset:0;z-index:1;
-      pointer-events:none;
-      opacity:1;
-      filter: contrast(1.15) saturate(0.85) brightness(1.02);
-    }
-
-    /* ✅ Dünya renklerini site tonuna çeker (bariz değişim) */
-    #globe canvas{
-      filter:
-        grayscale(1)
-        contrast(1.25)
-        brightness(0.92)
-        sepia(1)
-        hue-rotate(185deg)
-        saturate(2.4);
-    }
-
-    /* Overlay */
-    .video-overlay{
-      position:absolute;inset:0;z-index:2;
-      background:
-        radial-gradient(60% 55% at 50% 45%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.42) 72%),
-        linear-gradient(to bottom, rgba(12, 19, 36, 0.35), rgba(12, 19, 36, 0.72));
-      pointer-events:none;
-    }
-
-    .hero-content{position:relative;z-index:3;max-width:950px;}
-    .hero h1{
-      color:var(--white);
-      font-size:4rem;font-weight:800;line-height:1.1;
-      margin-bottom:1.5rem;
-      text-shadow:0 10px 40px rgba(0,0,0,0.6);
-    }
-    .hero h1 span{color:var(--gold);}
-    .hero p{
-      color:rgba(255,255,255,0.95);
-      font-size:1.3rem;margin-bottom:3rem;font-weight:300;
-      max-width:800px;margin-left:auto;margin-right:auto;
-    }
-    .hero-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
-
-    /* DESTINATIONS */
-    .destinations{padding:6rem 5%;background-color:var(--white);}
-    .section-header{text-align:center;margin-bottom:4rem;}
-    .section-header h2{font-size:2.8rem;color:var(--navy);margin-bottom:10px;font-weight:800;}
-    .section-header p{color:#666;font-size:1.1rem;}
-    .gold-line{width:100px;height:5px;background-color:var(--gold);margin:15px auto 0;}
-    .grid-container{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-      gap:2.5rem;
-    }
-    .card{
-      position:relative;height:480px;border-radius:15px;overflow:hidden;
-      box-shadow:0 15px 35px rgba(0,0,0,0.1);
-      transition:var(--transition);cursor:pointer;
-      border:1px solid rgba(0,0,0,0.05);
-    }
-    .card:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(12, 19, 36, 0.25);}
-    .card-img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s;}
-    .card:hover .card-img{transform:scale(1.1);}
-    .card-overlay{
-      position:absolute;bottom:0;left:0;width:100%;
-      background:linear-gradient(to top, var(--navy), transparent);
-      padding:2.5rem 2rem;color:var(--white);
-    }
-    .card-tag{
-      position:absolute;top:20px;right:20px;
-      background:var(--gold);color:var(--navy);
-      padding:8px 16px;border-radius:30px;
-      font-size:0.85rem;font-weight:800;text-transform:uppercase;
-      box-shadow:0 4px 15px rgba(0,0,0,0.4);
-      z-index:10;
-    }
-    .card h3{font-size:2rem;margin-bottom:8px;color:var(--gold);text-shadow:0 2px 10px rgba(0,0,0,0.5);}
-    .card p{font-size:1rem;color:#f0f0f0;font-weight:400;line-height:1.5;}
-
-    /* FOOTER */
-    footer{
-      background:var(--navy);color:var(--white);
-      padding:4rem 5% 2rem 5%;
-      text-align:center;border-top:5px solid var(--gold);
-    }
-    .trust-section{
-      display:flex;justify-content:center;align-items:center;
-      gap:3rem;margin-bottom:3rem;flex-wrap:wrap;
-      padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.1);
-    }
-    .trust-item{display:flex;align-items:center;gap:12px;opacity:0.9;transition:var(--transition);}
-    .trust-item:hover{opacity:1;transform:scale(1.05);}
-    .trust-item i{font-size:1.8rem;color:var(--gold);}
-    .trust-item span{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:0.5px;}
-    .copyright{font-size:0.9rem;opacity:0.6;}
-
-    @media (max-width: 768px){
-      .nav-links{display:none;}
-      .brand-logo{height:38px;}
-      .hero h1{font-size:2.5rem;}
-      .hero p{font-size:1rem;}
-      .hero-btns{flex-direction:column;width:100%;}
-      .btn-book,.btn-outline{width:100%;}
-      .trust-section{flex-direction:column;gap:1.5rem;}
-      .card{height:400px;}
-      #globe{opacity:0.92;}
-      .depth-bg{filter:blur(30px);}
-    }
-    @media (prefers-reduced-motion: reduce){
-      .depth-bg{animation:none;}
-      #globe{opacity:0.60;}
-    }
-  </style>
+<!-- Site Kit tarafından eklenen Google etiketi (gtag.js) snippet&#039;i -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-PHGFHRSL" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["vizeriotr.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-PHGFHRSL");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="https://vizeriotr.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://vizeriotr.com/wp-json/wp/v2/pages/12" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vizeriotr.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<link rel='shortlink' href='https://vizeriotr.com/' />
+<meta name="generator" content="Site Kit by Google 1.165.0" /><meta name="generator" content="Elementor 3.32.5; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<style type="text/css">body{font-family:"Plus Jakarta Sans";font-weight:500;}h1,h2,h3,h4,h5,h6{font-family:"Plus Jakarta Sans";font-weight:600;}.breadcrumb{background-image:url(https://evisa.xpressbuddy.com/wp-content/uploads/2023/12/breadcrumb_bg.jpg);}</style><link rel="icon" href="https://vizeriotr.com/wp-content/uploads/2025/11/cropped-logo-e1763303531582-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://vizeriotr.com/wp-content/uploads/2025/11/cropped-logo-e1763303531582-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://vizeriotr.com/wp-content/uploads/2025/11/cropped-logo-e1763303531582-180x180.png" />
+<meta name="msapplication-TileImage" content="https://vizeriotr.com/wp-content/uploads/2025/11/cropped-logo-e1763303531582-270x270.png" />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--medium-black: #131923;--wp--preset--color--light-green: #00fcfa;--wp--preset--color--deep-blue: #003796;--wp--preset--color--light-yellow: #ffe34c;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='elementor-post-10-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-10.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-665-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-665.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-679-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-679.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-808-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-808.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-812-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-812.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-816-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-816.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-820-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-820.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-60-css' href='https://vizeriotr.com/wp-content/uploads/elementor/css/post-60.css?ver=1764774445' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://vizeriotr.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.32.5' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-spacer-css' href='https://vizeriotr.com/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.32.5' type='text/css' media='all' />
 </head>
 
-<body>
-  <nav class="navbar">
-    <!-- ✅ Senin logo burada -->
-    <!-- Logo dosyanı repo içine şu yola koy: assets/logo.png -->
-    <a href="#" class="brand" aria-label="Vizerio Ana Sayfa">
-      <img src="assets/logo.png" alt="Vizerio Logo" class="brand-logo" />
-    </a>
+<body class="home wp-singular page-template page-template-evisa-template page-template-evisa-template-php page page-id-12 wp-theme-evisa  page-builder-used elementor-default elementor-kit-7 elementor-page elementor-page-12">
 
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="#" class="nav-link">Ana Sayfa</a></li>
-        <li><a href="#rotalar" class="nav-link">Rotalar</a></li>
-        <li><a href="#" class="nav-link">Hakkımızda</a></li>
-      </ul>
-
-      <a href="https://wa.me/905510698812" class="btn-book">REZERVASYON YAP</a>
+        <div class="xb-backtotop">
+            <a href="#" class="scroll">
+                <i class="far fa-arrow-up"></i>
+            </a>
+        </div>
+            <div id="xb-loadding">
+            <div class="loader">
+                <div class="plane">
+                    <img class="plane-img" src="https://vizeriotr.com/wp-content/themes/evisa/assets/img/plane.gif" alt="">
+                </div>
+                <div class="earth-wrapper">
+                    <div class="earth"></div>
+                </div>
+            </div>
+        </div>
+    <div id="page" class="site site_wrapper">
+    <div class="evisa-main-wrap">
+    		<div data-elementor-type="wp-post" data-elementor-id="10" class="elementor elementor-10">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-1d3adf43 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="1d3adf43" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-71ac1c0c" data-id="71ac1c0c" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-52e01acf elementor-widget elementor-widget-evisa-header-1" data-id="52e01acf" data-element_type="widget" data-widget_type="evisa-header-1.default">
+				<div class="elementor-widget-container">
+					
+            <header class="site-header header-style-one">
+				                    <div class="header__top-wrap gray-bg">
+                        <div class="container">
+                            <div class="header__top ul_li_between">
+								                                    <div class="header__top-cta">
+                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="19" viewBox="0 0 14 19" fill="none"><circle cx="2" cy="2" r="2" fill="#00CC99"></circle><circle cx="7" cy="2" r="2" fill="#00CC99"></circle><circle cx="12" cy="2" r="2" fill="#00CC99"></circle><circle cx="12" cy="7" r="2" fill="#00CC99"></circle><circle cx="12" cy="12" r="2" fill="#00CC99"></circle><circle cx="7" cy="7" r="2" fill="#00CC99"></circle><circle cx="7" cy="12" r="2" fill="#00CC99"></circle><circle cx="7" cy="17" r="2" fill="#00CC99"></circle><circle cx="2" cy="7" r="2" fill="#00CC99"></circle><circle cx="2" cy="12" r="2" fill="#00CC99"></circle></svg></span><span>Destek Hattı :</span> +90 542 145 54 47                                    </div>
+								                                <ul class="header__top-info ul_li">
+									                                            <li>
+                                                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12.1041 7.72917C12.1041 10.5467 9.81742 12.8333 6.99992 12.8333C4.18242 12.8333 1.89575 10.5467 1.89575 7.72917C1.89575 4.91167 4.18242 2.625 6.99992 2.625C9.81742 2.625 12.1041 4.91167 12.1041 7.72917Z" stroke="#00CC99" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 4.66666V7.58332" stroke="#00CC99" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.25 1.16666H8.75" stroke="#00CC99" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>Pazartesi - Cumartesi 09:00  - 18:00                                             </li>
+										                                            <li>
+                                                <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M6.99993 7.83415C8.00509 7.83415 8.81993 7.01931 8.81993 6.01415C8.81993 5.00899 8.00509 4.19415 6.99993 4.19415C5.99477 4.19415 5.17993 5.00899 5.17993 6.01415C5.17993 7.01931 5.99477 7.83415 6.99993 7.83415Z" stroke="#00CC99" stroke-width="1.5"></path><path d="M2.11158 4.95249C3.26074 -0.0991754 10.7449 -0.093342 11.8882 4.95832C12.5591 7.92166 10.7157 10.43 9.09991 11.9817C7.92741 13.1133 6.07241 13.1133 4.89408 11.9817C3.28408 10.43 1.44075 7.91582 2.11158 4.95249Z" stroke="#00CC99" stroke-width="1.5"></path></svg></span>Yenibosna,İstanbul/Türkiye                                            </li>
+										                                </ul>
+                            </div>
+                        </div>
+                    </div>
+				                <div class="header__wrap  stricky ">
+                    <div class="container">
+                        <div class="header__inner ul_li_between">
+                            <div class="header__logo">
+                                <a href="https://vizeriotr.com/">
+                                    <img src="https://vizeriotr.com/wp-content/uploads/2023/12/vizerio-logo-1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
+                                <nav class="main-menu collapse navbar-collapse">
+									<ul id="main-nav" class="menu"><li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-116"><a href="https://vizeriotr.com/" aria-current="page"><span>Anasayfa</span></a></li>
+<li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="https://vizeriotr.com/hizmetlerimiz/"><span>Hizmetlerimiz</span></a></li>
+<li id="menu-item-2149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2149"><a href="https://vizeriotr.com/vize/"><span>Vize</span></a></li>
+<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="https://vizeriotr.com/ulkeler/"><span>Ülkeler</span></a></li>
+<li id="menu-item-3552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3552"><a href="https://vizeriotr.com/vize-rehberi-2025/"><span>Vize Rehberi</span></a></li>
+<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-118"><a href="https://vizeriotr.com/hakkimizda/"><span>Hakkımızda</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="https://vizeriotr.com/sikca-sorulan-sorular/"><span>Sıkça Sorulan Sorular</span></a></li>
+</ul>
+</li>
+<li id="menu-item-121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121"><a href="https://vizeriotr.com/iletisim/"><span>İletişim</span></a></li>
+<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="https://vizeriotr.com/blog/"><span>Blog</span></a></li>
+</ul>                                </nav>
+                            </div>
+                            <div class="xb-hamburger-menu">
+                                <div class="xb-nav-mobile">
+                                    <div class="xb-nav-mobile-button"><i class="fal fa-bars"></i></div>
+                                </div>
+                            </div>
+                            <ul class="header__action ul_li">
+								                                <li>
+                                    <div class="header__language">
+                                        <ul>
+                                            <li><a href=""
+                                                   class="lang-btn">
+                                                    <div class="flag"><img
+                                                                src=""
+                                                                alt=""></div>
+													                                                    <div class="arrow_down"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1.7193 1.68249L6.06596 6.5725C6.5793 7.15 7.4193 7.15 7.93263 6.5725L12.2793 1.6825" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+                                                </a>
+                                                <ul class="lang_sub_list">
+													                                                            <li>
+                                                                <a href="#"></a>
+                                                            </li>
+														                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="xb-header-wrap">
+                    <div class="xb-header-menu">
+                        <div class="xb-header-menu-scroll">
+                            <div class="xb-menu-close xb-hide-xl xb-close"></div>
+                            <div class="xb-logo-mobile xb-hide-xl">
+                                <a href="https://vizeriotr.com/"><img src="https://vizeriotr.com/wp-content/uploads/2023/12/vizerio-logo-1.png"
+                                           alt=""></a>
+                            </div>
+							    <div class="xb-header-mobile-search xb-hide-xl">
+        <form role="search" action="https://vizeriotr.com/">
+            <input class="search-field" type="text" name="s" placeholder="Search Keywords" value="">
+            <button class="search-submit" type="submit"><i class="far fa-search"></i></button>
+        </form>
     </div>
-  </nav>
+                                <nav class="xb-header-nav">
+								<ul id="mobile-main-nav" class="xb-menu-primary clearfix"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-116"><a href="https://vizeriotr.com/" aria-current="page"><span>Anasayfa</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="https://vizeriotr.com/hizmetlerimiz/"><span>Hizmetlerimiz</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2149"><a href="https://vizeriotr.com/vize/"><span>Vize</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="https://vizeriotr.com/ulkeler/"><span>Ülkeler</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3552"><a href="https://vizeriotr.com/vize-rehberi-2025/"><span>Vize Rehberi</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-118"><a href="https://vizeriotr.com/hakkimizda/"><span>Hakkımızda</span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="https://vizeriotr.com/sikca-sorulan-sorular/"><span>Sıkça Sorulan Sorular</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121"><a href="https://vizeriotr.com/iletisim/"><span>İletişim</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="https://vizeriotr.com/blog/"><span>Blog</span></a></li>
+</ul>                            </nav>
+                        </div>
+                    </div>
+                    <div class="xb-header-menu-backdrop"></div>
+                </div>
+            </header>
 
-  <section class="hero">
-    <div class="depth-bg" aria-hidden="true"></div>
-    <div id="globe" aria-hidden="true"></div>
-    <div class="video-overlay" aria-hidden="true"></div>
+            <!-- sidebar-info end -->
+            <div class="body-overlay"></div>
 
-    <div class="hero-content">
-      <h1>Sadece Bir Tatil Değil, <br><span>Prestijli Bir Yaşam Tarzı.</span></h1>
-      <p>Rusya'nın ihtişamı, Dubai'nin lüksü ve Paris'in ışıltısı. Vizerio ile standartların ötesine geç.</p>
-      <div class="hero-btns">
-        <a href="#rotalar" class="btn-book">MACERALARI KEŞFET</a>
-        <a href="https://wa.me/905510698812" class="btn-outline">WHATSAPP İLE SOR</a>
-      </div>
+            <div class="header-search-form-wrapper">
+				    <div class="xb-search-close xb-close"></div>
+    <div class="header-search-container">
+        <form role="search" class="search-form" action="https://vizeriotr.com/">
+            <input type="search"  class="search-field" placeholder="Search Keywords" value="" name="s">
+            <button class="search-submit" type="submit"><i class="far fa-search"></i></button>
+        </form>
     </div>
-  </section>
+                </div>
 
-  <section class="destinations" id="rotalar">
-    <div class="section-header">
-      <h2>Sana Özel Deneyimler</h2>
-      <p>Şehirleri değil, kültürleri keşfet. Seçkin ülke turlarımız.</p>
-      <div class="gold-line"></div>
+							</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+
+    <div id="elementor_page_builder">
+                    		<div data-elementor-type="wp-page" data-elementor-id="12" class="elementor elementor-12">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-6335745 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="6335745" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-596d80f" data-id="596d80f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-cbc9d4d elementor-widget elementor-widget-int-hero-one" data-id="cbc9d4d" data-element_type="widget" data-widget_type="int-hero-one.default">
+				<div class="elementor-widget-container">
+					
+        <section class="hero hero__style-one bg_img"                  style="background-image: url('https://vizeriotr.com/wp-content/uploads/2025/11/Adsiz-tasarim-2025-11-06T160508.107.png') ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="hero__content">
+                                                            <h1 class="wow skewIn">Vize Başvurularınızda Güvenli ve Hızlı : Vizerio ile Yola Çıkın!</h1>
+                                                                                        <p class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration=".6s">Vizerio, yurt dışına seyahat edecek birey ve kurumlara profesyonel vize danışmanlık hizmeti sunar. </p>
+                                                                                        <ul class="xb-list list-unstyled mt-40 mb-60 wow fadeInUp" data-wow-delay="400ms"
+                                    data-wow-duration="500ms">
+                                                                            <li><i class="far fa-check"></i>40’tan Fazla Ülke için Vize Desteği</li>
+                                                                            <li><i class="far fa-check"></i>Belgelerinizi Uzmanlar Tarafından Kontrol Ediyoruz</li>
+                                                                            <li><i class="far fa-check"></i>Hızlı Başvuru ve Takip Süreci</li>
+                                                                    </ul>
+                            
+                            <div class="btns wow fadeInUp" data-wow-delay="600ms" data-wow-duration=".6s">
+                                                                    <a class="thm-btn"
+                                       href="https://vizeriotr.com/iletisim/">Vize Başvurusu Yap</a>
+                                                                                                    <a class="thm-btn thm-btn--white"
+                                       href="https://vizeriotr.com/vize/">Detaylı Bilgi Al</a>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1bbce70 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="1bbce70" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d83f9e7" data-id="d83f9e7" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6a6f488 elementor-widget elementor-widget-int-brand" data-id="6a6f488" data-element_type="widget" data-widget_type="int-brand.default">
+				<div class="elementor-widget-container">
+					
+        <section class="brand pt-110 pb-90">
+            <div class="container">
+                                    <h2 class="brand-title text-center mb-50">
+                        <span><span>Vize Süreçlerinde İş Birliği Yaptığımız Partnerler</span></span>
+                    </h2>
+                                <div class="xb-swiper-sliders brand-slider">
+                    <div class="xb-carousel-inner">
+                        <div class="xb-swiper-container swiper-container">
+                            <div class="xb-swiper-wrapper swiper-wrapper">
+                                                                    <div class="swiper-slide xb-swiper-slide">
+                                        <a href="#"><img decoding="async" width="137" height="40" src="https://vizeriotr.com/wp-content/uploads/2025/11/logo1.png" class="attachment-medium size-medium" alt="" /></a>
+                                    </div>
+                                                                    <div class="swiper-slide xb-swiper-slide">
+                                        <a href="#"><img decoding="async" width="137" height="40" src="https://vizeriotr.com/wp-content/uploads/2025/11/logo1-1.png" class="attachment-medium size-medium" alt="" /></a>
+                                    </div>
+                                                                    <div class="swiper-slide xb-swiper-slide">
+                                        <a href="#"><img decoding="async" width="137" height="40" src="https://vizeriotr.com/wp-content/uploads/2025/11/logo1-2.png" class="attachment-medium size-medium" alt="" /></a>
+                                    </div>
+                                                                    <div class="swiper-slide xb-swiper-slide">
+                                        <a href="#"><img loading="lazy" decoding="async" width="123" height="31" src="https://vizeriotr.com/wp-content/uploads/2023/12/img_04.png" class="attachment-medium size-medium" alt="" /></a>
+                                    </div>
+                                                                    <div class="swiper-slide xb-swiper-slide">
+                                        <a href="#"><img loading="lazy" decoding="async" width="137" height="40" src="https://vizeriotr.com/wp-content/uploads/2025/11/logo1-3.png" class="attachment-medium size-medium" alt="" /></a>
+                                    </div>
+                                                                    <div class="swiper-slide xb-swiper-slide">
+                                        <a href="#"><img loading="lazy" decoding="async" width="137" height="40" src="https://vizeriotr.com/wp-content/uploads/2025/11/logo1-4.png" class="attachment-medium size-medium" alt="" /></a>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-d3fa951 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="d3fa951" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-954c7e5" data-id="954c7e5" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-477135e elementor-widget elementor-widget-int-visa" data-id="477135e" data-element_type="widget" data-widget_type="int-visa.default">
+				<div class="elementor-widget-container">
+					
+        <section class="visa-type">
+            <div class="container">
+                <div class="service-wrap pos-rel">
+                    <div class="service-img-wrap">
+                        <div class="service-bg"                              style="background-image: url('https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/service_bg.png') "></div>
+                        <div class="service-img wow skewIn" data-wow-delay="100ms"
+                                                         style="background-image: url('https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_01.jpg') "></div>
+                    </div>
+                    <div class="sec-title pt-120">
+                                                    <h2 class="title wow skewIn mb-60">Hangi Vize Size Uygun? <br>
+<span>Tüm Vize Türlerini Keşfedin</span></h2>
+                                            </div>
+                    <div class="row justify-content-md-center mt-none-30">
+                                                    <div class="col-lg-4 col-md-6 mt-30">
+                                                                    <div class="xb-service elementor-repeater-item-c5bc3f2">
+                                        <div class="xb-item--inner">
+                                            <div class="xb-item--icon mb-50">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M3.08031 12.0401L5.69365 15.1468C6.09365 15.6135 6.09365 16.3868 5.69365 16.8535L3.08031 19.9601C2.72031 20.6801 3.08031 21.5601 3.85365 21.8268L5.62698 22.4135C6.05365 22.5601 6.68031 22.4135 7.00031 22.0935L10.0403 19.0668C10.2536 18.8401 10.6803 18.6668 10.987 18.6668L14.787 18.6668C15.347 18.6668 15.6136 19.0801 15.4003 19.6001L12.5736 26.1468C12.1336 27.1735 12.6803 28.0135 13.8003 28.0135L15.5203 28.0135C16.4136 28.0135 17.4403 27.3468 17.787 26.5201L21.0003 19.0668C21.0936 18.8535 21.3736 18.6668 21.6136 18.6668L25.6136 18.6668C26.867 18.6668 28.347 17.7468 28.9203 16.6268C29.1203 16.2268 29.1203 15.7601 28.9203 15.3601C28.347 14.2402 26.8536 13.3201 25.6003 13.3201L21.6003 13.3201C21.3603 13.3201 21.0803 13.1335 20.987 12.9201L17.7736 5.48015C17.4403 4.65348 16.4136 3.98682 15.5203 3.98682L13.8003 3.98682C12.6803 3.98682 12.1336 4.82682 12.5736 5.85348L15.4003 12.4001C15.627 12.9068 15.347 13.3335 14.787 13.3335L10.987 13.3335C10.6803 13.3335 10.2536 13.1601 10.0403 12.9468L7.00031 9.92015C6.68031 9.60015 6.06698 9.45348 5.62698 9.60015L3.85365 10.1868C3.08031 10.4268 2.70698 11.3068 3.08031 12.0401Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>                                            </div>
+                                            <div class="xb-item--holder">
+                                                                                                    <h3 class="xb-item--title mb-20"><a
+                                                                href="">Turist Vizesi</a>
+                                                    </h3>
+                                                                                                                                                    <div class="xb-item--description">
+                                                        Vizerio ile yurt dışı seyahat planınızı zahmetsizce gerçekleştirin. 
+                                                    </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                                            </div>
+                                                    <div class="col-lg-4 col-md-6 mt-30">
+                                                                    <div class="xb-service elementor-repeater-item-e5ba6c3">
+                                        <div class="xb-item--inner">
+                                            <div class="xb-item--icon mb-50">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M12.028 3.78672L4.8413 9.38672C3.6413 10.3201 2.66797 12.3067 2.66797 13.8134V23.6934C2.66797 26.7867 5.18797 29.3201 8.2813 29.3201H23.7213C26.8146 29.3201 29.3346 26.7867 29.3346 23.7067V14.0001C29.3346 12.3867 28.2546 10.3201 26.9346 9.40005L18.6946 3.62672C16.828 2.32005 13.828 2.38672 12.028 3.78672Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 15.3333L16.4 20.9333L14.2667 17.7333L10 21.9999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19.332 15.3335H21.9987V18.0002" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>                                            </div>
+                                            <div class="xb-item--holder">
+                                                                                                    <h3 class="xb-item--title mb-20"><a
+                                                                href="">İş (Ticari) Vizesi</a>
+                                                    </h3>
+                                                                                                                                                    <div class="xb-item--description">
+                                                        Yurt Dışı İş Görüşmeleri, Fuarlar ve Toplantılar İçin Ticari Vize Çözümleri.                                                    </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                                            </div>
+                                                    <div class="col-lg-4 col-md-6 mt-30">
+                                                            </div>
+                                                    <div class="col-lg-4 col-md-6 mt-30">
+                                                                    <div class="xb-service elementor-repeater-item-cfa6866">
+                                        <div class="xb-item--inner">
+                                            <div class="xb-item--icon mb-50">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M13.4 3.37338L5.37336 8.61338C2.80003 10.2934 2.80003 14.0534 5.37336 15.7334L13.4 20.9734C14.84 21.92 17.2134 21.92 18.6534 20.9734L26.64 15.7334C29.2 14.0534 29.2 10.3067 26.64 8.62671L18.6534 3.38671C17.2134 2.42671 14.84 2.42671 13.4 3.37338Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.50747 17.4399L7.49414 23.6933C7.49414 25.3866 8.80081 27.1999 10.4008 27.7333L14.6541 29.1466C15.3875 29.3866 16.6008 29.3866 17.3475 29.1466L21.6008 27.7333C23.2008 27.1999 24.5075 25.3866 24.5075 23.6933V17.5066" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M28.5332 20V12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>                                            </div>
+                                            <div class="xb-item--holder">
+                                                                                                    <h3 class="xb-item--title mb-20"><a
+                                                                href="">Öğrenci Vizesi</a>
+                                                    </h3>
+                                                                                                                                                    <div class="xb-item--description">
+                                                        Eğitim Hayalinizi Gerçekleştirin: Öğrenci Vizesi Başvurularınız Vizerio’ya Emanet.                                                    </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                                            </div>
+                                                    <div class="col-lg-4 col-md-6 mt-30">
+                                                                    <div class="xb-service elementor-repeater-item-da925d9">
+                                        <div class="xb-item--inner">
+                                            <div class="xb-item--icon mb-50">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16.667 29.3336H5.44029C3.89362 29.3336 2.62695 28.0936 2.62695 26.5736V6.78697C2.62695 3.29364 5.22695 1.70697 8.41362 3.26697L14.3336 6.17364C15.6136 6.8003 16.667 8.46697 16.667 9.8803V29.3336Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M29.2946 20.0802V25.1202C29.2946 28.0002 27.9613 29.3336 25.0813 29.3336H16.668V13.8936L17.2946 14.0269L23.2946 15.3736L26.0013 15.9736C27.7613 16.3602 29.2013 17.2669 29.2813 19.8269C29.2946 19.9069 29.2946 19.9869 29.2946 20.0802Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.33203 12H11.9587" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.33203 17.3335H11.9587" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M23.293 15.3735V19.6669C23.293 21.3202 21.9463 22.6669 20.293 22.6669C18.6396 22.6669 17.293 21.3202 17.293 19.6669V14.0269L23.293 15.3735Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M29.2796 19.8269C29.1996 21.4002 27.893 22.6669 26.293 22.6669C24.6396 22.6669 23.293 21.3202 23.293 19.6669V15.3735L25.9996 15.9735C27.7596 16.3602 29.1996 17.2669 29.2796 19.8269Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>                                            </div>
+                                            <div class="xb-item--holder">
+                                                                                                    <h3 class="xb-item--title mb-20"><a
+                                                                href="">İkamet Vizesi</a>
+                                                    </h3>
+                                                                                                                                                    <div class="xb-item--description">
+                                                        Uzun süreli ikamet veya çalışma planlayanlar için en uygun vize türünü belirliyor, resmi belgeleri hazırlıyor ve süreci adım adım yönetiyoruz.                                                    </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                                            </div>
+                                                    <div class="col-lg-4 col-md-6 mt-30">
+                                                                    <div class="xb-service elementor-repeater-item-a2a6950">
+                                        <div class="xb-item--inner">
+                                            <div class="xb-item--icon mb-50">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4.22656 9.92017L15.9999 16.7335L27.6932 9.96012" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 28.8136V16.7202" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13.2408 3.30675L6.12081 7.26679C4.50748 8.16012 3.1875 10.4001 3.1875 12.2401V19.7735C3.1875 21.6135 4.50748 23.8534 6.12081 24.7468L13.2408 28.7068C14.7608 29.5468 17.2541 29.5468 18.7741 28.7068L25.8942 24.7468C27.5075 23.8534 28.8275 21.6135 28.8275 19.7735V12.2401C28.8275 10.4001 27.5075 8.16012 25.8942 7.26679L18.7741 3.30675C17.2408 2.45341 14.7608 2.45341 13.2408 3.30675Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22.667 17.6535V12.7735L10.0137 5.4668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>                                            </div>
+                                            <div class="xb-item--holder">
+                                                                                                    <h3 class="xb-item--title mb-20"><a
+                                                                href="">Çalışma Vizesi</a>
+                                                    </h3>
+                                                                                                                                                    <div class="xb-item--description">
+                                                        Yurt Dışında Çalışmak İsteyenler İçin Kapsamlı Vize Danışmanlığı                                                    </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                                            </div>
+                                            </div>
+                </div>
+            </div>
+        </section>
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-6aefb52 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6aefb52" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4b09b13" data-id="4b09b13" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2504aa8 elementor-widget elementor-widget-int-sec-title" data-id="2504aa8" data-element_type="widget" data-widget_type="int-sec-title.default">
+				<div class="elementor-widget-container">
+					                <div class="sec-title">
+                            <h2 class="title wow skewIn">Vize Başvurusu Nasıl Yapılır? <br>
+<span>Vize Rehberliği</span></h2>
+                            <p>Vizerio ile yalnızca 4 adımda vize başvurunuzu kolayca tamamlayın. <br></p>
+                    </div>
+    				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-4206a8a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4206a8a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b18369b" data-id="b18369b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a0746cf elementor-widget elementor-widget-int-about-content" data-id="a0746cf" data-element_type="widget" data-widget_type="int-about-content.default">
+				<div class="elementor-widget-container">
+					
+        <div class="about__content">
+            <ul class="about-list ul_li list-unstyled">
+                                    <li>
+                        <div class="xb-item--inner elementor-repeater-item-5f7389a"">
+                                                            <div class="xb-item--number">1</div>
+                                                        <div class="xb-item--holder">
+                                                                    <h3 class="xb-item--title mb-10">Başvuru Formunu Doldurun</h3>
+                                                                                                    <div class="xb-item--description">
+                                        Online formu doldurarak gitmek istediğiniz ülkeyi ve vize türünü seçin. Uzman ekibimiz hemen sizinle iletişime geçer.                                    </div>
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="xb-item--inner elementor-repeater-item-3ffac42"">
+                                                            <div class="xb-item--number">2</div>
+                                                        <div class="xb-item--holder">
+                                                                    <h3 class="xb-item--title mb-10">Belgelerinizi Hazırlayın</h3>
+                                                                                                    <div class="xb-item--description">
+                                        Gerekli evrak listesi tarafınıza iletilir, tüm belgelerinizi eksiksiz şekilde hazırlamanız için yönlendirme yapılır.                                    </div>
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="xb-item--inner elementor-repeater-item-3e44c4c"">
+                                                            <div class="xb-item--number">3</div>
+                                                        <div class="xb-item--holder">
+                                                                    <h3 class="xb-item--title mb-10">Randevunuzu Oluşturalım</h3>
+                                                                                                    <div class="xb-item--description">
+                                        Konsolosluk veya aracı kurum randevunuzu sizin adınıza planlıyoruz. Başvuru günü belgelerinizi teslim edin.                                    </div>
+                                                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="xb-item--inner elementor-repeater-item-ea56702"">
+                                                            <div class="xb-item--number">4</div>
+                                                        <div class="xb-item--holder">
+                                                                    <h3 class="xb-item--title mb-10">Takip ve Sonuç Bildirimi</h3>
+                                                                                                    <div class="xb-item--description">
+                                        Vize süreciniz uzman ekibimiz tarafından takip edilir ve sonuç alındığında size anında bildirilir.                                    </div>
+                                                            </div>
+                        </div>
+                    </li>
+                            </ul>
+        </div>
+        				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c886b14" data-id="c886b14" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e74e529 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e74e529" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-62c607e" data-id="62c607e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-124aa58 elementor-widget elementor-widget-int-sec-title" data-id="124aa58" data-element_type="widget" data-widget_type="int-sec-title.default">
+				<div class="elementor-widget-container">
+					                <div class="sec-title">
+                            <h2 class="title wow skewIn">Rakamlarla Vizerio.<br></h2>
+                            <p>Her gün daha fazla kişiye güvenli, hızlı ve doğru vize hizmeti sunuyoruz.<br></p>
+                    </div>
+    				</div>
+				</div>
+				<div class="elementor-element elementor-element-0c6a1cc elementor-widget elementor-widget-int-funfact" data-id="0c6a1cc" data-element_type="widget" data-widget_type="int-funfact.default">
+				<div class="elementor-widget-container">
+					
+        <div class="xb-counter ul_li">
+                            <div class="xb-item--item ul_li elementor-repeater-item-f337069">
+                    <div class="xb-item--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M26.7317 41.6517C27.2033 41.7614 27.2485 42.3843 26.7903 42.5409C26.6878 42.576 26.584 42.6109 26.4791 42.6459L23.1875 43.7292C14.9166 46.3959 10.5625 44.1667 7.87498 35.8959L5.20831 27.6667C2.54165 19.3959 4.74998 15.0209 13.0208 12.3542L15.2131 11.6282C15.616 11.4948 15.9991 11.8953 15.8664 12.2984C15.6217 13.0414 15.3998 13.8517 15.1875 14.7292L13.1458 23.4584C10.8541 33.2709 14.2083 38.6876 24.0208 41.0209L26.7317 41.6517Z" fill="#FE6C3F"></path><path d="M35.7708 6.68756L32.2916 5.87506C25.3333 4.22922 21.1875 5.58339 18.75 10.6251C18.125 11.8959 17.625 13.4376 17.2083 15.2084L15.1666 23.9376C13.125 32.6459 15.8125 36.9376 24.5 39.0001L28 39.8334C29.2083 40.1251 30.3333 40.3126 31.375 40.3959C37.875 41.0209 41.3333 37.9792 43.0833 30.4584L45.125 21.7501C47.1666 13.0417 44.5 8.72922 35.7708 6.68756ZM31.8541 27.7709C31.6666 28.4792 31.0416 28.9376 30.3333 28.9376C30.2083 28.9376 30.0833 28.9167 29.9375 28.8959L23.875 27.3542C23.0416 27.1459 22.5416 26.2917 22.75 25.4584C22.9583 24.6251 23.8125 24.1251 24.6458 24.3334L30.7083 25.8751C31.5625 26.0834 32.0625 26.9376 31.8541 27.7709ZM37.9583 20.7292C37.7708 21.4376 37.1458 21.8959 36.4375 21.8959C36.3125 21.8959 36.1875 21.8751 36.0416 21.8542L25.9375 19.2917C25.1041 19.0834 24.6041 18.2292 24.8125 17.3959C25.0208 16.5626 25.875 16.0626 26.7083 16.2709L36.8125 18.8334C37.6666 19.0209 38.1666 19.8751 37.9583 20.7292Z" fill="#FE6C3F"></path></svg>                    </div>
+                    <div class="xb-item--holder">
+                                                    <h2 class="xb-item--number"><span class="xbo"
+                                                              data-count="40">00</span><span
+                                        class="suffix">+</span></h2>
+                                                                            <h5 class="xb-item--title">Hizmet Verilen Ülke</h5>
+                                            </div>
+                </div>
+                            <div class="xb-item--item ul_li elementor-repeater-item-e9ef065">
+                    <div class="xb-item--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="58" height="59" viewBox="0 0 58 59" fill="none"><path d="M41.9608 24.5299V24.8278C41.9608 25.5861 41.3649 26.1819 40.6066 26.1819H16.2316C15.4733 26.1819 14.8774 25.5861 14.8774 24.8278V24.5299C14.8774 19.7632 16.0691 18.5715 20.8899 18.5715H35.9483C40.7691 18.5715 41.9608 19.7632 41.9608 24.5299Z" fill="#0091FF"></path><path d="M16.2316 28.8901C15.4733 28.8901 14.8774 29.486 14.8774 30.2443V32.9526V35.6339C14.8774 40.4006 16.0691 41.5922 20.8899 41.5922H35.9483C40.7691 41.5922 41.9608 40.4006 41.9608 35.6339V32.9526V30.2443C41.9608 29.486 41.3649 28.8901 40.6066 28.8901H16.2316V28.8901Z" fill="#0091FF"></path><path d="M56.3868 35.8164C56.3868 46.2977 47.9097 54.7747 37.4285 54.7747L40.2722 50.0352" stroke="#0091FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1.6123 22.9378C1.6123 12.4566 10.0894 3.97949 20.5706 3.97949L17.7269 8.71908" stroke="#0091FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>                    </div>
+                    <div class="xb-item--holder">
+                                                    <h2 class="xb-item--number"><span class="xbo"
+                                                              data-count="1200">00</span><span
+                                        class="suffix">+</span></h2>
+                                                                            <h5 class="xb-item--title">Tamamlanan Vize Başvurusu</h5>
+                                            </div>
+                </div>
+                            <div class="xb-item--item ul_li elementor-repeater-item-c566d6b">
+                    <div class="xb-item--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none"><path d="M33.1393 7.935L33.0051 15.1992C32.9859 16.1958 33.6184 17.5183 34.4234 18.1125L39.1768 21.7158C42.2243 24.0158 41.7259 26.8333 38.0843 27.9833L31.8934 29.9192C30.8584 30.245 29.7659 31.3758 29.4976 32.43L28.0218 38.065C26.8526 42.5117 23.9393 42.9525 21.5243 39.0425L18.1509 33.58C17.5376 32.5833 16.0809 31.8358 14.9309 31.8933L8.52928 32.2192C3.94844 32.4492 2.64511 29.8042 5.63511 26.3158L9.43011 21.9075C10.1393 21.0833 10.4651 19.55 10.1393 18.515L8.18428 12.305C7.05345 8.66334 9.08511 6.65084 12.7076 7.83917L18.3618 9.69834C19.3201 10.005 20.7576 9.79417 21.5626 9.2L27.4659 4.945C30.6668 2.66417 33.2159 4.00584 33.1393 7.935Z" fill="#00CC99"></path><path d="M41.0934 39.2341L35.2859 33.4266C34.7301 32.8708 33.8101 32.8708 33.2543 33.4266C32.6984 33.9825 32.6984 34.9025 33.2543 35.4583L39.0618 41.2658C39.3493 41.5533 39.7134 41.6875 40.0776 41.6875C40.4418 41.6875 40.8059 41.5533 41.0934 41.2658C41.6493 40.71 41.6493 39.79 41.0934 39.2341Z" fill="#00CC99"></path></svg>                    </div>
+                    <div class="xb-item--holder">
+                                                    <h2 class="xb-item--number"><span class="xbo"
+                                                              data-count="98">00</span><span
+                                        class="suffix">%</span></h2>
+                                                                            <h5 class="xb-item--title">Başvuru&quot; Başarı&quot;  Oranı</h5>
+                                            </div>
+                </div>
+                            <div class="xb-item--item ul_li elementor-repeater-item-00e5d24">
+                    <div class="xb-item--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none"><path d="M37.2512 16.5112C37.1025 16.49 36.9537 16.49 36.805 16.5112C33.5112 16.405 30.8975 13.7062 30.8975 10.3912C30.8975 7.0125 33.6387 4.25 37.0387 4.25C40.4175 4.25 43.18 6.99125 43.18 10.3912C43.1587 13.7062 40.545 16.405 37.2512 16.5112Z" fill="#FFBD0F"></path><path d="M44.1787 31.2374C41.7987 32.8311 38.4624 33.4261 35.3812 33.0224C36.1887 31.2799 36.6137 29.3461 36.6349 27.3061C36.6349 25.1811 36.1674 23.1624 35.2749 21.3986C38.4199 20.9736 41.7562 21.5686 44.1574 23.1624C47.5149 25.3724 47.5149 29.0061 44.1787 31.2374Z" fill="#FFBD0F"></path><path d="M13.6851 16.5112C13.8338 16.49 13.9826 16.49 14.1313 16.5112C17.4251 16.405 20.0388 13.7062 20.0388 10.3912C20.0388 6.99125 17.2976 4.25 13.8976 4.25C10.5188 4.25 7.77759 6.99125 7.77759 10.3912C7.77759 13.7062 10.3913 16.405 13.6851 16.5112Z" fill="#FFBD0F"></path><path d="M13.9186 27.3063C13.9186 29.3675 14.3649 31.3225 15.1724 33.0863C12.1761 33.405 9.05238 32.7675 6.75738 31.2588C3.39988 29.0275 3.39988 25.3938 6.75738 23.1625C9.03113 21.6325 12.2399 21.0163 15.2574 21.3563C14.3861 23.1413 13.9186 25.16 13.9186 27.3063Z" fill="#FFBD0F"></path><path d="M25.755 33.7237C25.585 33.7025 25.3937 33.7025 25.2025 33.7237C21.2924 33.5962 18.1687 30.3875 18.1687 26.435C18.19 22.3975 21.4412 19.125 25.5 19.125C29.5375 19.125 32.8099 22.3975 32.8099 26.435C32.7887 30.3875 29.6862 33.5962 25.755 33.7237Z" fill="#FFBD0F"></path><path d="M18.8487 38.1226C15.64 40.2689 15.64 43.7964 18.8487 45.9214C22.5037 48.3651 28.4962 48.3651 32.1512 45.9214C35.36 43.7751 35.36 40.2476 32.1512 38.1226C28.5175 35.6789 22.525 35.6789 18.8487 38.1226Z" fill="#FFBD0F"></path></svg>                    </div>
+                    <div class="xb-item--holder">
+                                                    <h2 class="xb-item--number"><span class="xbo"
+                                                              data-count="7">00</span><span
+                                        class="suffix">/24</span></h2>
+                                                                            <h5 class="xb-item--title">Danışmanlık Desteği</h5>
+                                            </div>
+                </div>
+                    </div>
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e7ca577 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="e7ca577" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-efdefa4" data-id="efdefa4" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-c0b8a9a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c0b8a9a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-f3a5b3a" data-id="f3a5b3a" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b216a3b elementor-widget elementor-widget-int-sec-title" data-id="b216a3b" data-element_type="widget" data-widget_type="int-sec-title.default">
+				<div class="elementor-widget-container">
+					                <div class="sec-title">
+                            <h2 class="title wow skewIn">40’tan Fazla Ülke
+<span>İçin Vize Danışmanlığı Hizmeti</span></h2>
+                    </div>
+    				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c1e434e" data-id="c1e434e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2c62f87 elementor-widget elementor-widget-text-editor" data-id="2c62f87" data-element_type="widget" data-widget_type="text-editor.default">
+									<p>Amerika’dan Avrupa’ya, Asya’dan Orta Doğu’ya kadar birçok ülke için vize sürecinizi Vizerio ile kolaylaştırın.</p>								</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-55b5355 elementor-widget elementor-widget-int-country-tab" data-id="55b5355" data-element_type="widget" data-widget_type="int-country-tab.default">
+				<div class="elementor-widget-container">
+					            <div class="container mxw_1320">
+                <ul class="xb-country-nav nav nav-tabs ul_li_between mb-65" id="myTab" role="tablist">
+					
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="d-1-tab" data-bs-toggle="tab" data-bs-target="#d-1" type="button" role="tab" aria-controls="d-1" aria-selected="true">Avrupa</button>
+      </li>    
+    
+      <li class="nav-item" role="presentation">
+        <button class="nav-link " id="d-2-tab" data-bs-toggle="tab" data-bs-target="#d-2" type="button" role="tab" aria-controls="d-2" aria-selected="false">Kuzey Amerika</button>
+      </li>    
+    
+      <li class="nav-item" role="presentation">
+        <button class="nav-link " id="d-3-tab" data-bs-toggle="tab" data-bs-target="#d-3" type="button" role="tab" aria-controls="d-3" aria-selected="false">Asya</button>
+      </li>    
+    
+      <li class="nav-item" role="presentation">
+        <button class="nav-link " id="d-4-tab" data-bs-toggle="tab" data-bs-target="#d-4" type="button" role="tab" aria-controls="d-4" aria-selected="false">Latin Amerika</button>
+      </li>    
+    
+      <li class="nav-item" role="presentation">
+        <button class="nav-link " id="d-5-tab" data-bs-toggle="tab" data-bs-target="#d-5" type="button" role="tab" aria-controls="d-5" aria-selected="false">Okyanusya</button>
+      </li>    
+    
+      <li class="nav-item" role="presentation">
+        <button class="nav-link " id="d-6-tab" data-bs-toggle="tab" data-bs-target="#d-6" type="button" role="tab" aria-controls="d-6" aria-selected="false">Afrika</button>
+      </li>    
+                    </ul>
+            </div>
+
+            <div class="tab-content" id="myTabContent">
+				
+      <div class="tab-pane animated fadeInUp show active" id="d-1" role="tabpanel" aria-labelledby="d-1-tab">
+        		<div data-elementor-type="page" data-elementor-id="665" class="elementor elementor-665">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-d35baf1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d35baf1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d11fc90" data-id="d11fc90" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-56feb5c elementor-widget elementor-widget-int-country" data-id="56feb5c" data-element_type="widget" data-widget_type="int-country.default">
+				<div class="elementor-widget-container">
+					<div class="xb-country ul_li"><div class="xb-item--item"><a href="https://vizeriotr.com/country/kanada/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_01-2.png" alt=""></div><h3 class="xb-item--title">Kanada</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/belcika/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_02-2.png" alt=""></div><h3 class="xb-item--title">Belçika</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/danimarka/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_03-2.png" alt=""></div><h3 class="xb-item--title">Danimarka</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/avusturya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_04-2.png" alt=""></div><h3 class="xb-item--title">Avusturya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/fransa/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_05-2.png" alt=""></div><h3 class="xb-item--title">Fransa</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/almanya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_06-2.png" alt=""></div><h3 class="xb-item--title">Almanya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/yunanistan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_07-2.png" alt=""></div><h3 class="xb-item--title">Yunanistan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/macaristan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_08-1.png" alt=""></div><h3 class="xb-item--title">Macaristan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/izlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_09.png" alt=""></div><h3 class="xb-item--title">İzlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/irlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_10.png" alt=""></div><h3 class="xb-item--title">İrlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/italya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_11.png" alt=""></div><h3 class="xb-item--title">İtalya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/luksemburg/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_12.png" alt=""></div><h3 class="xb-item--title">Lüksemburg</h3></a></div></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+      </div>
+      
+      <div class="tab-pane animated fadeInUp " id="d-2" role="tabpanel" aria-labelledby="d-2-tab">
+        		<div data-elementor-type="page" data-elementor-id="679" class="elementor elementor-679">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-259227b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="259227b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f0c7feb" data-id="f0c7feb" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ead82e1 elementor-widget elementor-widget-int-country" data-id="ead82e1" data-element_type="widget" data-widget_type="int-country.default">
+				<div class="elementor-widget-container">
+					<div class="xb-country ul_li"><div class="xb-item--item"><a href="https://vizeriotr.com/country/belcika/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_02-2.png" alt=""></div><h3 class="xb-item--title">Belçika</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/luksemburg/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_12.png" alt=""></div><h3 class="xb-item--title">Lüksemburg</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/avusturya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_04-2.png" alt=""></div><h3 class="xb-item--title">Avusturya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/italya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_11.png" alt=""></div><h3 class="xb-item--title">İtalya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/fransa/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_05-2.png" alt=""></div><h3 class="xb-item--title">Fransa</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/macaristan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_08-1.png" alt=""></div><h3 class="xb-item--title">Macaristan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/irlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_10.png" alt=""></div><h3 class="xb-item--title">İrlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/kanada/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_01-2.png" alt=""></div><h3 class="xb-item--title">Kanada</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/almanya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_06-2.png" alt=""></div><h3 class="xb-item--title">Almanya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/yunanistan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_07-2.png" alt=""></div><h3 class="xb-item--title">Yunanistan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/danimarka/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_03-2.png" alt=""></div><h3 class="xb-item--title">Danimarka</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/izlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_09.png" alt=""></div><h3 class="xb-item--title">İzlanda</h3></a></div></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+      </div>
+      
+      <div class="tab-pane animated fadeInUp " id="d-3" role="tabpanel" aria-labelledby="d-3-tab">
+        		<div data-elementor-type="page" data-elementor-id="808" class="elementor elementor-808">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-7a17385 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7a17385" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6cd0cd3" data-id="6cd0cd3" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-deddeb7 elementor-widget elementor-widget-int-country" data-id="deddeb7" data-element_type="widget" data-widget_type="int-country.default">
+				<div class="elementor-widget-container">
+					<div class="xb-country ul_li"><div class="xb-item--item"><a href="https://vizeriotr.com/country/belcika/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_02-2.png" alt=""></div><h3 class="xb-item--title">Belçika</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/izlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_09.png" alt=""></div><h3 class="xb-item--title">İzlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/yunanistan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_07-2.png" alt=""></div><h3 class="xb-item--title">Yunanistan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/kanada/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_01-2.png" alt=""></div><h3 class="xb-item--title">Kanada</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/italya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_11.png" alt=""></div><h3 class="xb-item--title">İtalya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/fransa/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_05-2.png" alt=""></div><h3 class="xb-item--title">Fransa</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/irlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_10.png" alt=""></div><h3 class="xb-item--title">İrlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/avusturya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_04-2.png" alt=""></div><h3 class="xb-item--title">Avusturya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/macaristan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_08-1.png" alt=""></div><h3 class="xb-item--title">Macaristan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/danimarka/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_03-2.png" alt=""></div><h3 class="xb-item--title">Danimarka</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/almanya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_06-2.png" alt=""></div><h3 class="xb-item--title">Almanya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/luksemburg/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_12.png" alt=""></div><h3 class="xb-item--title">Lüksemburg</h3></a></div></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+      </div>
+      
+      <div class="tab-pane animated fadeInUp " id="d-4" role="tabpanel" aria-labelledby="d-4-tab">
+        		<div data-elementor-type="page" data-elementor-id="812" class="elementor elementor-812">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-d89f2e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d89f2e1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c4f4bd6" data-id="c4f4bd6" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-da9458b elementor-widget elementor-widget-int-country" data-id="da9458b" data-element_type="widget" data-widget_type="int-country.default">
+				<div class="elementor-widget-container">
+					<div class="xb-country ul_li"><div class="xb-item--item"><a href="https://vizeriotr.com/country/almanya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_06-2.png" alt=""></div><h3 class="xb-item--title">Almanya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/yunanistan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_07-2.png" alt=""></div><h3 class="xb-item--title">Yunanistan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/macaristan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_08-1.png" alt=""></div><h3 class="xb-item--title">Macaristan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/fransa/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_05-2.png" alt=""></div><h3 class="xb-item--title">Fransa</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/avusturya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_04-2.png" alt=""></div><h3 class="xb-item--title">Avusturya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/izlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_09.png" alt=""></div><h3 class="xb-item--title">İzlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/belcika/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_02-2.png" alt=""></div><h3 class="xb-item--title">Belçika</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/irlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_10.png" alt=""></div><h3 class="xb-item--title">İrlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/danimarka/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_03-2.png" alt=""></div><h3 class="xb-item--title">Danimarka</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/italya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_11.png" alt=""></div><h3 class="xb-item--title">İtalya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/kanada/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_01-2.png" alt=""></div><h3 class="xb-item--title">Kanada</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/luksemburg/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_12.png" alt=""></div><h3 class="xb-item--title">Lüksemburg</h3></a></div></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+      </div>
+      
+      <div class="tab-pane animated fadeInUp " id="d-5" role="tabpanel" aria-labelledby="d-5-tab">
+        		<div data-elementor-type="page" data-elementor-id="816" class="elementor elementor-816">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-c1e48e8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c1e48e8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-feef759" data-id="feef759" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-f807d87 elementor-widget elementor-widget-int-country" data-id="f807d87" data-element_type="widget" data-widget_type="int-country.default">
+				<div class="elementor-widget-container">
+					<div class="xb-country ul_li"><div class="xb-item--item"><a href="https://vizeriotr.com/country/fransa/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_05-2.png" alt=""></div><h3 class="xb-item--title">Fransa</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/almanya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_06-2.png" alt=""></div><h3 class="xb-item--title">Almanya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/yunanistan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_07-2.png" alt=""></div><h3 class="xb-item--title">Yunanistan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/danimarka/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_03-2.png" alt=""></div><h3 class="xb-item--title">Danimarka</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/kanada/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_01-2.png" alt=""></div><h3 class="xb-item--title">Kanada</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/izlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_09.png" alt=""></div><h3 class="xb-item--title">İzlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/italya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_11.png" alt=""></div><h3 class="xb-item--title">İtalya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/belcika/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_02-2.png" alt=""></div><h3 class="xb-item--title">Belçika</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/avusturya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_04-2.png" alt=""></div><h3 class="xb-item--title">Avusturya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/macaristan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_08-1.png" alt=""></div><h3 class="xb-item--title">Macaristan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/irlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_10.png" alt=""></div><h3 class="xb-item--title">İrlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/luksemburg/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_12.png" alt=""></div><h3 class="xb-item--title">Lüksemburg</h3></a></div></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+      </div>
+      
+      <div class="tab-pane animated fadeInUp " id="d-6" role="tabpanel" aria-labelledby="d-6-tab">
+        		<div data-elementor-type="page" data-elementor-id="820" class="elementor elementor-820">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-960bf51 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="960bf51" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6aaab1d" data-id="6aaab1d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2eec0ba elementor-widget elementor-widget-int-country" data-id="2eec0ba" data-element_type="widget" data-widget_type="int-country.default">
+				<div class="elementor-widget-container">
+					<div class="xb-country ul_li"><div class="xb-item--item"><a href="https://vizeriotr.com/country/danimarka/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_03-2.png" alt=""></div><h3 class="xb-item--title">Danimarka</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/avusturya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_04-2.png" alt=""></div><h3 class="xb-item--title">Avusturya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/yunanistan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_07-2.png" alt=""></div><h3 class="xb-item--title">Yunanistan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/fransa/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_05-2.png" alt=""></div><h3 class="xb-item--title">Fransa</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/almanya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_06-2.png" alt=""></div><h3 class="xb-item--title">Almanya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/macaristan/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_08-1.png" alt=""></div><h3 class="xb-item--title">Macaristan</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/italya/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_11.png" alt=""></div><h3 class="xb-item--title">İtalya</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/izlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_09.png" alt=""></div><h3 class="xb-item--title">İzlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/irlanda/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_10.png" alt=""></div><h3 class="xb-item--title">İrlanda</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/kanada/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_01-2.png" alt=""></div><h3 class="xb-item--title">Kanada</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/belcika/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_02-2.png" alt=""></div><h3 class="xb-item--title">Belçika</h3></a></div><div class="xb-item--item"><a href="https://vizeriotr.com/country/luksemburg/" class="xb-item--inner ul_li"><div class="xb-item--flag"><img decoding="async" src="https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/img_12.png" alt=""></div><h3 class="xb-item--title">Lüksemburg</h3></a></div></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+      </div>
+                  </div>
+							</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4394229 elementor-section-full_width elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-height-default elementor-section-height-default" data-id="4394229" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8a56468" data-id="8a56468" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ad7d0a4 elementor-widget elementor-widget-int-team" data-id="ad7d0a4" data-element_type="widget" data-widget_type="int-team.default">
+				<div class="elementor-widget-container">
+					
+        <section class="team pb-120">
+            <div class="container">
+                <div class="team-wrap pos-rel">
+                    <div class="row mt-none-30">
+                        <div class="col-xl-6 mt-30">
+                            <div class="sec-title mb-45">
+                                                                    <h2 class="title wow skewIn mb-40">Our trusted immigration <br>
+<span> support team</span></h2>
+                                                                    <p>At the heart of our commitment to providing exceptional immigration solutions stands</p>
+                                                            </div>
+                        </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                                <div class="xb-team text-center">
+                                    <div class="xb-item--inner">
+                                                                                    <div class="xb-item--img">
+                                                <img loading="lazy" decoding="async" width="405" height="393" src="https://vizeriotr.com/wp-content/uploads/2023/12/img_01-1.png" class="attachment-large size-large" alt="" />                                            </div>
+                                                                                <div class="xb-item--holder">
+                                                                                            <h3 class="xb-item--name"><a
+                                                            href="https://wp.xpressbuddy.com/evisa/team-details/">Esther Howard</a>
+                                                </h3>
+                                                                                                                                        <span class="xb-item--designation">Legal Advisor</span>
+                                                                                    </div>
+                                        <ul class="xb-item--social list-unstyled">
+                                                                                            <li><a href="#"><i
+                                                                class="fab fa-twitter"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-linkedin-in"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-facebook-f"></i></a></li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                                <div class="xb-team text-center">
+                                    <div class="xb-item--inner">
+                                                                                    <div class="xb-item--img">
+                                                <img loading="lazy" decoding="async" width="405" height="393" src="https://vizeriotr.com/wp-content/uploads/2023/12/img_02-1.png" class="attachment-large size-large" alt="" />                                            </div>
+                                                                                <div class="xb-item--holder">
+                                                                                            <h3 class="xb-item--name"><a
+                                                            href="https://wp.xpressbuddy.com/evisa/team-details/">Annette Black</a>
+                                                </h3>
+                                                                                                                                        <span class="xb-item--designation">Education Counsellor</span>
+                                                                                    </div>
+                                        <ul class="xb-item--social list-unstyled">
+                                                                                            <li><a href="#"><i
+                                                                class="fab fa-twitter"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-linkedin-in"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-facebook-f"></i></a></li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                                <div class="xb-team text-center">
+                                    <div class="xb-item--inner">
+                                                                                    <div class="xb-item--img">
+                                                <img loading="lazy" decoding="async" width="405" height="393" src="https://vizeriotr.com/wp-content/uploads/2023/12/img_03-1.png" class="attachment-large size-large" alt="" />                                            </div>
+                                                                                <div class="xb-item--holder">
+                                                                                            <h3 class="xb-item--name"><a
+                                                            href="https://wp.xpressbuddy.com/evisa/team-details/">Andrew Riis</a>
+                                                </h3>
+                                                                                                                                        <span class="xb-item--designation">Visa Specialist</span>
+                                                                                    </div>
+                                        <ul class="xb-item--social list-unstyled">
+                                                                                            <li><a href="#"><i
+                                                                class="fab fa-twitter"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-linkedin-in"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-facebook-f"></i></a></li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                                <div class="xb-team text-center">
+                                    <div class="xb-item--inner">
+                                                                                    <div class="xb-item--img">
+                                                <img loading="lazy" decoding="async" width="405" height="393" src="https://vizeriotr.com/wp-content/uploads/2023/12/img_04-1.png" class="attachment-large size-large" alt="" />                                            </div>
+                                                                                <div class="xb-item--holder">
+                                                                                            <h3 class="xb-item--name"><a
+                                                            href="https://wp.xpressbuddy.com/evisa/team-details/">Kristin Watson</a>
+                                                </h3>
+                                                                                                                                        <span class="xb-item--designation">Visa Coordinator</span>
+                                                                                    </div>
+                                        <ul class="xb-item--social list-unstyled">
+                                                                                            <li><a href="#"><i
+                                                                class="fab fa-twitter"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-linkedin-in"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-facebook-f"></i></a></li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                                <div class="xb-team text-center">
+                                    <div class="xb-item--inner">
+                                                                                    <div class="xb-item--img">
+                                                <img loading="lazy" decoding="async" width="405" height="393" src="https://vizeriotr.com/wp-content/uploads/2023/12/img_05-1.png" class="attachment-large size-large" alt="" />                                            </div>
+                                                                                <div class="xb-item--holder">
+                                                                                            <h3 class="xb-item--name"><a
+                                                            href="https://wp.xpressbuddy.com/evisa/team-details/">Jerome Bell</a>
+                                                </h3>
+                                                                                                                                        <span class="xb-item--designation">General Manager</span>
+                                                                                    </div>
+                                        <ul class="xb-item--social list-unstyled">
+                                                                                            <li><a href="#"><i
+                                                                class="fab fa-twitter"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-linkedin-in"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-facebook-f"></i></a></li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                                <div class="xb-team text-center">
+                                    <div class="xb-item--inner">
+                                                                                    <div class="xb-item--img">
+                                                <img loading="lazy" decoding="async" width="405" height="393" src="https://vizeriotr.com/wp-content/uploads/2023/12/img_06-1.png" class="attachment-large size-large" alt="" />                                            </div>
+                                                                                <div class="xb-item--holder">
+                                                                                            <h3 class="xb-item--name"><a
+                                                            href="https://wp.xpressbuddy.com/evisa/team-details/">Eleanor Pena</a>
+                                                </h3>
+                                                                                                                                        <span class="xb-item--designation">Case Manager</span>
+                                                                                    </div>
+                                        <ul class="xb-item--social list-unstyled">
+                                                                                            <li><a href="#"><i
+                                                                class="fab fa-twitter"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-linkedin-in"></i></a></li>
+                                                                                                                                        <li><a href="#"><i
+                                                                class="fab fa-facebook-f"></i></a></li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                    <div class="xb-team-bg">
+                        <div class="xb-bg xb-bg--1"></div>
+                        <div class="xb-bg xb-bg--2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e505acf elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="e505acf" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4922b39" data-id="4922b39" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-823a332 elementor-widget elementor-widget-int-testimonial" data-id="823a332" data-element_type="widget" data-widget_type="int-testimonial.default">
+				<div class="elementor-widget-container">
+					
+        <section class="testimonial">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="sec-title margin-none-md mb-30-xs mb-125">
+                                                            <h2 class="title wow skewIn mb-70">Danışanlarımızın Memnuniyeti <br>
+<span> En Büyük Referansımız</span></h2>
+                                                            <p>Vizerio ile vize başvuru sürecini kolay, güvenli ve<br> 
+sorunsuz yaşayan danışanlarımızın yorumlarını keşfedin</p>
+                                                    </div>
+                        <div class="xb-testimonial__nav ul_li">
+                            <div class="tm-nav-item tm-button-prev"></div>
+                            <div class="tm-nav-item tm-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="xb-swiper-sliders">
+                            <div class="xb-carousel-inner">
+                                <div class="xb-testimonial-slider xb-swiper-container swiper-container">
+                                    <div class="swiper-wrapper">
+                                                                                    <div class="swiper-slide xb-swiper-slide">
+                                                <div class="xb-testimonial">
+                                                    <div class="xb-item--inner text-center">
+                                                                                                                    <div class="xb-item--img">
+                                                                <img loading="lazy" decoding="async" width="145" height="42" src="https://vizeriotr.com/wp-content/uploads/2023/12/trustpilot.png" class="attachment-medium size-medium" alt="" />                                                            </div>
+                                                                                                                                                                            <div class="xb-item--content">
+                                                                İlk defa Schengen vizesi başvurusu yapacaktım, süreci hiç bilmiyordum. Vizerio ekibi tüm belgeleri tek tek anlattı, eksiksiz teslim ettim ve vizem 7 günde onaylandı. Gerçekten çok profesyoneller.                                                            </div>
+                                                                                                                <div class="xb-item--bottom">
+                                                                                                                            <div class="xb-item--ratting">
+                                                                    <img loading="lazy" decoding="async" width="101" height="16" src="https://vizeriotr.com/wp-content/uploads/2023/12/tr_rattig.png" class="attachment-medium size-medium" alt="" />                                                                </div>
+                                                                                                                                                                                        <h3 class="xb-item--title">Ayşe K. – İstanbul</h3>
+                                                                                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                                    <div class="swiper-slide xb-swiper-slide">
+                                                <div class="xb-testimonial">
+                                                    <div class="xb-item--inner text-center">
+                                                                                                                    <div class="xb-item--img">
+                                                                <img loading="lazy" decoding="async" width="145" height="42" src="https://vizeriotr.com/wp-content/uploads/2023/12/trustpilot.png" class="attachment-medium size-medium" alt="" />                                                            </div>
+                                                                                                                                                                            <div class="xb-item--content">
+                                                                Almanya iş vizesi için danışmanlık aldım, hem evraklarımda hem randevu sürecinde hiçbir sorun yaşamadım. Her şey planlı ve şeffaf ilerledi. Kesinlikle tavsiye ederim.                                                            </div>
+                                                                                                                <div class="xb-item--bottom">
+                                                                                                                            <div class="xb-item--ratting">
+                                                                    <img loading="lazy" decoding="async" width="101" height="16" src="https://vizeriotr.com/wp-content/uploads/2023/12/tr_rattig.png" class="attachment-medium size-medium" alt="" />                                                                </div>
+                                                                                                                                                                                        <h3 class="xb-item--title">Mehmet D. – Ankara</h3>
+                                                                                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                                    <div class="swiper-slide xb-swiper-slide">
+                                                <div class="xb-testimonial">
+                                                    <div class="xb-item--inner text-center">
+                                                                                                                    <div class="xb-item--img">
+                                                                <img loading="lazy" decoding="async" width="145" height="42" src="https://vizeriotr.com/wp-content/uploads/2023/12/trustpilot.png" class="attachment-medium size-medium" alt="" />                                                            </div>
+                                                                                                                                                                            <div class="xb-item--content">
+                                                                Dil okulu için İngiltere öğrenci vizesi aldım. Belgelerim eksiksizdi, mülakat öncesi prova bile yaptılar. Sonuç olumlu geldi, teşekkürler Vizerio!                                                            </div>
+                                                                                                                <div class="xb-item--bottom">
+                                                                                                                            <div class="xb-item--ratting">
+                                                                    <img loading="lazy" decoding="async" width="101" height="16" src="https://vizeriotr.com/wp-content/uploads/2023/12/tr_rattig.png" class="attachment-medium size-medium" alt="" />                                                                </div>
+                                                                                                                                                                                        <h3 class="xb-item--title">Selin A. – İzmir</h3>
+                                                                                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-648d6a2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="648d6a2" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-750ca3b" data-id="750ca3b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3c71b24 elementor-widget elementor-widget-int-sec-title" data-id="3c71b24" data-element_type="widget" data-widget_type="int-sec-title.default">
+				<div class="elementor-widget-container">
+					                <div class="sec-title">
+                            <h2 class="title wow skewIn">Sıkça sorulan soruların <br>
+<span> yanıtları</span></h2>
+                            <p>Vizerio ile vize başvuru sürecinde <br>
+en çok merak edilen konuların yanıtlarını burada bulabilirsiniz.</p>
+                    </div>
+    				</div>
+				</div>
+				<div class="elementor-element elementor-element-dad752d elementor-widget elementor-widget-image" data-id="dad752d" data-element_type="widget" data-widget_type="image.default">
+															<img loading="lazy" decoding="async" width="642" height="455" src="https://vizeriotr.com/wp-content/uploads/2023/12/faq_img.png" class="attachment-large size-large wp-image-590" alt="" />															</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8bd09c6" data-id="8bd09c6" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-496be20 elementor-widget elementor-widget-int-faq" data-id="496be20" data-element_type="widget" data-widget_type="int-faq.default">
+				<div class="elementor-widget-container">
+					
+        <ul class="xb-accordion accordion_box clearfix">
+
+                            <li class="accordion block active-block">
+                    <div class="acc-btn">
+                        Vize başvurusunu kendim yapabilir miyim, neden danışmanlık almalıyım?                        <span class="arrow"></span>
+                    </div>
+                    <div class="acc_body current">
+                        <div class="content">
+                            Evet, bireysel başvuru mümkündür; ancak belgelerde yapılacak küçük hatalar veya eksikler vize reddine neden olabilir.
+Vizerio, evrak hazırlığından randevu sürecine kadar profesyonel destek sağlayarak onay oranınızı artırır.                        </div>
+                    </div>
+                </li>
+                            <li class="accordion block ">
+                    <div class="acc-btn">
+                        Hangi ülkelere vize başvurusu yapabiliyorsunuz?                        <span class="arrow"></span>
+                    </div>
+                    <div class="acc_body ">
+                        <div class="content">
+                            Vizerio, Avrupa (Schengen), Amerika, İngiltere, Kanada, Dubai, Japonya ve daha birçok ülke için vize danışmanlığı hizmeti sunar.
+Toplamda 40’tan fazla ülkeye yönelik başvuru desteği sağlamaktayız.                        </div>
+                    </div>
+                </li>
+                            <li class="accordion block ">
+                    <div class="acc-btn">
+                        Vize başvuru süreci ne kadar sürer?                        <span class="arrow"></span>
+                    </div>
+                    <div class="acc_body ">
+                        <div class="content">
+                            Her ülkenin değerlendirme süresi farklıdır. Ortalama olarak başvurular 5 ila 15 iş günü içinde sonuçlanır.
+Ancak yoğun dönemlerde bu süre uzayabilir. Vizerio ekibi süreci sizin için takip eder ve bilgilendirir.                        </div>
+                    </div>
+                </li>
+                            <li class="accordion block ">
+                    <div class="acc-btn">
+                        Reddedilen vize başvurusu için yeniden başvuru yapılabilir mi?                        <span class="arrow"></span>
+                    </div>
+                    <div class="acc_body ">
+                        <div class="content">
+                            Evet, ancak ilk başvuruda yapılan hata analiz edilmelidir.
+Vizerio uzmanları reddedilme nedenini inceleyip doğru stratejiyle yeniden başvuru yapmanız için rehberlik eder.                        </div>
+                    </div>
+                </li>
+                            <li class="accordion block ">
+                    <div class="acc-btn">
+                        Evrak teslimi ve randevu işlemleri nasıl gerçekleşiyor?                        <span class="arrow"></span>
+                    </div>
+                    <div class="acc_body ">
+                        <div class="content">
+                            Belgeleriniz hazırlandıktan sonra randevunuz oluşturulur.
+Bazı ülkelerde belgeler şahsen teslim edilir, bazılarında kargo veya aracı kurum üzerinden gönderim mümkündür.
+Tüm aşamalar tarafımızca organize edilir.                        </div>
+                    </div>
+                </li>
+                    </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-02a530d elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="02a530d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c109630" data-id="c109630" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0e7fcd0 elementor-widget elementor-widget-int-blog" data-id="0e7fcd0" data-element_type="widget" data-widget_type="int-blog.default">
+				<div class="elementor-widget-container">
+					
+        <section class="blog pb-130">
+            <div class="container">
+                <div class="blog-wrap">
+                    <div class="sec-title mb-60 text-center">
+                                                    <h2 class="title wow skewIn">Vizerio Blog <br> <span>  Vize ve Seyahat Rehberiniz</h2>
+                                                    <p><p>Vize süreçleri, seyahat planlaması ve konsolosluk güncellemeleri hakkında<br>güncel bilgilerle yolculuğunuza rehberlik ediyoruz.</p>
+</p>
+                                            </div>
+                    <div class="row justify-content-md-center mt-none-30">
+                                            </div>
+                    <div class="xb-blog-bg"                          style="background-image: url('https://wp.xpressbuddy.com/evisa/wp-content/uploads/2023/12/blog_bg.png') "></div>
+                </div>
+            </div>
+        </section>
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		            </div><!-- #main -->
+
+</div>
+<footer class="xb-footer ">
+    		<div data-elementor-type="wp-post" data-elementor-id="60" class="elementor elementor-60">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-7ea1b290 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="7ea1b290" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-541f4cfc" data-id="541f4cfc" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7fc4ca0a elementor-widget elementor-widget-int-newsletter" data-id="7fc4ca0a" data-element_type="widget" data-widget_type="int-newsletter.default">
+				<div class="elementor-widget-container">
+					
+        <section class="newsletter">
+            <div class="container">
+                <div class="xb-newsletter pos-rel">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="xb-item--inner">
+                                <div class="xb-item--holder mb-30">
+                                                                            <span>BÜLTENE ABONE OL</span>
+                                                                                                                <h3><b>Vizerio Bülteni</b> – Güncel Vize 
+ <br>
+Haberlerini Kaçırmayın</h3>
+                                                                    </div>
+                                                                    <div class="xb-item--form">
+                                        
+<div class="wpcf7 no-js" id="wpcf7-f199-o1" lang="en-US" dir="ltr" data-wpcf7-id="199">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f199-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="199" /><input type="hidden" name="_wpcf7_version" value="6.1.3" /><input type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f199-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<span class="wpcf7-form-control-wrap" data-name="email-726"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your e-mail address" value="" type="email" name="email-726" /></span>
+<button class="thm-btn">Subscribe</button><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                            <div class="xb-newsletter__img">
+                            <img width="396" height="332" src="https://vizeriotr.com/wp-content/uploads/2023/12/newsletter_img-1.png" class="attachment-large size-large" alt="" decoding="async" />                        </div>
+                                    </div>
+            </div>
+        </section>
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-285bbc4d elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="285bbc4d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5110e9af" data-id="5110e9af" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-30a1e5ce elementor-widget elementor-widget-int-contact" data-id="30a1e5ce" data-element_type="widget" data-widget_type="int-contact.default">
+				<div class="elementor-widget-container">
+					        <section class="contact contact-pt gray-bg">
+            <div class="container">
+                <div class="xb-contact pos-rel">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="xb-item--inner">
+                                <div class="xb-item--holder mb-25">
+                                                                            <span>
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="19" viewBox="0 0 14 19" fill="none"><circle cx="2" cy="2" r="2" fill="#00CC99"></circle><circle cx="7" cy="2" r="2" fill="#00CC99"></circle><circle cx="12" cy="2" r="2" fill="#00CC99"></circle><circle cx="12" cy="7" r="2" fill="#00CC99"></circle><circle cx="12" cy="12" r="2" fill="#00CC99"></circle><circle cx="7" cy="7" r="2" fill="#00CC99"></circle><circle cx="7" cy="12" r="2" fill="#00CC99"></circle><circle cx="7" cy="17" r="2" fill="#00CC99"></circle><circle cx="2" cy="7" r="2" fill="#00CC99"></circle><circle cx="2" cy="12" r="2" fill="#00CC99"></circle></svg></span>
+                                            İLETİŞİME GEÇ                                        </span>
+                                                                                                                <h3>Formu Doldurun, Sizi Arayalım</h3>
+                                                                    </div>
+
+                                                                    <div class="xb-item--form contact-from">
+                                        
+<div class="wpcf7 no-js" id="wpcf7-f197-o2" lang="en-US" dir="ltr" data-wpcf7-id="197">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f197-o2" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="197" /><input type="hidden" name="_wpcf7_version" value="6.1.3" /><input type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f197-o2" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="xb-item--field">
+            <span class="icon icon-user"></span>
+<span class="wpcf7-form-control-wrap" data-name="text-929"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Goladria Gomez" value="" type="text" name="text-929" /></span>
+        </div>
     </div>
-
-    <div class="grid-container">
-      <div class="card" onclick="location.href='https://wa.me/905510698812'">
-        <span class="card-tag">Vizesiz Avrupa</span>
-        <img src="https://images.unsplash.com/photo-1549643977-c934f0c976f9?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Sırbistan" />
-        <div class="card-overlay">
-          <h3>Sırbistan</h3>
-          <p>Vizesiz giriş fırsatıyla Balkanların en canlı kültürünü ve eğlencesini yaşayın.</p>
+    <div class="col-lg-6">
+        <div class="xb-item--field">
+            <span class="icon icon-mail"></span>
+<span class="wpcf7-form-control-wrap" data-name="email-454"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="example@evisa.com" value="" type="email" name="email-454" /></span>
         </div>
-      </div>
-
-      <div class="card" onclick="location.href='https://wa.me/905510698812'">
-        <span class="card-tag">Tarih & İhtişam</span>
-        <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Rusya" />
-        <div class="card-overlay">
-          <h3>Rusya</h3>
-          <p>Kuzeyin ihtişamı, imparatorluk sarayları ve eşsiz bir sanat tarihi.</p>
-        </div>
-      </div>
-
-      <div class="card" onclick="location.href='https://wa.me/905510698812'">
-        <span class="card-tag">Prestij & Moda</span>
-        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Fransa" />
-        <div class="card-overlay">
-          <h3>Fransa</h3>
-          <p>Romantizm, moda ve sanatın dünyadaki başkenti. Seçkin bir Avrupa deneyimi.</p>
-        </div>
-      </div>
-
-      <div class="card" onclick="location.href='https://wa.me/905510698812'">
-        <span class="card-tag">Lüks & Gelecek</span>
-        <img src="https://images.unsplash.com/photo-1512453979798-5ea904ac66de?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Dubai BAE" />
-        <div class="card-overlay">
-          <h3>BAE - Dubai</h3>
-          <p>Çölün ortasında yükselen lüks, modern mimari ve sınırsız alışveriş keyfi.</p>
-        </div>
-      </div>
-
-      <div class="card" onclick="location.href='https://wa.me/905510698812'">
-        <span class="card-tag">Antik Gizem</span>
-        <img src="https://images.unsplash.com/photo-1539650116455-8efgd4.jpg?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Mısır" />
-        <div class="card-overlay">
-          <h3>Mısır</h3>
-          <p>Piramitlerin gölgesinde binlerce yıllık tarihe egzotik bir yolculuk.</p>
-        </div>
-      </div>
-
-      <div class="card" onclick="location.href='https://wa.me/905510698812'">
-        <span class="card-tag">Fiesta & Enerji</span>
-        <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=800" class="card-img" alt="İspanya" />
-        <div class="card-overlay">
-          <h3>İspanya</h3>
-          <p>Akdeniz ateşi, flamenko ruhu ve bitmeyen bir enerji. Sıcak bir Avrupa masalı.</p>
-        </div>
-      </div>
     </div>
-  </section>
-
-  <footer>
-    <div class="trust-section">
-      <div class="trust-item">
-        <i class="fas fa-crown"></i>
-        <span>VIZERIO PRESTIGE</span>
-      </div>
-      <div class="trust-item">
-        <i class="fas fa-certificate"></i>
-        <span>TÜRSAB ONAYLI PARTNER</span>
-      </div>
-      <div class="trust-item">
-        <i class="fas fa-shield-alt"></i>
-        <span>%100 GÜVENLİ ÖDEME</span>
-      </div>
+    <div class="col-lg-6">
+        <div class="xb-item--field">
+            <span class="icon icon-select"></span>
+<span class="wpcf7-form-control-wrap" data-name="menu-365"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required nice-select" aria-required="true" aria-invalid="false" name="menu-365"><option value="Student Visa">Student Visa</option><option value="Tourist Visa">Tourist Visa</option><option value="Commercial Visa">Commercial Visa</option><option value="Residence Visa">Residence Visa</option><option value="Working Visa">Working Visa</option></select></span>
+        </div>
     </div>
-    <p class="copyright">&copy; 2025 Vizerio Travel. Tüm Hakları Saklıdır.</p>
-  </footer>
+    <div class="col-lg-6">
+        <div class="xb-item--field">
+            <span class="icon icon-call"></span>
+<span class="wpcf7-form-control-wrap" data-name="text-930"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="+888 -8867 3333" value="" type="text" name="text-930" /></span>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="xb-item--field">
+            <span class="icon icon-message"></span>
+<span class="wpcf7-form-control-wrap" data-name="textarea-670"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Write Your Message..." name="textarea-670"></textarea></span>
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="thm-btn" type="submit">Send Message</button>
+    </div>
+</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
 
-  <!-- 3D Globe (WebGL) -->
-  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
-  <script src="https://unpkg.com/globe.gl@2.33.1/dist/globe.gl.min.js"></script>
-  <script>
-    (() => {
-      const el = document.getElementById('globe');
-      if (!el) return;
+                    <div class="google-map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14602.254272231177!2d28.8339453!3d41.0022859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1592852423971!5m2!1sen!2sbd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>                </div>
+            </div>
+        </section>
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2fadea35 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2fadea35" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-254338cc" data-id="254338cc" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-1771521f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1771521f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-4dc1c1f8" data-id="4dc1c1f8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-62bbbd1d elementor-widget elementor-widget-heading" data-id="62bbbd1d" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Sorularınız mı var veya daha fazla
+bilgi mi arıyorsunuz? Hemen bizimle iletişime geçin.</h2>				</div>
+				<div class="elementor-element elementor-element-41612b2d elementor-widget elementor-widget-int-footer-cta" data-id="41612b2d" data-element_type="widget" data-widget_type="int-footer-cta.default">
+				<div class="elementor-widget-container">
+					        <ul class="footer__cta list-unstyled">
+                    <li class="ul_li"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17.62 10.7496C17.19 10.7496 16.85 10.3996 16.85 9.97961C16.85 9.60961 16.48 8.83961 15.86 8.16961C15.25 7.51961 14.58 7.13961 14.02 7.13961C13.59 7.13961 13.25 6.78961 13.25 6.36961C13.25 5.94961 13.6 5.59961 14.02 5.59961C15.02 5.59961 16.07 6.13961 16.99 7.10961C17.85 8.01961 18.4 9.14961 18.4 9.96961C18.4 10.3996 18.05 10.7496 17.62 10.7496Z" fill="#00CC99"></path><path d="M21.23 10.75C20.8 10.75 20.46 10.4 20.46 9.98C20.46 6.43 17.57 3.55 14.03 3.55C13.6 3.55 13.26 3.2 13.26 2.78C13.26 2.36 13.6 2 14.02 2C18.42 2 22 5.58 22 9.98C22 10.4 21.65 10.75 21.23 10.75Z" fill="#00CC99"></path><path d="M11.79 14.21L8.52 17.48C8.16 17.16 7.81 16.83 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.09 13.57 11.44 13.91 11.79 14.21Z" fill="#9FA2AA"></path><path d="M21.9701 18.33C21.9701 18.61 21.9201 18.9 21.8201 19.18C21.7901 19.26 21.7601 19.34 21.7201 19.42C21.5501 19.78 21.3301 20.12 21.0401 20.44C20.5501 20.98 20.0101 21.37 19.4001 21.62C19.3901 21.62 19.3801 21.63 19.3701 21.63C18.7801 21.87 18.1401 22 17.4501 22C16.4301 22 15.3401 21.76 14.1901 21.27C13.0401 20.78 11.8901 20.12 10.7501 19.29C10.3601 19 9.9701 18.71 9.6001 18.4L12.8701 15.13C13.1501 15.34 13.4001 15.5 13.6101 15.61C13.6601 15.63 13.7201 15.66 13.7901 15.69C13.8701 15.72 13.9501 15.73 14.0401 15.73C14.2101 15.73 14.3401 15.67 14.4501 15.56L15.2101 14.81C15.4601 14.56 15.7001 14.37 15.9301 14.25C16.1601 14.11 16.3901 14.04 16.6401 14.04C16.8301 14.04 17.0301 14.08 17.2501 14.17C17.4701 14.26 17.7001 14.39 17.9501 14.56L21.2601 16.91C21.5201 17.09 21.7001 17.3 21.8101 17.55C21.9101 17.8 21.9701 18.05 21.9701 18.33Z" fill="#9FA2AA"></path></svg></span>+90 542 145 54 47</li>
+                        <li class="ul_li"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.5 8C20.8807 8 22 6.88071 22 5.5C22 4.11929 20.8807 3 19.5 3C18.1193 3 17 4.11929 17 5.5C17 6.88071 18.1193 8 19.5 8Z" fill="#292D32"></path><path d="M19.5 8C20.8807 8 22 6.88071 22 5.5C22 4.11929 20.8807 3 19.5 3C18.1193 3 17 4.11929 17 5.5C17 6.88071 18.1193 8 19.5 8Z" fill="#00CC99"></path><path d="M20.72 9.31C20.02 9.53 19.25 9.57 18.45 9.37C17.11 9.02 16.02 7.95 15.65 6.61C15.47 5.96 15.46 5.32 15.57 4.74C15.7 4.1 15.25 3.5 14.61 3.5H7C4 3.5 2 5 2 8.5V15.5C2 19 4 20.5 7 20.5H17C20 20.5 22 19 22 15.5V10.26C22 9.6 21.36 9.1 20.72 9.31ZM15.52 11.15L14.34 12.09C13.68 12.62 12.84 12.88 12 12.88C11.16 12.88 10.31 12.62 9.66 12.09L6.53 9.59C6.21 9.33 6.16 8.85 6.41 8.53C6.67 8.21 7.14 8.15 7.46 8.41L10.59 10.91C11.35 11.52 12.64 11.52 13.4 10.91L14.58 9.97C14.9 9.71 15.38 9.76 15.63 10.09C15.89 10.41 15.84 10.89 15.52 11.15Z" fill="#9FA2AA"></path></svg></span>info@vizeriotr.com</li>
+                    </ul>
+        				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-32b6347c" data-id="32b6347c" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-49324703 elementor-widget elementor-widget-heading" data-id="49324703" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Kurumsal</h2>				</div>
+				<div class="elementor-element elementor-element-13862179 elementor-widget elementor-widget-int-footer-links" data-id="13862179" data-element_type="widget" data-widget_type="int-footer-links.default">
+				<div class="elementor-widget-container">
+					                <ul class="footer__links list-unstyled">
+                            <li>
+                    <a href="https://vizeriotr.com/hakkimizda/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Hakkımızda                    </a></li>
+                            <li>
+                    <a href="https://vizeriotr.com/hakkimizda/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Misyon &amp; Vizyon                    </a></li>
+                            <li>
+                    <a href="https://vizeriotr.com/iletisim/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>İletişim                    </a></li>
+                            <li>
+                    <a href="http://instagram.com/vizeriotr" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Instagram                    </a></li>
+                            <li>
+                    <a href="http://instagram.com/vizeriotr" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Tiktok                    </a></li>
+                    </ul>
+    				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-778f0dd7" data-id="778f0dd7" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1a2274b5 elementor-widget elementor-widget-heading" data-id="1a2274b5" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Bilgilendirme</h2>				</div>
+				<div class="elementor-element elementor-element-604b0bb0 elementor-widget elementor-widget-int-footer-links" data-id="604b0bb0" data-element_type="widget" data-widget_type="int-footer-links.default">
+				<div class="elementor-widget-container">
+					                <ul class="footer__links list-unstyled">
+                            <li>
+                    <a href="#" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Gizlilik Politikası                    </a></li>
+                            <li>
+                    <a href="#" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Kullanım Şartları                    </a></li>
+                            <li>
+                    <a href="#" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Çerez Politikası                    </a></li>
+                            <li>
+                    <a href="#" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>KVKK Aydınlatma Metni                    </a></li>
+                            <li>
+                    <a href="https://vizeriotr.com/sikca-sorulan-sorular/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Sıkça Sorulan Sorular                    </a></li>
+                    </ul>
+    				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-21632007" data-id="21632007" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1aedf95c elementor-widget elementor-widget-heading" data-id="1aedf95c" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Hizmetler / Destek</h2>				</div>
+				<div class="elementor-element elementor-element-2eba7f5d elementor-widget elementor-widget-int-footer-links" data-id="2eba7f5d" data-element_type="widget" data-widget_type="int-footer-links.default">
+				<div class="elementor-widget-container">
+					                <ul class="footer__links list-unstyled">
+                            <li>
+                    <a href="https://vizeriotr.com/vize/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Vize Türleri                    </a></li>
+                            <li>
+                    <a href="https://vizeriotr.com/iletisim/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Vize Başvurusu Yap                    </a></li>
+                            <li>
+                    <a href="https://vizeriotr.com/iletisim/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Randevu Talebi                    </a></li>
+                            <li>
+                    <a href="https://vizeriotr.com/blog/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Blog / Rehber                    </a></li>
+                            <li>
+                    <a href="https://vizeriotr.com/iletisim/" ><span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 0C6.72067 3.49437 9.5056 6.27934 13 6.5C9.5056 6.72067 6.72067 9.5056 6.5 13C6.27934 9.5056 3.49437 6.72067 0 6.5C3.49437 6.27934 6.27934 3.49437 6.5 0Z" fill="#B1B4BA"></path></svg></span>Bize Ulaşın                    </a></li>
+                    </ul>
+    				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-8fab598 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8fab598" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2a4fbf7f" data-id="2a4fbf7f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6ab08bcf elementor-widget elementor-widget-text-editor" data-id="6ab08bcf" data-element_type="widget" data-widget_type="text-editor.default">
+									<footer>© 2025 Vizerio — <a href="https://vizeriotr.com" rel="noopener">vizeriotr.com</a>. Tüm hakları saklıdır. | Tasarım: <a href="https://kastaydijital.com" rel="noopener">Kastay Dijital</a></footer>								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7a9b25be" data-id="7a9b25be" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5ecfe2c5 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image" data-id="5ecfe2c5" data-element_type="widget" data-widget_type="image.default">
+															<img src="https://evisa.xpressbuddy.com/wp-content/uploads/2023/12/card_img.png" title="" alt="" loading="lazy" />															</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		</footer>
 
-      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const GOLD = '#C5A059';
+</div><!-- #page -->
 
-      const routeOrder = [
-        { name:'Istanbul',   lat:41.0082, lng:28.9784 },
-        { name:'Belgrade',   lat:44.7866, lng:20.4489 },
-        { name:'Rome',       lat:41.9028, lng:12.4964 },
-        { name:'Paris',      lat:48.8566, lng:2.3522  },
-        { name:'Madrid',     lat:40.4168, lng:-3.7038 },
-        { name:'London',     lat:51.5074, lng:-0.1278 },
 
-        { name:'New York',    lat:40.7128, lng:-74.0060 },
-        { name:'Toronto',     lat:43.6532, lng:-79.3832 },
-        { name:'Chicago',     lat:41.8781, lng:-87.6298 },
-        { name:'Miami',       lat:25.7617, lng:-80.1918 },
-        { name:'Los Angeles', lat:34.0522, lng:-118.2437 },
-        { name:'Mexico City', lat:19.4326, lng:-99.1332 },
-        { name:'Bogota',      lat:4.7110,  lng:-74.0721 },
-        { name:'Lima',        lat:-12.0464,lng:-77.0428 },
-        { name:'Sao Paulo',   lat:-23.5558,lng:-46.6396 },
-        { name:'Rio',         lat:-22.9068,lng:-43.1729 },
-        { name:'Buenos Aires',lat:-34.6037,lng:-58.3816 },
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/evisa/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script type="text/javascript" src="https://vizeriotr.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.3" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2024-07-22 17:28:11+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"tr"},"This contact form is placed in the wrong place.":["Bu ileti\u015fim formu yanl\u0131\u015f yere yerle\u015ftirilmi\u015f."],"Error:":["Hata:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+/* ]]> */
+</script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/vizeriotr.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.3" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/plugins/xpress-core/elementor/widgets/assets/js/custom-elementor.js?ver=1.0.0" id="custom-elementor-script-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/bootstrap.bundle.min.js?ver=5.0.0" id="bootstrap-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/swiper.min.js?ver=6.7.0" id="swiper-slider-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/wow.min.js?ver=1.1.3" id="wow-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/appear.js?ver=1.0.0" id="appear-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/odometer.min.js?ver=0.4.8" id="odometer-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/jquery.nice-select.min.js?ver=1.0.0" id="nice-select-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/isotope.pkgd.min.js?ver=3.0.5" id="isotope-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/jquery.magnific-popup.min.js?ver=1.1.0" id="magnific-popup-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/jquery-ui.min.js?ver=1.12.1" id="jquery-ui-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/parallax.min.js?ver=1.0.0" id="parallax-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/parallax-scroll.js?ver=1.0.0" id="parallax-scroll-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/jarallax.js?ver=1.0.0" id="jarallax-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/themes/evisa/assets/js/main.js?ver=1.0.2" id="evisa-main-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.32.5" id="elementor-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.32.5" id="elementor-frontend-modules-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" id="elementor-frontend-js-before">
+/* <![CDATA[ */
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Facebook\u2019ta payla\u015f","shareOnTwitter":"Twitter\u2019da payla\u015f\u0131n","pinIt":"Sabitle","download":"\u0130ndir","downloadImage":"G\u00f6rseli indir","fullscreen":"Tam Ekran","zoom":"Yak\u0131nla\u015ft\u0131r","share":"Payla\u015f","playVideo":"Videoyu Oynat","previous":"\u00d6nceki","next":"Sonraki","close":"Kapat","a11yCarouselPrevSlideMessage":"\u00d6nceki Slayt","a11yCarouselNextSlideMessage":"Sonraki Slayt","a11yCarouselFirstSlideMessage":"Bu ilk slayt","a11yCarouselLastSlideMessage":"Bu son slayt","a11yCarouselPaginationBulletMessage":"Slayta Git"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobil Portre","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobil G\u00f6r\u00fcn\u00fcm\u00fc","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portresi","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet G\u00f6r\u00fcn\u00fcm\u00fc","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Diz\u00fcst\u00fc bilgisayar","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Geni\u015f ekran","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.32.5","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"e_pro_free_trial_popup":true,"nested-elements":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"import-export-customization":true},"urls":{"assets":"https:\/\/vizeriotr.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/vizeriotr.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/vizeriotr.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"c8d26b33f7"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":12,"title":"Anasayfa%20-%20VizeRio","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.32.5" id="elementor-frontend-js"></script>
+<script type="text/javascript" src="https://vizeriotr.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-7-40476021fb6e59177033.js" id="googlesitekit-events-provider-contact-form-7-js" defer></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://vizeriotr.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://vizeriotr.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
 
-        { name:'Dubai',       lat:25.2048, lng:55.2708 },
-        { name:'Singapore',   lat:1.3521,  lng:103.8198 },
-        { name:'Tokyo',       lat:35.6762, lng:139.6503 },
-        { name:'Sydney',      lat:-33.8688,lng:151.2093 }
-      ];
-
-      const points = routeOrder.map(c => ({...c}));
-
-      const globe = Globe()(el)
-        .backgroundColor('rgba(0,0,0,0)')
-        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
-        .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
-        .showAtmosphere(true)
-        .atmosphereColor(GOLD)
-        .atmosphereAltitude(0.20)
-
-        .pointsData(points)
-        .pointLat(d => d.lat)
-        .pointLng(d => d.lng)
-        .pointColor(() => GOLD)
-        .pointAltitude(0.030)
-        .pointRadius(0.27)
-
-        .arcsData([])
-        .arcColor(() => [GOLD, GOLD])
-        .arcAltitude(() => 0.32)
-        .arcStroke(() => 1.00)
-        .arcDashLength(0.55)
-        .arcDashGap(2.0)
-        .arcDashAnimateTime(prefersReduced ? 0 : 1850);
-
-      globe.ringsData([])
-        .ringLat(d => d.lat)
-        .ringLng(d => d.lng)
-        .ringColor(() => [GOLD, 'rgba(197,160,89,0)'])
-        .ringMaxRadius(() => 4.6)
-        .ringPropagationSpeed(() => 2.8)
-        .ringRepeatPeriod(() => 1100);
-
-      const scene = globe.scene();
-      const ambient = new THREE.AmbientLight(0xffffff, 0.48);
-      const dir1 = new THREE.DirectionalLight(0xffffff, 1.35);
-      dir1.position.set(2.2, 1.2, 1.0);
-      const dir2 = new THREE.DirectionalLight(0xffffff, 0.45);
-      dir2.position.set(-2.0, -0.6, -1.0);
-      scene.add(ambient);
-      scene.add(dir1);
-      scene.add(dir2);
-
-      globe.pointOfView({ lat: 22, lng: 15, altitude: 2.05 }, 0);
-      globe.controls().enableZoom = false;
-      globe.controls().enablePan = false;
-
-      if (!prefersReduced) {
-        globe.controls().autoRotate = true;
-        globe.controls().autoRotateSpeed = 0.90; // soldan sağa
-      }
-
-      const resize = () => {
-        globe.width(window.innerWidth);
-        globe.height(window.innerHeight);
-      };
-      window.addEventListener('resize', resize);
-      resize();
-
-      let i = 0;
-      const makeArc = (from, to) => ({
-        startLat: from.lat, startLng: from.lng,
-        endLat: to.lat, endLng: to.lng
-      });
-
-      const step = () => {
-        if (prefersReduced) return;
-        const from = routeOrder[i % routeOrder.length];
-        const to = routeOrder[(i + 1) % routeOrder.length];
-        globe.arcsData([ makeArc(from, to) ]);
-        globe.ringsData([{ lat: to.lat, lng: to.lng }]);
-        i++;
-      };
-
-      step();
-      if (!prefersReduced) setInterval(step, 2350);
-    })();
-  </script>
 </body>
 </html>
